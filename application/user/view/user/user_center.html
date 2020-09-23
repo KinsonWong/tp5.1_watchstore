@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
+    lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>用户中心</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="__STATIC__/images/favicon.png">
+
+    <style>
+        .user_body {
+            position: relative;
+            height: 1200px;
+        }
+        
+        .user_body .user_content {
+            position: absolute;
+            left: 396.5px;
+            width: 1110px;
+        }
+        
+        .user_body .user_content .user_list {
+            float: left;
+            width: 350px;
+        }
+        
+        .user_body .user_content .user_info {
+            float: left;
+            height: 500px;
+            width: 760px;
+            padding-top: 7px;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .user_content .slide_list li {
+            display: block;
+            font-weight: bold;
+            margin: 50px 0 0 10px;
+            font-size: 18px;
+        }
+        
+        .slide_list li a {
+            color: black;
+        }
+        
+        .user_info span {
+            font-size: 14px;
+        }
+        
+        .user_info a {
+            color: black;
+            font-size: 16px;
+            text-decoration: underline;
+            padding-left: 10px;
+        }
+        
+        .user_info .text_email {
+            padding-left: 10px;
+        }
+        
+        .user_info_basic {
+            padding: 20px 0 20px 0;
+            border: 1px solid #ccc;
+            border-left: 0;
+            border-right: 0;
+        }
+        
+        .edit_setting {
+            display: block;
+            padding: 1.875rem 0 0 23.625rem;
+        }
+        
+        .user_info_adderess {
+            padding-top: 40px;
+            height: 500px;
+        }
+        
+        .ad_biaoti {
+            position: relative;
+        }
+        
+        .ad_biaoti span {
+            position: absolute;
+        }
+        
+        .ad_biaoti_zi {
+            font-size: 24px;
+        }
+        
+        .ad_more {
+            right: 0;
+            padding-top: 0.5rem;
+        }
+        
+        .user_info_adderess .my_address {
+            padding: 7.8125rem 0 2.8125rem 0;
+        }
+        
+        .ad_list li {
+            height: 30px;
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body class="cart">
+    {include file="public/static/product/header/header.html"}
+
+    <div class="breadcrumbs-area mb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumbs-menu">
+                        <ul>
+                            <li><a href="{:url('/show_index')}">主页</a></li>
+                            <li><a href="javascript:void(0);" class="active">个人中心</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumbs-area-end -->
+    <!-- entry-header-area-start -->
+    <div class="user_body">
+        <div class="user_content">
+            <div class="user_list">
+                <h1>个人中心</h1>
+                <ul class="slide_list">
+                    <li class=""><a href="#">概况</a></li>
+                    <li class=""><a href="#">订单</a></li>
+                    <li class=""><a href="#">我的邮箱</a></li>
+                    <li class=""><a href="#">我的地址</a></li>
+                    <li class=""><a href="#">个人信息</a></li>
+                </ul>
+            </div>
+            <div class="user_info">
+                <h3>设置账号</h3>
+                <div class="user_info_basic">
+                    <span>EMAIL:</span><span class="text_email">{$user.email}</span>
+                    <br>
+                    <span>PASSWORD:</span><a href="#" class="change_password">change password</a>
+                </div>
+                <span class="edit_setting"><button type="button" class="btn btn-warning">EDIT ACCOUNT SETTING</button></span>
+                <div class="user_info_adderess">
+
+                    <div class="ad_biaoti "><span class="ad_biaoti_zi"><h3>地址</h3></span><span class="ad_more "><a href="#">更多地址</a></span></div>
+
+
+                    <div class="my_address ">
+                        <ul class="ad_list  ">
+                            <li>{$address.consignee}</li>
+                            <li>{$address.contact}</li>
+                            <li>{$address.province}</li>
+                            <li>{$address.city}</li>
+                            <li>{$address.area}</li>
+                            <li>{$address.addr}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {include file="public/static/product/footer/footer.html"}
+
+</body>
+
+</html>

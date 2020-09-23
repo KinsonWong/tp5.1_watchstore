@@ -1,0 +1,1584 @@
+---------------------------------------------------------------
+[2020-09-22T15:48:21+08:00] 127.0.0.1 GET www.mystore.com/show_admin_login
+[运行时间：0.658073s] [吞吐率：1.52req/s] [内存消耗：2,189.73kb] [文件加载：66]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_admin_login',
+  'route' => 'admin/admin/show_admin_login',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\login.html [ array (
+) ]
+---------------------------------------------------------------
+[2020-09-22T15:48:21+08:00] 127.0.0.1 GET www.mystore.com/captcha
+[运行时间：0.077191s] [吞吐率：12.95req/s] [内存消耗：1,517.55kb] [文件加载：53]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'captcha/<id?>',
+  'route' => '\\think\\captcha\\CaptchaController@index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_admin_login',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2020-09-22T15:48:22+08:00] 127.0.0.1 GET www.mystore.com/favicon.ico
+[运行时间：0.099467s] [吞吐率：10.05req/s] [内存消耗：1,618.07kb] [文件加载：53]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[2020-09-22T15:48:29+08:00] 127.0.0.1 POST www.mystore.com/admin_login
+[运行时间：0.172347s] [吞吐率：5.80req/s] [内存消耗：3,313.51kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'admin_login',
+  'route' => 'admin/admin/admin_login',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_admin_login',
+  'origin' => 'http://www.mystore.com',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'content-length' => '39',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'root',
+  'password' => '123456',
+  'code' => 'xmpm',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007106s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.014350s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `username` = 'root'  AND `password` = '123456' LIMIT 1 [ RunTime:0.004544s ]
+---------------------------------------------------------------
+[2020-09-22T15:48:31+08:00] 127.0.0.1 GET www.mystore.com/show_admin_index
+[运行时间：0.032599s] [吞吐率：30.68req/s] [内存消耗：2,181.01kb] [文件加载：67]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_admin_index',
+  'route' => 'admin/admin/show_admin_index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_admin_login',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\index.html [ array (
+) ]
+---------------------------------------------------------------
+[2020-09-22T15:48:31+08:00] 127.0.0.1 GET www.mystore.com/show_admin_welcome
+[运行时间：0.136482s] [吞吐率：7.33req/s] [内存消耗：3,629.66kb] [文件加载：84]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_admin_welcome',
+  'route' => 'admin/admin/show_admin_welcome',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_admin_index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\welcome.html [ array (
+  0 => 'info',
+  1 => 'time',
+  2 => 'count',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000734s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch_order` [ RunTime:0.006045s ]
+[ sql ] [ SQL ] SELECT * FROM `watch_order` [ RunTime:0.000317s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.005993s ]
+[ sql ] [ SQL ] SELECT * FROM `user` [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch` [ RunTime:0.005872s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` [ RunTime:0.000380s ]
+[ sql ] [ SQL ] SELECT VERSION() AS ver [ RunTime:0.001798s ]
+---------------------------------------------------------------
+[2020-09-22T15:48:35+08:00] 127.0.0.1 GET www.mystore.com/show_order_list
+[运行时间：0.100165s] [吞吐率：9.98req/s] [内存消耗：3,556.53kb] [文件加载：81]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_order_list',
+  'route' => 'admin/admin_order/show_order_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_admin_index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_order\order_list.html [ array (
+  0 => 'order_count',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.019772s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch_order` [ RunTime:0.001370s ]
+[ sql ] [ SQL ] SELECT * FROM `watch_order` [ RunTime:0.000319s ]
+---------------------------------------------------------------
+[2020-09-22T15:48:35+08:00] 127.0.0.1 GET www.mystore.com/get_order_list?page=1&limit=8
+[运行时间：0.078500s] [吞吐率：12.74req/s] [内存消耗：3,410.84kb] [文件加载：80]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'get_order_list',
+  'route' => 'admin/admin_order/get_order_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_order_list',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '8',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000698s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch_order` [ RunTime:0.001066s ]
+[ sql ] [ SQL ] SELECT * FROM `watch_order` [ RunTime:0.000287s ]
+[ sql ] [ SQL ] SELECT * FROM `watch_order` ORDER BY `o_id` ASC LIMIT 0,8 [ RunTime:0.000709s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_state` [ RunTime:0.005799s ]
+[ sql ] [ SQL ] SELECT `state` FROM `order_state` WHERE  `os_id` = 2 LIMIT 1 [ RunTime:0.001589s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.006491s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `h_a_id` = 1 LIMIT 1 [ RunTime:0.000299s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_detail` [ RunTime:0.005880s ]
+[ sql ] [ SQL ] SELECT * FROM `order_detail` WHERE  `b_o_id` = 13 [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch` [ RunTime:0.001270s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 19 LIMIT 1 [ RunTime:0.000323s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 19  AND `b_o_id` = 13 LIMIT 1 [ RunTime:0.000330s ]
+[ sql ] [ SQL ] SELECT `state` FROM `order_state` WHERE  `os_id` = 2 LIMIT 1 [ RunTime:0.000309s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `h_a_id` = 3 LIMIT 1 [ RunTime:0.000324s ]
+[ sql ] [ SQL ] SELECT * FROM `order_detail` WHERE  `b_o_id` = 15 [ RunTime:0.000272s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 9 LIMIT 1 [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 9  AND `b_o_id` = 15 LIMIT 1 [ RunTime:0.000300s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 8 LIMIT 1 [ RunTime:0.000323s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 8  AND `b_o_id` = 15 LIMIT 1 [ RunTime:0.000271s ]
+[ sql ] [ SQL ] SELECT `state` FROM `order_state` WHERE  `os_id` = 1 LIMIT 1 [ RunTime:0.000209s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `h_a_id` = 3 LIMIT 1 [ RunTime:0.000267s ]
+[ sql ] [ SQL ] SELECT * FROM `order_detail` WHERE  `b_o_id` = 18 [ RunTime:0.000246s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 8 LIMIT 1 [ RunTime:0.000223s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 8  AND `b_o_id` = 18 LIMIT 1 [ RunTime:0.000270s ]
+[ sql ] [ SQL ] SELECT `state` FROM `order_state` WHERE  `os_id` = 1 LIMIT 1 [ RunTime:0.000246s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `h_a_id` = 3 LIMIT 1 [ RunTime:0.000206s ]
+[ sql ] [ SQL ] SELECT * FROM `order_detail` WHERE  `b_o_id` = 19 [ RunTime:0.000239s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 19 LIMIT 1 [ RunTime:0.000243s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 19  AND `b_o_id` = 19 LIMIT 1 [ RunTime:0.000182s ]
+[ sql ] [ SQL ] SELECT `state` FROM `order_state` WHERE  `os_id` = 1 LIMIT 1 [ RunTime:0.000143s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `h_a_id` = 4 LIMIT 1 [ RunTime:0.000151s ]
+[ sql ] [ SQL ] SELECT * FROM `order_detail` WHERE  `b_o_id` = 20 [ RunTime:0.000148s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 10 LIMIT 1 [ RunTime:0.000154s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 10  AND `b_o_id` = 20 LIMIT 1 [ RunTime:0.000148s ]
+---------------------------------------------------------------
+[2020-09-22T15:49:08+08:00] 127.0.0.1 GET www.mystore.com/show_order_list
+[运行时间：0.083567s] [吞吐率：11.97req/s] [内存消耗：3,556.53kb] [文件加载：81]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_order_list',
+  'route' => 'admin/admin_order/show_order_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_order_list',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_order\order_list.html [ array (
+  0 => 'order_count',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014589s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch_order` [ RunTime:0.001285s ]
+[ sql ] [ SQL ] SELECT * FROM `watch_order` [ RunTime:0.000323s ]
+---------------------------------------------------------------
+[2020-09-22T15:49:09+08:00] 127.0.0.1 GET www.mystore.com/get_order_list?page=1&limit=8
+[运行时间：0.061371s] [吞吐率：16.29req/s] [内存消耗：3,410.84kb] [文件加载：80]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'get_order_list',
+  'route' => 'admin/admin_order/get_order_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_order_list',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '8',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022264s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch_order` [ RunTime:0.001161s ]
+[ sql ] [ SQL ] SELECT * FROM `watch_order` [ RunTime:0.000296s ]
+[ sql ] [ SQL ] SELECT * FROM `watch_order` ORDER BY `o_id` ASC LIMIT 0,8 [ RunTime:0.000302s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_state` [ RunTime:0.000990s ]
+[ sql ] [ SQL ] SELECT `state` FROM `order_state` WHERE  `os_id` = 2 LIMIT 1 [ RunTime:0.000280s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.000994s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `h_a_id` = 1 LIMIT 1 [ RunTime:0.000412s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_detail` [ RunTime:0.001173s ]
+[ sql ] [ SQL ] SELECT * FROM `order_detail` WHERE  `b_o_id` = 13 [ RunTime:0.000365s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch` [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 19 LIMIT 1 [ RunTime:0.000269s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 19  AND `b_o_id` = 13 LIMIT 1 [ RunTime:0.000239s ]
+[ sql ] [ SQL ] SELECT `state` FROM `order_state` WHERE  `os_id` = 2 LIMIT 1 [ RunTime:0.000230s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `h_a_id` = 3 LIMIT 1 [ RunTime:0.000238s ]
+[ sql ] [ SQL ] SELECT * FROM `order_detail` WHERE  `b_o_id` = 15 [ RunTime:0.000292s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 9 LIMIT 1 [ RunTime:0.000286s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 9  AND `b_o_id` = 15 LIMIT 1 [ RunTime:0.000240s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 8 LIMIT 1 [ RunTime:0.000230s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 8  AND `b_o_id` = 15 LIMIT 1 [ RunTime:0.000233s ]
+[ sql ] [ SQL ] SELECT `state` FROM `order_state` WHERE  `os_id` = 1 LIMIT 1 [ RunTime:0.000195s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `h_a_id` = 3 LIMIT 1 [ RunTime:0.000239s ]
+[ sql ] [ SQL ] SELECT * FROM `order_detail` WHERE  `b_o_id` = 18 [ RunTime:0.000151s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 8 LIMIT 1 [ RunTime:0.000155s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 8  AND `b_o_id` = 18 LIMIT 1 [ RunTime:0.000150s ]
+[ sql ] [ SQL ] SELECT `state` FROM `order_state` WHERE  `os_id` = 1 LIMIT 1 [ RunTime:0.000208s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `h_a_id` = 3 LIMIT 1 [ RunTime:0.000151s ]
+[ sql ] [ SQL ] SELECT * FROM `order_detail` WHERE  `b_o_id` = 19 [ RunTime:0.000146s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 19 LIMIT 1 [ RunTime:0.000155s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 19  AND `b_o_id` = 19 LIMIT 1 [ RunTime:0.000203s ]
+[ sql ] [ SQL ] SELECT `state` FROM `order_state` WHERE  `os_id` = 1 LIMIT 1 [ RunTime:0.000144s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `h_a_id` = 4 LIMIT 1 [ RunTime:0.000150s ]
+[ sql ] [ SQL ] SELECT * FROM `order_detail` WHERE  `b_o_id` = 20 [ RunTime:0.000145s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 10 LIMIT 1 [ RunTime:0.000192s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 10  AND `b_o_id` = 20 LIMIT 1 [ RunTime:0.000163s ]
+---------------------------------------------------------------
+[2020-09-22T15:49:23+08:00] 127.0.0.1 GET www.mystore.com/show_order_list
+[运行时间：0.095820s] [吞吐率：10.44req/s] [内存消耗：3,556.53kb] [文件加载：81]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_order_list',
+  'route' => 'admin/admin_order/show_order_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_order_list',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_order\order_list.html [ array (
+  0 => 'order_count',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.024009s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch_order` [ RunTime:0.001256s ]
+[ sql ] [ SQL ] SELECT * FROM `watch_order` [ RunTime:0.000324s ]
+---------------------------------------------------------------
+[2020-09-22T15:49:23+08:00] 127.0.0.1 GET www.mystore.com/get_order_list?page=1&limit=8
+[运行时间：0.060971s] [吞吐率：16.40req/s] [内存消耗：3,410.84kb] [文件加载：80]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'get_order_list',
+  'route' => 'admin/admin_order/get_order_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_order_list',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '8',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.020745s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch_order` [ RunTime:0.001235s ]
+[ sql ] [ SQL ] SELECT * FROM `watch_order` [ RunTime:0.000324s ]
+[ sql ] [ SQL ] SELECT * FROM `watch_order` ORDER BY `o_id` ASC LIMIT 0,8 [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_state` [ RunTime:0.001007s ]
+[ sql ] [ SQL ] SELECT `state` FROM `order_state` WHERE  `os_id` = 2 LIMIT 1 [ RunTime:0.000313s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.001117s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `h_a_id` = 1 LIMIT 1 [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_detail` [ RunTime:0.001077s ]
+[ sql ] [ SQL ] SELECT * FROM `order_detail` WHERE  `b_o_id` = 13 [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch` [ RunTime:0.001006s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 19 LIMIT 1 [ RunTime:0.000310s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 19  AND `b_o_id` = 13 LIMIT 1 [ RunTime:0.000306s ]
+[ sql ] [ SQL ] SELECT `state` FROM `order_state` WHERE  `os_id` = 2 LIMIT 1 [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `h_a_id` = 3 LIMIT 1 [ RunTime:0.000306s ]
+[ sql ] [ SQL ] SELECT * FROM `order_detail` WHERE  `b_o_id` = 15 [ RunTime:0.000287s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 9 LIMIT 1 [ RunTime:0.000267s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 9  AND `b_o_id` = 15 LIMIT 1 [ RunTime:0.000256s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 8 LIMIT 1 [ RunTime:0.000241s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 8  AND `b_o_id` = 15 LIMIT 1 [ RunTime:0.000253s ]
+[ sql ] [ SQL ] SELECT `state` FROM `order_state` WHERE  `os_id` = 1 LIMIT 1 [ RunTime:0.000230s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `h_a_id` = 3 LIMIT 1 [ RunTime:0.000243s ]
+[ sql ] [ SQL ] SELECT * FROM `order_detail` WHERE  `b_o_id` = 18 [ RunTime:0.000247s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 8 LIMIT 1 [ RunTime:0.000214s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 8  AND `b_o_id` = 18 LIMIT 1 [ RunTime:0.000151s ]
+[ sql ] [ SQL ] SELECT `state` FROM `order_state` WHERE  `os_id` = 1 LIMIT 1 [ RunTime:0.000141s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `h_a_id` = 3 LIMIT 1 [ RunTime:0.000226s ]
+[ sql ] [ SQL ] SELECT * FROM `order_detail` WHERE  `b_o_id` = 19 [ RunTime:0.000149s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 19 LIMIT 1 [ RunTime:0.000194s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 19  AND `b_o_id` = 19 LIMIT 1 [ RunTime:0.000304s ]
+[ sql ] [ SQL ] SELECT `state` FROM `order_state` WHERE  `os_id` = 1 LIMIT 1 [ RunTime:0.000268s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `h_a_id` = 4 LIMIT 1 [ RunTime:0.000233s ]
+[ sql ] [ SQL ] SELECT * FROM `order_detail` WHERE  `b_o_id` = 20 [ RunTime:0.000257s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 10 LIMIT 1 [ RunTime:0.000229s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 10  AND `b_o_id` = 20 LIMIT 1 [ RunTime:0.000208s ]
+---------------------------------------------------------------
+[2020-09-22T15:49:50+08:00] 127.0.0.1 GET www.mystore.com/show_watch_list
+[运行时间：0.096529s] [吞吐率：10.36req/s] [内存消耗：3,543.39kb] [文件加载：81]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_watch_list',
+  'route' => 'admin/admin_product/show_watch_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_admin_index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_product\watch_list.html [ array (
+  0 => 'watch_count',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.021421s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch` [ RunTime:0.001307s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` [ RunTime:0.000323s ]
+---------------------------------------------------------------
+[2020-09-22T15:49:50+08:00] 127.0.0.1 GET www.mystore.com/get_watch_list?page=1&limit=10
+[运行时间：0.037642s] [吞吐率：26.57req/s] [内存消耗：3,335.63kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'get_watch_list',
+  'route' => 'admin/admin_product/get_watch_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_watch_list',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012386s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch` [ RunTime:0.001249s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` [ RunTime:0.000321s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` ORDER BY `bid` ASC LIMIT 0,10 [ RunTime:0.000314s ]
+---------------------------------------------------------------
+[2020-09-22T15:49:50+08:00] 127.0.0.1 GET www.mystore.com/upload/img/%7B%7Bd.cover%7D%7D
+[运行时间：0.013425s] [吞吐率：74.49req/s] [内存消耗：1,618.07kb] [文件加载：53]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[2020-09-22T15:50:05+08:00] 127.0.0.1 GET www.mystore.com/show_member_list
+[运行时间：0.094234s] [吞吐率：10.61req/s] [内存消耗：3,599.77kb] [文件加载：81]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_member_list',
+  'route' => 'admin/admin_member/show_member_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_admin_index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_member\member_list.html [ array (
+  0 => 'user_count',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022947s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001525s ]
+[ sql ] [ SQL ] SELECT * FROM `user` [ RunTime:0.000363s ]
+---------------------------------------------------------------
+[2020-09-22T15:50:05+08:00] 127.0.0.1 GET www.mystore.com/get_member_list?page=1&limit=10
+[运行时间：0.039542s] [吞吐率：25.29req/s] [内存消耗：3,328.10kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'get_member_list',
+  'route' => 'admin/admin_member/get_member_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_member_list',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014794s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001076s ]
+[ sql ] [ SQL ] SELECT * FROM `user` [ RunTime:0.000258s ]
+[ sql ] [ SQL ] SELECT * FROM `user` ORDER BY `uid` ASC LIMIT 0,10 [ RunTime:0.000277s ]
+---------------------------------------------------------------
+[2020-09-22T15:50:08+08:00] 127.0.0.1 GET www.mystore.com/show_member_edit/1
+[运行时间：0.088864s] [吞吐率：11.25req/s] [内存消耗：3,495.35kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_member_edit/<uid>',
+  'route' => 'admin/admin_member/show_member_edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'uid' => '1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_member_list',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_member\member_edit.html [ array (
+  0 => 'user',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.020537s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001216s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `uid` = 1 LIMIT 1 [ RunTime:0.000328s ]
+---------------------------------------------------------------
+[2020-09-22T15:50:09+08:00] 127.0.0.1 GET www.mystore.com/get_address_list/uid/1?page=1&limit=5&uid=1
+[运行时间：0.026833s] [吞吐率：37.27req/s] [内存消耗：3,330.47kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'get_address_list',
+  'route' => 'admin/admin_member/get_address_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'uid' => '1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_member_edit/1',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '5',
+  'uid' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000857s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.001060s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `u_id` = 1 LIMIT 0,5 [ RunTime:0.000275s ]
+---------------------------------------------------------------
+[2020-09-22T15:50:18+08:00] 127.0.0.1 GET www.mystore.com/show_member_list
+[运行时间：0.045209s] [吞吐率：22.12req/s] [内存消耗：3,599.77kb] [文件加载：81]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_member_list',
+  'route' => 'admin/admin_member/show_member_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_admin_index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_member\member_list.html [ array (
+  0 => 'user_count',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.019128s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001271s ]
+[ sql ] [ SQL ] SELECT * FROM `user` [ RunTime:0.000318s ]
+---------------------------------------------------------------
+[2020-09-22T15:52:54+08:00] 127.0.0.1 GET www.mystore.com/
+[运行时间：0.158268s] [吞吐率：6.32req/s] [内存消耗：3,909.73kb] [文件加载：82]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\index\view\index\index.html [ array (
+  0 => 'randWatch',
+  1 => 'featureOne',
+  2 => 'featureTwo',
+  3 => 'type',
+  4 => 'watches',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.018200s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch` [ RunTime:0.001235s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` ORDER BY rand() LIMIT 1 [ RunTime:0.001937s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` ORDER BY rand() LIMIT 10 [ RunTime:0.000719s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` ORDER BY rand() LIMIT 10 [ RunTime:0.000406s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` ORDER BY `date` DESC LIMIT 10 [ RunTime:0.000347s ]
+---------------------------------------------------------------
+[2020-09-22T15:52:54+08:00] 127.0.0.1 POST www.mystore.com/watch_header
+[运行时间：0.066396s] [吞吐率：15.06req/s] [内存消耗：3,362.11kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'watch_header',
+  'route' => 'product/product/watch_header',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/',
+  'origin' => 'http://www.mystore.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.024037s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch` [ RunTime:0.001148s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `type` FROM `watch` LIMIT 4 [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '电子表' [ RunTime:0.000285s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '石英表' [ RunTime:0.000310s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '机械表' [ RunTime:0.000303s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '智能手表' [ RunTime:0.000232s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `type` FROM `watch` LIMIT 4 [ RunTime:0.000327s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '电子表' ORDER BY `date` DESC [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '石英表' ORDER BY `date` DESC [ RunTime:0.000298s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '机械表' ORDER BY `date` DESC [ RunTime:0.000270s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '智能手表' ORDER BY `date` DESC [ RunTime:0.000241s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `type` FROM `watch` LIMIT 3 [ RunTime:0.000289s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`sell` FROM `watch` WHERE  `type` = '电子表' ORDER BY `sell` DESC [ RunTime:0.000300s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`sell` FROM `watch` WHERE  `type` = '石英表' ORDER BY `sell` DESC [ RunTime:0.000246s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`sell` FROM `watch` WHERE  `type` = '机械表' ORDER BY `sell` DESC [ RunTime:0.000244s ]
+---------------------------------------------------------------
+[2020-09-22T15:52:54+08:00] 127.0.0.1 GET www.mystore.com/upload/img/undefined
+[运行时间：0.012781s] [吞吐率：78.24req/s] [内存消耗：1,618.07kb] [文件加载：53]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[2020-09-22T15:52:55+08:00] 127.0.0.1 GET www.mystore.com/public/static/product/images/favicon.png
+[运行时间：0.013220s] [吞吐率：75.64req/s] [内存消耗：1,530.91kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[2020-09-22T15:52:55+08:00] 127.0.0.1 POST www.mystore.com/get_cart_info
+[运行时间：0.015993s] [吞吐率：62.53req/s] [内存消耗：2,006.28kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'get_cart_info',
+  'route' => 'product/product/get_cart_info',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/',
+  'origin' => 'http://www.mystore.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2020-09-22T15:52:55+08:00] 127.0.0.1 GET www.mystore.com/show_cart
+[运行时间：0.059397s] [吞吐率：16.84req/s] [内存消耗：2,306.88kb] [文件加载：67]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_cart',
+  'route' => 'product/product/show_cart',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\product\view\product\cart.html [ array (
+  0 => 'result',
+  1 => 'allPrice',
+) ]
+---------------------------------------------------------------
+[2020-09-22T15:52:56+08:00] 127.0.0.1 POST www.mystore.com/watch_header
+[运行时间：0.045134s] [吞吐率：22.16req/s] [内存消耗：3,362.13kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'watch_header',
+  'route' => 'product/product/watch_header',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_cart',
+  'origin' => 'http://www.mystore.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013884s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch` [ RunTime:0.000658s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `type` FROM `watch` LIMIT 4 [ RunTime:0.000323s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '电子表' [ RunTime:0.000356s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '石英表' [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '机械表' [ RunTime:0.000319s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '智能手表' [ RunTime:0.000307s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `type` FROM `watch` LIMIT 4 [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '电子表' ORDER BY `date` DESC [ RunTime:0.000258s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '石英表' ORDER BY `date` DESC [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '机械表' ORDER BY `date` DESC [ RunTime:0.000310s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '智能手表' ORDER BY `date` DESC [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `type` FROM `watch` LIMIT 3 [ RunTime:0.000315s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`sell` FROM `watch` WHERE  `type` = '电子表' ORDER BY `sell` DESC [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`sell` FROM `watch` WHERE  `type` = '石英表' ORDER BY `sell` DESC [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`sell` FROM `watch` WHERE  `type` = '机械表' ORDER BY `sell` DESC [ RunTime:0.000298s ]
+---------------------------------------------------------------
+[2020-09-22T15:52:57+08:00] 127.0.0.1 POST www.mystore.com/get_cart_info
+[运行时间：0.015885s] [吞吐率：62.95req/s] [内存消耗：2,006.33kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'get_cart_info',
+  'route' => 'product/product/get_cart_info',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_cart',
+  'origin' => 'http://www.mystore.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2020-09-22T15:56:09+08:00] 127.0.0.1 GET www.mystore.com/show_cart
+[运行时间：0.064398s] [吞吐率：15.53req/s] [内存消耗：2,308.72kb] [文件加载：67]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_cart',
+  'route' => 'product/product/show_cart',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\product\view\product\cart.html [ array (
+  0 => 'result',
+  1 => 'allPrice',
+) ]
+---------------------------------------------------------------
+[2020-09-22T15:56:09+08:00] 127.0.0.1 POST www.mystore.com/watch_header
+[运行时间：0.054466s] [吞吐率：18.36req/s] [内存消耗：3,363.61kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'watch_header',
+  'route' => 'product/product/watch_header',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_cart',
+  'origin' => 'http://www.mystore.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022732s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch` [ RunTime:0.001127s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `type` FROM `watch` LIMIT 4 [ RunTime:0.000301s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '电子表' [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '石英表' [ RunTime:0.000267s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '机械表' [ RunTime:0.000219s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '智能手表' [ RunTime:0.000243s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `type` FROM `watch` LIMIT 4 [ RunTime:0.000223s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '电子表' ORDER BY `date` DESC [ RunTime:0.000264s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '石英表' ORDER BY `date` DESC [ RunTime:0.000222s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '机械表' ORDER BY `date` DESC [ RunTime:0.000225s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '智能手表' ORDER BY `date` DESC [ RunTime:0.000274s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `type` FROM `watch` LIMIT 3 [ RunTime:0.000270s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`sell` FROM `watch` WHERE  `type` = '电子表' ORDER BY `sell` DESC [ RunTime:0.000470s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`sell` FROM `watch` WHERE  `type` = '石英表' ORDER BY `sell` DESC [ RunTime:0.000349s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`sell` FROM `watch` WHERE  `type` = '机械表' ORDER BY `sell` DESC [ RunTime:0.000327s ]
+---------------------------------------------------------------
+[2020-09-22T15:56:10+08:00] 127.0.0.1 POST www.mystore.com/get_cart_info
+[运行时间：0.015538s] [吞吐率：64.36req/s] [内存消耗：2,007.81kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'get_cart_info',
+  'route' => 'product/product/get_cart_info',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_cart',
+  'origin' => 'http://www.mystore.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2020-09-22T15:56:11+08:00] 127.0.0.1 GET www.mystore.com/show_index
+[运行时间：0.106077s] [吞吐率：9.43req/s] [内存消耗：3,877.31kb] [文件加载：81]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_index',
+  'route' => 'index/index/show_index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_cart',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\index\view\index\index.html [ array (
+  0 => 'randWatch',
+  1 => 'featureOne',
+  2 => 'featureTwo',
+  3 => 'type',
+  4 => 'watches',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011067s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch` [ RunTime:0.000666s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` ORDER BY rand() LIMIT 1 [ RunTime:0.000380s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` ORDER BY rand() LIMIT 10 [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` ORDER BY rand() LIMIT 10 [ RunTime:0.000342s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` ORDER BY `date` DESC LIMIT 10 [ RunTime:0.000322s ]
+---------------------------------------------------------------
+[2020-09-22T15:56:11+08:00] 127.0.0.1 POST www.mystore.com/watch_header
+[运行时间：0.050225s] [吞吐率：19.91req/s] [内存消耗：3,363.61kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'watch_header',
+  'route' => 'product/product/watch_header',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_index',
+  'origin' => 'http://www.mystore.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.019027s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch` [ RunTime:0.001303s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `type` FROM `watch` LIMIT 4 [ RunTime:0.000364s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '电子表' [ RunTime:0.000342s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '石英表' [ RunTime:0.000322s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '机械表' [ RunTime:0.000314s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '智能手表' [ RunTime:0.000322s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `type` FROM `watch` LIMIT 4 [ RunTime:0.000301s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '电子表' ORDER BY `date` DESC [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '石英表' ORDER BY `date` DESC [ RunTime:0.000313s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '机械表' ORDER BY `date` DESC [ RunTime:0.000342s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '智能手表' ORDER BY `date` DESC [ RunTime:0.000329s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `type` FROM `watch` LIMIT 3 [ RunTime:0.000318s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`sell` FROM `watch` WHERE  `type` = '电子表' ORDER BY `sell` DESC [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`sell` FROM `watch` WHERE  `type` = '石英表' ORDER BY `sell` DESC [ RunTime:0.000290s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`sell` FROM `watch` WHERE  `type` = '机械表' ORDER BY `sell` DESC [ RunTime:0.000273s ]
+---------------------------------------------------------------
+[2020-09-22T15:56:11+08:00] 127.0.0.1 GET www.mystore.com/upload/img/undefined
+[运行时间：0.013611s] [吞吐率：73.47req/s] [内存消耗：1,619.92kb] [文件加载：53]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[2020-09-22T15:56:12+08:00] 127.0.0.1 POST www.mystore.com/get_cart_info
+[运行时间：0.017517s] [吞吐率：57.09req/s] [内存消耗：2,007.81kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'get_cart_info',
+  'route' => 'product/product/get_cart_info',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_index',
+  'origin' => 'http://www.mystore.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2020-09-22T15:56:13+08:00] 127.0.0.1 GET www.mystore.com/show_login
+[运行时间：0.034793s] [吞吐率：28.74req/s] [内存消耗：2,247.98kb] [文件加载：66]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_login',
+  'route' => 'user/user/show_login',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\user\view\user\login.html [ array (
+) ]
+---------------------------------------------------------------
+[2020-09-22T15:56:13+08:00] 127.0.0.1 GET www.mystore.com/captcha
+[运行时间：0.014118s] [吞吐率：70.83req/s] [内存消耗：1,519.84kb] [文件加载：53]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'captcha/<id?>',
+  'route' => '\\think\\captcha\\CaptchaController@index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_login',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2020-09-22T15:56:13+08:00] 127.0.0.1 POST www.mystore.com/watch_header
+[运行时间：0.032086s] [吞吐率：31.17req/s] [内存消耗：3,363.61kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'watch_header',
+  'route' => 'product/product/watch_header',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_login',
+  'origin' => 'http://www.mystore.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000701s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch` [ RunTime:0.000544s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `type` FROM `watch` LIMIT 4 [ RunTime:0.000300s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '电子表' [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '石英表' [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '机械表' [ RunTime:0.000269s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '智能手表' [ RunTime:0.000310s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `type` FROM `watch` LIMIT 4 [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '电子表' ORDER BY `date` DESC [ RunTime:0.000315s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '石英表' ORDER BY `date` DESC [ RunTime:0.000324s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '机械表' ORDER BY `date` DESC [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '智能手表' ORDER BY `date` DESC [ RunTime:0.000303s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `type` FROM `watch` LIMIT 3 [ RunTime:0.000288s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`sell` FROM `watch` WHERE  `type` = '电子表' ORDER BY `sell` DESC [ RunTime:0.000255s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`sell` FROM `watch` WHERE  `type` = '石英表' ORDER BY `sell` DESC [ RunTime:0.000247s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`sell` FROM `watch` WHERE  `type` = '机械表' ORDER BY `sell` DESC [ RunTime:0.000243s ]
+---------------------------------------------------------------
+[2020-09-22T15:56:14+08:00] 127.0.0.1 POST www.mystore.com/get_cart_info
+[运行时间：0.015432s] [吞吐率：64.80req/s] [内存消耗：2,008.51kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'get_cart_info',
+  'route' => 'product/product/get_cart_info',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_login',
+  'origin' => 'http://www.mystore.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2020-09-22T15:56:20+08:00] 127.0.0.1 POST www.mystore.com/user_login
+[运行时间：0.037474s] [吞吐率：26.69req/s] [内存消耗：3,332.68kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'user_login',
+  'route' => 'user/user/user_login',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_login',
+  'origin' => 'http://www.mystore.com',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'content-length' => '41',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'kinson',
+  'password' => '123456',
+  'code' => 'fv6v',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014160s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001235s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = 'kinson'  AND `password` = '123456' LIMIT 1 [ RunTime:0.000343s ]
+---------------------------------------------------------------
+[2020-09-22T15:56:21+08:00] 127.0.0.1 GET www.mystore.com/show_index
+[运行时间：0.112617s] [吞吐率：8.88req/s] [内存消耗：3,877.41kb] [文件加载：81]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_index',
+  'route' => 'index/index/show_index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_login',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\index\view\index\index.html [ array (
+  0 => 'randWatch',
+  1 => 'featureOne',
+  2 => 'featureTwo',
+  3 => 'type',
+  4 => 'watches',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011862s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch` [ RunTime:0.000583s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` ORDER BY rand() LIMIT 1 [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` ORDER BY rand() LIMIT 10 [ RunTime:0.000299s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` ORDER BY rand() LIMIT 10 [ RunTime:0.000330s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` ORDER BY `date` DESC LIMIT 10 [ RunTime:0.000280s ]
+---------------------------------------------------------------
+[2020-09-22T15:56:21+08:00] 127.0.0.1 POST www.mystore.com/watch_header
+[运行时间：0.052761s] [吞吐率：18.95req/s] [内存消耗：3,363.61kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'watch_header',
+  'route' => 'product/product/watch_header',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_index',
+  'origin' => 'http://www.mystore.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.023228s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch` [ RunTime:0.000644s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `type` FROM `watch` LIMIT 4 [ RunTime:0.000317s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '电子表' [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '石英表' [ RunTime:0.000295s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '机械表' [ RunTime:0.000298s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '智能手表' [ RunTime:0.000294s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `type` FROM `watch` LIMIT 4 [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '电子表' ORDER BY `date` DESC [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '石英表' ORDER BY `date` DESC [ RunTime:0.000250s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '机械表' ORDER BY `date` DESC [ RunTime:0.000223s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '智能手表' ORDER BY `date` DESC [ RunTime:0.000216s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `type` FROM `watch` LIMIT 3 [ RunTime:0.000190s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`sell` FROM `watch` WHERE  `type` = '电子表' ORDER BY `sell` DESC [ RunTime:0.000309s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`sell` FROM `watch` WHERE  `type` = '石英表' ORDER BY `sell` DESC [ RunTime:0.000218s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`sell` FROM `watch` WHERE  `type` = '机械表' ORDER BY `sell` DESC [ RunTime:0.000183s ]
+---------------------------------------------------------------
+[2020-09-22T15:56:21+08:00] 127.0.0.1 GET www.mystore.com/upload/img/undefined
+[运行时间：0.014000s] [吞吐率：71.43req/s] [内存消耗：1,619.92kb] [文件加载：53]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[2020-09-22T15:56:22+08:00] 127.0.0.1 POST www.mystore.com/get_cart_info
+[运行时间：0.020487s] [吞吐率：48.81req/s] [内存消耗：2,007.88kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'get_cart_info',
+  'route' => 'product/product/get_cart_info',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_index',
+  'origin' => 'http://www.mystore.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2020-09-22T15:56:24+08:00] 127.0.0.1 GET www.mystore.com/show_user_center
+[运行时间：0.035930s] [吞吐率：27.83req/s] [内存消耗：2,241.66kb] [文件加载：66]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_user_center',
+  'route' => 'user/user/show_user_center',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\user\view\user\user_center.html [ array (
+) ]
+---------------------------------------------------------------
+[2020-09-22T15:56:24+08:00] 127.0.0.1 POST www.mystore.com/watch_header
+[运行时间：0.047470s] [吞吐率：21.07req/s] [内存消耗：3,363.61kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'watch_header',
+  'route' => 'product/product/watch_header',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_user_center',
+  'origin' => 'http://www.mystore.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016373s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch` [ RunTime:0.000675s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `type` FROM `watch` LIMIT 4 [ RunTime:0.000323s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '电子表' [ RunTime:0.000355s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '石英表' [ RunTime:0.000330s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '机械表' [ RunTime:0.000271s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '智能手表' [ RunTime:0.000237s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `type` FROM `watch` LIMIT 4 [ RunTime:0.000282s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '电子表' ORDER BY `date` DESC [ RunTime:0.000271s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '石英表' ORDER BY `date` DESC [ RunTime:0.000299s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '机械表' ORDER BY `date` DESC [ RunTime:0.000313s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '智能手表' ORDER BY `date` DESC [ RunTime:0.000284s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `type` FROM `watch` LIMIT 3 [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`sell` FROM `watch` WHERE  `type` = '电子表' ORDER BY `sell` DESC [ RunTime:0.000292s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`sell` FROM `watch` WHERE  `type` = '石英表' ORDER BY `sell` DESC [ RunTime:0.000302s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`sell` FROM `watch` WHERE  `type` = '机械表' ORDER BY `sell` DESC [ RunTime:0.000319s ]
+---------------------------------------------------------------
+[2020-09-22T15:56:25+08:00] 127.0.0.1 POST www.mystore.com/get_cart_info
+[运行时间：0.015539s] [吞吐率：64.35req/s] [内存消耗：2,007.88kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'get_cart_info',
+  'route' => 'product/product/get_cart_info',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=14cah8bp2t7q3hrfjk3k45sftd',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore.com/show_user_center',
+  'origin' => 'http://www.mystore.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'www.mystore.com',
+)
+[ info ] [ PARAM ] array (
+)
