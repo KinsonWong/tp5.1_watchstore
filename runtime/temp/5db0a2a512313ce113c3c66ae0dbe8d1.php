@@ -1,4 +1,4 @@
-<?php /*a:1:{s:83:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_product\watch_list.html";i:1600671691;}*/ ?>
+<?php /*a:1:{s:83:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_product\watch_list.html";i:1600930740;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -76,7 +76,7 @@
           { field: 'price', title: '售价(元)', width: 100, sort: true },
           { field: 'sell', title: '销量', width: 80, sort: true, },
           { field: 'store', title: '库存', width: 80, sort: true },
-          { fixed: 'right', title: '操作', width: 120, toolbar: '#barDemo' }
+          { title: '操作', width: 120, toolbar: '#barDemo' }
         ]],
         text: { none: '暂无相关数据', }
       });
