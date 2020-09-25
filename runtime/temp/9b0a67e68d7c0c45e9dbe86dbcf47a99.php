@@ -1,4 +1,4 @@
-<?php /*a:3:{s:73:"D:\phpstudy_pro\WWW\watchstore\application\product\view\product\cart.html";i:1600673039;s:40:"public/static/product/header/header.html";i:1600761367;s:40:"public/static/product/footer/footer.html";i:1600671831;}*/ ?>
+<?php /*a:3:{s:73:"D:\phpstudy_pro\WWW\watchstore\application\product\view\product\cart.html";i:1601016726;s:40:"public/static/product/header/header.html";i:1600997570;s:40:"public/static/product/footer/footer.html";i:1600671831;}*/ ?>
 <!DOCTYPE html>
 <html
     class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
@@ -279,6 +279,7 @@
         product_num: "0",
     };
     var type_vm = new Vue({
+        //挂载点 <div class="_type">
         el: "._type",
         data: type_data,
         methods: {
@@ -456,7 +457,7 @@
                                 </tr>
                             </tbody>
                             <?php else: ?>
-                            <span>您结算的订单金额小于需要付¥15.00运费</span>
+                            <span>结算金额小于¥599，需付¥15运费</span>
 
 
                             </td>

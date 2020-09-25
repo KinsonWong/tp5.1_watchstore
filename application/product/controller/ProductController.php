@@ -282,6 +282,13 @@ class ProductController extends Controller
             if($all_price < 599){   //订单金额小于599元，加收15元运费
                 $all_price += 15;
             }
+
+            $orderpayment=$request->payment;
+            if($orderpayment=="online-pay"){
+                $payment="线上支付";
+            }else{
+                $payment="货到付款";
+            }
             // 发布订单
             $WatchOrderModel = new WatchOrderModel();
             $WatchOrderModel->u_id = Session::get("uid");
@@ -289,6 +296,7 @@ class ProductController extends Controller
             $WatchOrderModel->date = date("Y-m-d H:i:s");
             $WatchOrderModel->h_a_id = $h_a_id;
             $WatchOrderModel->l_msg = $request->l_msg;
+            $WatchOrderModel->payment = $payment;
             $WatchOrderModel->all_price = $all_price;
             if($coupon_flag == 1){
                 $WatchOrderModel->discounts = $all_price*0.2;

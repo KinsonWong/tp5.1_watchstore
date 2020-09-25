@@ -1,4 +1,4 @@
-<?php /*a:3:{s:74:"D:\phpstudy_pro\WWW\watchstore\application\product\view\product\check.html";i:1600671730;s:40:"public/static/product/header/header.html";i:1600761367;s:40:"public/static/product/footer/footer.html";i:1600671831;}*/ ?>
+<?php /*a:3:{s:74:"D:\phpstudy_pro\WWW\watchstore\application\product\view\product\check.html";i:1601018902;s:40:"public/static/product/header/header.html";i:1600997570;s:40:"public/static/product/footer/footer.html";i:1600671831;}*/ ?>
 <!DOCTYPE html>
 <html
     class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
@@ -308,6 +308,7 @@
         product_num: "0",
     };
     var type_vm = new Vue({
+        //挂载点 <div class="_type">
         el: "._type",
         data: type_data,
         methods: {
@@ -432,7 +433,14 @@
                             </form>
                         </div>
                     </div>
+
+
                     <div class="different-address">
+                        <div class="checkout-form-list"><label for="checkout-mess">支付方式</label>
+                            <label style="margin: 0 0 10px;"><input id="cbox" type="radio" v-model="payment" value="online-pay" checked/>线上支付</label>
+                            <label style="margin: 0 0 10px;"><input id="cbox" type="radio" v-model="payment" value="cash-pay"/>货到付款</label>
+                        </div>
+
                         <div class="order-notes">
                             <div class="checkout-form-list"><label for="checkout-mess">买家留言</label>
                                 <textarea placeholder="请输入您的留言" v-model="l_mes" rows="10" cols="30"
@@ -567,6 +575,7 @@
         is_add_harvest: false
     }
     var vm = new Vue({
+        //挂载点为 <div class="checkout-area mb-70 app">
         el: ".app",
         data: data,
         methods: {
@@ -582,6 +591,9 @@
                 } else {
                     params = $("#choice_harvest").serialize()
                 }
+                //支付方式
+                params += "&payment=" + vm.payment;
+                //买家留言
                 if (vm.l_mes != "") {
                     params += "&l_msg=" + vm.l_mes;
                 }

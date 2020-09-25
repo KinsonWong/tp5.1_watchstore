@@ -73,14 +73,15 @@
           elem: '#demo',
           url: "{:url('/get_order_list')}" ,//数据接口
           page: true ,//开启分页
-          limit:8,
+          limit:10,
           cellMinWidth: 40, //全局定义常规单元格的最小宽度
           cols: [[ //表头
           {type: 'checkbox'},
           {field: 'o_id', title: '订单号',width:90,sort: true},
           {field: 'detail', title: '订单详情',width:300,templet: '#titleTpl'},
           {field: 'consignee', title: '收件人',width:100,},
-          {field: 'contact', title: '联系电话'} ,
+          {field: 'contact', title: '联系电话'},
+          {field: 'payment', width:100,title: '支付方式',sort: true},
           {field: 'all_price', title: '应付金额',width:110,sort: true},
           {field: 'discounts', title: '优惠金额',width:110,sort: true},
           {field: 'pay', title: '实付金额',width:110,sort: true},

@@ -6481,9 +6481,9 @@ p.checkout-coupon input[type="submit"] {
 
 .checkout-form-list input#cbox {
     float: left;
-    height: 0;
+    height: 20px;
     position: relative;
-    width: 2%;
+    width: 3%;
 }
 
 .create-acc label {

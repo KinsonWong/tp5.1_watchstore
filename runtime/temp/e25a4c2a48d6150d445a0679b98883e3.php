@@ -1,4 +1,4 @@
-<?php /*a:4:{s:70:"D:\phpstudy_pro\WWW\watchstore\application\index\view\index\index.html";i:1600936728;s:40:"public/static/product/header/header.html";i:1600997570;s:40:"public/static/product/footer/footer.html";i:1600671831;s:40:"public/static/product/dialog/dialog.html";i:1600672004;}*/ ?>
+<?php /*a:4:{s:70:"D:\phpstudy_pro\WWW\watchstore\application\index\view\index\index.html";i:1601016482;s:40:"public/static/product/header/header.html";i:1600997570;s:40:"public/static/product/footer/footer.html";i:1600671831;s:40:"public/static/product/dialog/dialog.html";i:1600672004;}*/ ?>
 <!DOCTYPE html>
 <html
     class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
@@ -326,7 +326,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
                     <div class="single-banner">
-                        <div class="banner-img"><a href="#"><img src="/public/static/product/images/40.png" alt="banner"></a></div>
+                        <div class="banner-img"><a href="javascript:void(0);"><img src="/public/static/product/images/40.png" alt="banner"></a></div>
                         <div class="banner-text">
                             <h4>免费配送订单</h4>
                             <p>订单金额大于¥599</p>
@@ -335,16 +335,16 @@
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
                     <div class="single-banner">
-                        <div class="banner-img"><a href="#"><img src="/public/static/product/images/2.png" alt="banner"></a></div>
+                        <div class="banner-img"><a href="javascript:void(0);"><img src="/public/static/product/images/2.png" alt="banner"></a></div>
                         <div class="banner-text">
                             <h4>退款保证</h4>
-                            <p>100%退款保证</p>
+                            <p>7天无理由退款</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 hidden-sm col-xs-12">
                     <div class="single-banner">
-                        <div class="banner-img"><a href="#"><img src="/public/static/product/images/3.png" alt="banner"></a></div>
+                        <div class="banner-img"><a href="javascript:void(0);"><img src="/public/static/product/images/3.png" alt="banner"></a></div>
                         <div class="banner-text">
                             <h4>货到付款</h4>
                             <p>支持货到付款</p>
@@ -353,7 +353,7 @@
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
                     <div class="single-banner mrg-none-xs">
-                        <div class="banner-img"><a href="#"><img src="/public/static/product/images/4.png" alt="banner"></a></div>
+                        <div class="banner-img"><a href="javascript:void(0);"><img src="/public/static/product/images/4.png" alt="banner"></a></div>
                         <div class="banner-text">
                             <h4>帮助 &amp; 支持</h4>
                             <p>联系我们 : xxx-xxxxxxxx</p>
@@ -479,7 +479,7 @@
                                                     <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                 </ul>
                                             </div>
-                                            <h4><a href="<?php echo url('/show_details'); ?>/bid/<?php echo htmlentities($watch['bid']); ?>"><?php echo htmlentities($watch['bname']); ?></a>
+                                            <h4><a href="<?php echo url('/show_details'); ?>/bid/<?php echo htmlentities($watch['bid']); ?>" style="height: 60px;"><?php echo htmlentities($watch['bname']); ?></a>
                                             </h4>
                                             <div class="product-price">
                                                 <ul>
@@ -504,7 +504,6 @@
                                 </div>
                                 <?php endforeach; ?>
                             </div>
-                            <!--这是一个-->
 
                         </div>
 
@@ -550,7 +549,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="banner-img-2"><a href="#"><img src="/public/static/product/images/999.png" alt="banner"></a>
+                        <div class="banner-img-2"><a href="javascript:void(0);"><img src="/public/static/product/images/999.png" alt="banner"></a>
                             <div class="banner-text">
                                 <h3>一个月内注册的新会员</h3>
                                 <h3 class="spe_text">
@@ -609,7 +608,7 @@
                                                     <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                 </ul>
                                             </div>
-                                            <h4><a
+                                            <h4><a style="height:60px;"
                                                     href="<?php echo url('/show_details'); ?>/bid/<?php echo htmlentities($feature_watch1['bid']); ?>"><?php echo htmlentities($feature_watch1['bname']); ?></a>
                                             </h4>
                                             <div class="product-price">
@@ -669,7 +668,7 @@
                                                     <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                 </ul>
                                             </div>
-                                            <h4><a
+                                            <h4><a style="height:60px;"
                                                     href="<?php echo url('/show_details'); ?>/bid/<?php echo htmlentities($feature_watch2['bid']); ?>"><?php echo htmlentities($feature_watch2['bname']); ?></a>
                                             </h4>
                                             <div class="product-price">

@@ -128,7 +128,14 @@
                             </form>
                         </div>
                     </div>
+
+
                     <div class="different-address">
+                        <div class="checkout-form-list"><label for="checkout-mess">支付方式</label>
+                            <label style="margin: 0 0 10px;"><input id="cbox" type="radio" v-model="payment" value="online-pay" checked/>线上支付</label>
+                            <label style="margin: 0 0 10px;"><input id="cbox" type="radio" v-model="payment" value="cash-pay"/>货到付款</label>
+                        </div>
+
                         <div class="order-notes">
                             <div class="checkout-form-list"><label for="checkout-mess">买家留言</label>
                                 <textarea placeholder="请输入您的留言" v-model="l_mes" rows="10" cols="30"
@@ -152,6 +159,7 @@
         is_add_harvest: false
     }
     var vm = new Vue({
+        //挂载点为 <div class="checkout-area mb-70 app">
         el: ".app",
         data: data,
         methods: {
@@ -167,6 +175,9 @@
                 } else {
                     params = $("#choice_harvest").serialize()
                 }
+                //支付方式
+                params += "&payment=" + vm.payment;
+                //买家留言
                 if (vm.l_mes != "") {
                     params += "&l_msg=" + vm.l_mes;
                 }

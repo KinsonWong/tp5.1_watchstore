@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version: 5.7.26)
-# Date: 2020-09-24 16:09:28
+# Date: 2020-09-25 15:42:23
 # Generator: MySQL-Front 5.3  (Build 4.234)
 
 /*!40101 SET NAMES utf8 */;
@@ -31,13 +31,13 @@ CREATE TABLE `order_detail` (
   `b_id` int(11) DEFAULT NULL,
   `num` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 #
 # Data for table "order_detail"
 #
 
-INSERT INTO `order_detail` VALUES (17,12,10,1),(18,13,19,1),(19,14,11,1),(20,15,9,1),(21,15,8,2),(24,18,8,10),(25,19,19,4),(26,20,10,1),(27,21,29,1);
+INSERT INTO `order_detail` VALUES (17,12,10,1),(18,13,19,1),(19,14,11,1),(20,15,9,1),(21,15,8,2),(24,18,8,10),(25,19,19,4),(26,20,10,1),(27,21,29,1),(28,22,23,1),(29,23,24,1),(30,24,26,1);
 
 #
 # Structure for table "order_state"
@@ -120,13 +120,13 @@ CREATE TABLE `watch` (
   `cover` varchar(255) DEFAULT NULL,
   `sell` int(10) DEFAULT NULL,
   PRIMARY KEY (`bid`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
 
 #
 # Data for table "watch"
 #
 
-INSERT INTO `watch` VALUES (8,'CASIO 卡西欧 G-SHOCK 经典复古防水男士手表','CASIO 卡西欧 G-SHOCK 经典复古防水男士手表','W-218H-1A','184','卡西欧(CASIO)','2020-09-04','电子表',35,'5f51f6c3c4392.jpg',15),(9,'CASIO 卡西欧 G-SHOCK 运动防水手表男表 黑金','GA-110系列 黑金双显','GA-110GB-1A','1490','卡西欧(CASIO)','2020-09-06','电子表',57,'5f54d3e6c421b.jpg',9),(10,'TISSOT 天梭 俊雅系列 皮带石英男表','TISSOT 天梭 俊雅系列 皮带石英男表 玫瑰金','T063.610.36.037.00','2550','天梭(TISSOT)','2020-09-06','石英表',11,'5f54db9af3845.jpg',5),(11,'Emporio Armani 阿玛尼 男士手表经典休闲机械镂空时尚男腕表 珍珠白','Emporio Armani 阿玛尼 男士手表经典休闲机械镂空时尚男腕表 珍珠白','AR60007','3999','阿玛尼(Emporio Armani)','2020-09-09','机械表',14,'5f5884159baab.jpg',5),(19,'HUAWEI 华为 WATCH GT2 46MM 智能手表 曜石黑','HUAWEI 华为 WATCH GT2 46MM 智能手表 曜石黑','WATCH GT2-曜石黑','1488','华为(HUAWEI)','2020-09-10','智能手表',16,'5f59e1954b32b.jpg',9),(21,'Emporio Armani 阿玛尼 皮带时尚简约石英手表防水日历男表','Emporio Armani 阿玛尼 皮带时尚简约石英手表防水日历男表','AR2502','1799','阿玛尼(Emporio Armani)','2020-09-24','石英表',25,'5f6c408ba1eb5.jpg',0),(22,'DanielWellington 丹尼尔惠灵顿 DW 32MM 石英手表金边黑色钢带女表','DanielWellington 丹尼尔惠灵顿 DW 32MM 石英手表金边黑色钢带女表','DW00100201','1390','丹尼尔惠灵顿(DanielWellington)','2020-09-24','石英表',15,'5f6c43969aa2c.jpg',0),(23,'TIMEX 天美时 简约夜光石英表欧美表蓝色男表','TIMEX 天美时 简约夜光石英表欧美表蓝色男表','TW4B14100','599','天美时(TIMEX)','2020-09-24','石英表',58,'5f6c455a3f44e.jpg',0),(24,'CASIO 卡西欧 G-SHOCK 方形小金块 防水运动男士手表','CASIO 卡西欧 G-SHOCK 方形小金块 防水运动男士手表','GMW-B500GD-9','3999','卡西欧(CASIO)','2020-09-24','电子表',26,'5f6c483d35190.jpg',0),(25,'CASIO 卡西欧 G-SHOCK 小银块 太阳能不锈钢男士手表','CASIO 卡西欧 G-SHOCK 小银块 太阳能不锈钢男士手表','GMW-B5000D-1','3699','卡西欧(CASIO)','2020-09-24','电子表',24,'5f6c4a692c9b1.jpg',0),(26,'LONGINES 浪琴 康卡斯潜水系列 39MM 自动机械男士腕表','LONGINES 浪琴 康卡斯潜水系列 39MM 自动机械男士腕表','L3.741.4.56.6','9999','浪琴(LONGINES)','2020-09-24','机械表',13,'5f6c4c1e1a5be.jpg',0),(27,'SEIKO 精工 绿水鬼机械表潜水表 男款 绿色','SEIKO 精工 绿水鬼机械表潜水表 男款 绿色','SPB103J1','5880','精工(SEIKO)','2020-09-24','机械表',26,'5f6c4d878439d.jpg',0),(28,'Garmin 佳明 vivoactive3音乐版黑色 VA3M 运动智能手表','Garmin 佳明 vivoactive3音乐版黑色 VA3M 运动智能手表','010-01985-22','2080','佳明(Garmin)','2020-09-24','智能手表',19,'5f6c4f36e0ec5.jpg',0),(29,'苹果 APPLE Watch Series 5 智能手表 黑色','苹果 APPLE Watch Series 5 智能手表','APPLE Watch Series 5 - 黑','3199','苹果(APPLE)','2020-09-24','智能手表',12,'5f6c5068b8235.jpg',1);
+INSERT INTO `watch` VALUES (8,'CASIO 卡西欧 G-SHOCK 经典复古防水男士手表','CASIO 卡西欧 G-SHOCK 经典复古防水男士手表','W-218H-1A','184','卡西欧(CASIO)','2020-09-04','电子表',35,'5f51f6c3c4392.jpg',15),(9,'CASIO 卡西欧 G-SHOCK 运动防水手表男表 黑金','GA-110系列 黑金双显','GA-110GB-1A','1490','卡西欧(CASIO)','2020-09-06','电子表',57,'5f54d3e6c421b.jpg',9),(10,'TISSOT 天梭 俊雅系列 皮带石英男表','TISSOT 天梭 俊雅系列 皮带石英男表 玫瑰金','T063.610.36.037.00','2550','天梭(TISSOT)','2020-09-06','石英表',11,'5f54db9af3845.jpg',5),(11,'Emporio Armani 阿玛尼 男士手表经典休闲机械镂空时尚男腕表 珍珠白','Emporio Armani 阿玛尼 男士手表经典休闲机械镂空时尚男腕表 珍珠白','AR60007','3999','阿玛尼(Emporio Armani)','2020-09-09','机械表',14,'5f5884159baab.jpg',5),(19,'HUAWEI 华为 WATCH GT2 46MM 智能手表 曜石黑','HUAWEI 华为 WATCH GT2 46MM 智能手表 曜石黑','WATCH GT2-曜石黑','1488','华为(HUAWEI)','2020-09-10','智能手表',16,'5f59e1954b32b.jpg',9),(21,'Emporio Armani 阿玛尼 皮带时尚简约石英手表防水日历男表','Emporio Armani 阿玛尼 皮带时尚简约石英手表防水日历男表','AR2502','1799','阿玛尼(Emporio Armani)','2020-09-24','石英表',25,'5f6c408ba1eb5.jpg',0),(22,'DanielWellington 丹尼尔惠灵顿 DW 32MM 石英手表金边黑色钢带女表','DanielWellington 丹尼尔惠灵顿 DW 32MM 石英手表金边黑色钢带女表','DW00100201','1390','丹尼尔惠灵顿(DanielWellington)','2020-09-24','石英表',15,'5f6c43969aa2c.jpg',0),(23,'TIMEX 天美时 简约夜光石英表欧美表蓝色男表','TIMEX 天美时 简约夜光石英表欧美表蓝色男表','TW4B14100','599','天美时(TIMEX)','2020-09-24','石英表',57,'5f6c455a3f44e.jpg',1),(24,'CASIO 卡西欧 G-SHOCK 方形小金块 防水运动男士手表','CASIO 卡西欧 G-SHOCK 方形小金块 防水运动男士手表','GMW-B500GD-9','3999','卡西欧(CASIO)','2020-09-24','电子表',25,'5f6c483d35190.jpg',1),(25,'CASIO 卡西欧 G-SHOCK 小银块 太阳能不锈钢男士手表','CASIO 卡西欧 G-SHOCK 小银块 太阳能不锈钢男士手表','GMW-B5000D-1','3699','卡西欧(CASIO)','2020-09-24','电子表',24,'5f6c4a692c9b1.jpg',0),(26,'LONGINES 浪琴 康卡斯潜水系列 39MM 自动机械男士腕表','LONGINES 浪琴 康卡斯潜水系列 39MM 自动机械男士腕表','L3.741.4.56.6','9999','浪琴(LONGINES)','2020-09-24','机械表',12,'5f6c4c1e1a5be.jpg',1),(27,'SEIKO 精工 绿水鬼机械表潜水表 男款 绿色','SEIKO 精工 绿水鬼机械表潜水表 男款 绿色','SPB103J1','5880','精工(SEIKO)','2020-09-24','机械表',26,'5f6c4d878439d.jpg',0),(28,'Garmin 佳明 vivoactive3音乐版黑色 VA3M 运动智能手表','Garmin 佳明 vivoactive3音乐版黑色 VA3M 运动智能手表','010-01985-22','2080','佳明(Garmin)','2020-09-24','智能手表',19,'5f6c4f36e0ec5.jpg',0),(29,'苹果 APPLE Watch Series 5 智能手表 黑色','苹果 APPLE Watch Series 5 智能手表','APPLE Watch Series 5 - 黑','3199','苹果(APPLE)','2020-09-24','智能手表',12,'5f6c5068b8235.jpg',1);
 
 #
 # Structure for table "watch_img"
@@ -160,11 +160,12 @@ CREATE TABLE `watch_order` (
   `date` varchar(255) DEFAULT NULL,
   `status` varchar(255) DEFAULT NULL,
   `l_msg` varchar(255) DEFAULT NULL,
+  `payment` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`o_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 
 #
 # Data for table "watch_order"
 #
 
-INSERT INTO `watch_order` VALUES (13,1,1488,297.6,1190.4,1,'888888888888','2020-09-15 14:18:46','2',NULL),(15,6,1858,371.6,1486.4,3,'12345678912388','2020-09-18 10:38:58','2',NULL),(18,6,1840,0,1840,3,NULL,'2020-09-18 16:46:12','1',NULL),(19,6,5952,0,5952,3,NULL,'2020-09-18 21:05:43','1',NULL),(20,2,2550,0,2550,4,NULL,'2020-09-19 13:38:59','1','66666666'),(21,6,3199,639.8,2559.2,3,NULL,'2020-09-24 15:54:49','1',NULL);
+INSERT INTO `watch_order` VALUES (13,1,1488,297.6,1190.4,1,'888888888888','2020-09-15 14:18:46','2',NULL,'线上支付'),(15,6,1858,371.6,1486.4,3,'12345678912388','2020-09-18 10:38:58','2',NULL,'线上支付'),(18,6,1840,0,1840,3,NULL,'2020-09-18 16:46:12','1',NULL,'线上支付'),(19,6,5952,0,5952,3,NULL,'2020-09-18 21:05:43','1',NULL,'线上支付'),(20,2,2550,0,2550,4,NULL,'2020-09-19 13:38:59','1','66666666','线上支付'),(21,6,3199,639.8,2559.2,3,NULL,'2020-09-24 15:54:49','1',NULL,'线上支付'),(22,2,599,0,599,4,NULL,'2020-09-25 15:22:40','1','6666666','线上支付'),(23,2,3999,0,3999,4,NULL,'2020-09-25 15:32:33','1','88888888','线上支付'),(24,1,9999,1999.8,7999.2,7,NULL,'2020-09-25 15:35:45','1','顺丰快递PLZ','货到付款');
