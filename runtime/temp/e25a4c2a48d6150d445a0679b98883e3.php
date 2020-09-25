@@ -1,4 +1,4 @@
-<?php /*a:4:{s:70:"D:\phpstudy_pro\WWW\watchstore\application\index\view\index\index.html";i:1600671563;s:40:"public/static/product/header/header.html";i:1600761367;s:40:"public/static/product/footer/footer.html";i:1600671831;s:40:"public/static/product/dialog/dialog.html";i:1600672004;}*/ ?>
+<?php /*a:4:{s:70:"D:\phpstudy_pro\WWW\watchstore\application\index\view\index\index.html";i:1600936728;s:40:"public/static/product/header/header.html";i:1600761367;s:40:"public/static/product/footer/footer.html";i:1600671831;s:40:"public/static/product/dialog/dialog.html";i:1600672004;}*/ ?>
 <!DOCTYPE html>
 <html
     class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
@@ -553,7 +553,6 @@
                             <div class="banner-text">
                                 <h3>一个月内注册的新会员</h3>
                                 <h3 class="spe_text">
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     输入"freshman"优惠码</h3>
                                 <h2>最多可享受30%的折扣</h2>
                             </div>
