@@ -4,6 +4,7 @@
     lang="en">
 
 <head>
+    <meta name="renderer" content="webkit">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>商品列表</title>
@@ -98,7 +99,7 @@
                                                             </ul>
                                                         </div>
                                                         <h4>
-                                                            <a
+                                                            <a 
                                                                 href="{:url('/show_details')}/bid/{$watchOrderItem.bid}">{$watchOrderItem.bname}</a>
                                                         </h4>
                                                         <div class="product-price">
@@ -167,13 +168,12 @@
                                             </div>
                                             <h4>
                                                 <input type="hidden" name="bid" value="{$watchDataItem.bid}">
-                                                <a
+                                                <a style="height:60px" 
                                                     href="{:url('/show_details')}/bid/{$watchDataItem.bid}">{$watchDataItem.bname}</a>
                                             </h4>
                                             <div class="product-price">
                                                 <ul>
                                                     <li>￥{$watchDataItem.price}</li>
-                                                    <!--<li class="old-price">￥{$watchDataItem.price}</li>-->
                                                 </ul>
                                             </div>
                                         </div>
@@ -211,8 +211,9 @@
     </div>
     </div>
     </div>
-    {include file="public/static/product/footer/footer.html"}
     {include file="public/static/product/dialog/dialog.html"}
+    {include file="public/static/product/footer/footer.html"}
+    
 </body>
 
 </html>

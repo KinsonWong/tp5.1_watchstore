@@ -1,10 +1,11 @@
-<?php /*a:4:{s:74:"D:\phpstudy_pro\WWW\watchstore\application\product\view\product\plist.html";i:1600671759;s:40:"public/static/product/header/header.html";i:1600761367;s:40:"public/static/product/footer/footer.html";i:1600671831;s:40:"public/static/product/dialog/dialog.html";i:1600672004;}*/ ?>
+<?php /*a:4:{s:74:"D:\phpstudy_pro\WWW\watchstore\application\product\view\product\plist.html";i:1601002346;s:40:"public/static/product/header/header.html";i:1600997570;s:40:"public/static/product/dialog/dialog.html";i:1600672004;s:40:"public/static/product/footer/footer.html";i:1600671831;}*/ ?>
 <!DOCTYPE html>
 <html
     class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
     lang="en">
 
 <head>
+    <meta name="renderer" content="webkit">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>商品列表</title>
@@ -276,6 +277,7 @@
         product_num: "0",
     };
     var type_vm = new Vue({
+        //挂载点 <div class="_type">
         el: "._type",
         data: type_data,
         methods: {
@@ -403,7 +405,7 @@
                                                             </ul>
                                                         </div>
                                                         <h4>
-                                                            <a
+                                                            <a 
                                                                 href="<?php echo url('/show_details'); ?>/bid/<?php echo htmlentities($watchOrderItem['bid']); ?>"><?php echo htmlentities($watchOrderItem['bname']); ?></a>
                                                         </h4>
                                                         <div class="product-price">
@@ -472,13 +474,12 @@
                                             </div>
                                             <h4>
                                                 <input type="hidden" name="bid" value="<?php echo htmlentities($watchDataItem['bid']); ?>">
-                                                <a
+                                                <a style="height:60px" 
                                                     href="<?php echo url('/show_details'); ?>/bid/<?php echo htmlentities($watchDataItem['bid']); ?>"><?php echo htmlentities($watchDataItem['bname']); ?></a>
                                             </h4>
                                             <div class="product-price">
                                                 <ul>
                                                     <li>￥<?php echo htmlentities($watchDataItem['price']); ?></li>
-                                                    <!--<li class="old-price">￥<?php echo htmlentities($watchDataItem['price']); ?></li>-->
                                                 </ul>
                                             </div>
                                         </div>
@@ -516,118 +517,6 @@
     </div>
     </div>
     </div>
-    <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-
-<body>
-    <script src="/public/static/product/js/jquery-1.12.0.min.js"></script><!-- bootstrap js -->
-    <script src="/public/static/product/js/bootstrap.min.js"></script><!-- owl.carousel js -->
-    <script src="/public/static/product/js/owl.carousel.min.js"></script><!-- meanmenu js -->
-    <script src="/public/static/product/js/jquery.meanmenu.js"></script><!-- wow js -->
-    <script src="/public/static/product/js/wow.min.js"></script><!-- jquery.parallax-1.1.3.js -->
-    <script src="/public/static/product/js/jquery.parallax-1.1.3.js"></script><!-- jquery.countdown.min.js -->
-    <script src="/public/static/product/js/jquery.countdown.min.js"></script><!-- jquery.flexslider.js -->
-    <script src="/public/static/product/js/jquery.flexslider.js"></script><!-- chosen.jquery.min.js -->
-    <script src="/public/static/product/js/chosen.jquery.min.js"></script><!-- jquery.counterup.min.js -->
-    <script src="/public/static/product/js/jquery.counterup.min.js"></script><!-- waypoints.min.js -->
-    <script src="/public/static/product/js/waypoints.min.js"></script><!-- plugins js -->
-    <script src="/public/static/product/js/plugins.js"></script><!-- main js -->
-    <script src="/public/static/product/js/main.js"></script>
-    <footer>
-        <!-- footer-top-start -->
-        <div class="footer-mid ptb-50">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-md-8 col-sm-12">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                <div class="single-footer br-2 xs-mb">
-                                    <div class="footer-title mb-20">
-                                        <h3>商品</h3>
-                                    </div>
-                                    <div class="footer-mid-menu">
-                                        <ul>
-
-                                            <li><a href="<?php echo url('/show_index'); ?>#pos">最新商品</a></li>
-                                            <li><a href="<?php echo url('/show_index'); ?>/type/2#pos">销量最高</a></li>
-                                            <li><a href="<?php echo url('/show_index'); ?>/type/3#pos">主打商品</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                <div class="single-footer br-2 xs-mb">
-                                    <div class="footer-title mb-20">
-                                        <h3>公司</h3>
-                                    </div>
-                                    <div class="footer-mid-menu">
-                                        <ul>
-                                            <li><a href="javascript:void(0);">关于我们</a></li>
-                                            <li><a href="javascript:void(0);">联系我们</a></li>
-                                            <li><a href="javascript:void(0);">线下门店</a> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                <div class="single-footer br-2 xs-mb">
-                                    <div class="footer-title mb-20">
-                                        <h3>您的账户</h3>
-                                    </div>
-                                    <div class="footer-mid-menu">
-                                        <ul>
-                                            <li><a href="javascript:void(0);">收货地址</a></li>
-                                            <li><a href="javascript:void(0);">绑定银行卡</a></li>
-                                            <li><a href="<?php echo url('/show_user_order'); ?>">我的订单</a></li>
-                                            <li><a href="javascript:void(0);">个人信息</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <div class="single-footer mrg-sm">
-                            <div class="footer-title mb-20">
-                                <h3>其它</h3>
-                            </div>
-                            <div class="footer-contact">
-                                <p><span>联系我们：</span>xxx-xxxxxxxx</p>
-                                <p><span>Email：</span> xxxxx@mail.com</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- footer-mid-end -->
-        <!-- footer-bottom-start -->
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row bt-2">
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="copy-right-area">
-                            <p>2020 Copyright @ Watch League All Right Reserved.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="payment-img text-right"><a href="javascript:void(0);"><img
-                                    src="/public/static/product/images/1.png" style="width:294px; height:32px" alt="payment"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- footer-bottom-end -->
-    </footer><!-- footer-area-end -->
-    <!-- all js here -->
-    <!-- jquery latest version -->
-</body>
-
-</html>
     <style>
     .btn-add-cart {
         display: inline-block;
@@ -802,6 +691,119 @@
         vm.add_cart(bid)
     }
 </script>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script src="/public/static/product/js/jquery-1.12.0.min.js"></script><!-- bootstrap js -->
+    <script src="/public/static/product/js/bootstrap.min.js"></script><!-- owl.carousel js -->
+    <script src="/public/static/product/js/owl.carousel.min.js"></script><!-- meanmenu js -->
+    <script src="/public/static/product/js/jquery.meanmenu.js"></script><!-- wow js -->
+    <script src="/public/static/product/js/wow.min.js"></script><!-- jquery.parallax-1.1.3.js -->
+    <script src="/public/static/product/js/jquery.parallax-1.1.3.js"></script><!-- jquery.countdown.min.js -->
+    <script src="/public/static/product/js/jquery.countdown.min.js"></script><!-- jquery.flexslider.js -->
+    <script src="/public/static/product/js/jquery.flexslider.js"></script><!-- chosen.jquery.min.js -->
+    <script src="/public/static/product/js/chosen.jquery.min.js"></script><!-- jquery.counterup.min.js -->
+    <script src="/public/static/product/js/jquery.counterup.min.js"></script><!-- waypoints.min.js -->
+    <script src="/public/static/product/js/waypoints.min.js"></script><!-- plugins js -->
+    <script src="/public/static/product/js/plugins.js"></script><!-- main js -->
+    <script src="/public/static/product/js/main.js"></script>
+    <footer>
+        <!-- footer-top-start -->
+        <div class="footer-mid ptb-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-12">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                <div class="single-footer br-2 xs-mb">
+                                    <div class="footer-title mb-20">
+                                        <h3>商品</h3>
+                                    </div>
+                                    <div class="footer-mid-menu">
+                                        <ul>
+
+                                            <li><a href="<?php echo url('/show_index'); ?>#pos">最新商品</a></li>
+                                            <li><a href="<?php echo url('/show_index'); ?>/type/2#pos">销量最高</a></li>
+                                            <li><a href="<?php echo url('/show_index'); ?>/type/3#pos">主打商品</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                <div class="single-footer br-2 xs-mb">
+                                    <div class="footer-title mb-20">
+                                        <h3>公司</h3>
+                                    </div>
+                                    <div class="footer-mid-menu">
+                                        <ul>
+                                            <li><a href="javascript:void(0);">关于我们</a></li>
+                                            <li><a href="javascript:void(0);">联系我们</a></li>
+                                            <li><a href="javascript:void(0);">线下门店</a> </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                <div class="single-footer br-2 xs-mb">
+                                    <div class="footer-title mb-20">
+                                        <h3>您的账户</h3>
+                                    </div>
+                                    <div class="footer-mid-menu">
+                                        <ul>
+                                            <li><a href="javascript:void(0);">收货地址</a></li>
+                                            <li><a href="javascript:void(0);">绑定银行卡</a></li>
+                                            <li><a href="<?php echo url('/show_user_order'); ?>">我的订单</a></li>
+                                            <li><a href="javascript:void(0);">个人信息</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="single-footer mrg-sm">
+                            <div class="footer-title mb-20">
+                                <h3>其它</h3>
+                            </div>
+                            <div class="footer-contact">
+                                <p><span>联系我们：</span>xxx-xxxxxxxx</p>
+                                <p><span>Email：</span> xxxxx@mail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- footer-mid-end -->
+        <!-- footer-bottom-start -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row bt-2">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="copy-right-area">
+                            <p>2020 Copyright @ Watch League All Right Reserved.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="payment-img text-right"><a href="javascript:void(0);"><img
+                                    src="/public/static/product/images/1.png" style="width:294px; height:32px" alt="payment"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- footer-bottom-end -->
+    </footer><!-- footer-area-end -->
+    <!-- all js here -->
+    <!-- jquery latest version -->
+</body>
+
+</html>
+    
 </body>
 
 </html>

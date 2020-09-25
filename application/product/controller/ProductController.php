@@ -58,19 +58,19 @@ class ProductController extends Controller
             }
             $this->assign("catalog_list", $data);
             // 销量排名
-            $watchOrderData = WatchModel::order("sell desc")->limit(8)->select();
+            $watchOrderData = WatchModel::order("sell desc")->limit(5)->select();
             $this->assign("watchOrderData", $watchOrderData);
             // 展示商品列表
             $WatchModel = new WatchModel();
             if ($type != null) {
                 // 根据类型进行商品展示
-                $watchData = $WatchModel->where("type", $type)->paginate(10);
+                $watchData = $WatchModel->where("type", $type)->paginate(12);
             } else if ($search != null){
                 // 搜索商品
-                $watchData = $WatchModel->whereLike("bname", "%".$search."%")->paginate(10);
+                $watchData = $WatchModel->whereLike("bname", "%".$search."%")->paginate(12);
             }else {
                 // 直接查询watch数据库商品
-                $watchData = $WatchModel->paginate(10);
+                $watchData = $WatchModel->paginate(12);
             }
             $this->assign("watchData", $watchData);
         } catch (Exception $e) {
