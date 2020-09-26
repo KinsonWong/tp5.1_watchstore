@@ -92,12 +92,77 @@ class UserController extends Controller
     }
 
 
+    /**
+     * 忘记密码时检查用户邮箱是否存在
+     * @param Request $request
+     * @return \think\response\Json
+     */
+    public function email_check(Request $request)
+    {
+        $email = $request->email;//获取邮箱
+        $jsonRes = UserExtend::select_email($email);    //邮箱不存在结果为0， 邮箱存在结果为1
+        return json($jsonRes);//返回json数据
+    }
+
+        /**
+     * 用户忘记密码重置
+     * @param Request $request
+     * @return \think\response\Json
+     */
+    public function user_reset_password(Request $request)
+    {
+        $checkRes = UserExtend::select_email($request->email);
+        if ($checkRes['msg'] == 0) {
+            $jsonRes = ['msg' => 0];    //邮箱信息不存在,返回0
+        } else {
+            $password = $request->password;//获取用户密码
+            $password_confirm = $request->password_confirm;//获取用户的确认密码
+            $phone = $request->phone;//获取用户电话
+            $email = $request->email;//获取用户邮箱
+            $province = $request->province;//获取用户省
+            $city = $request->city;//获取用户市
+            $area = $request->area;//获取用户区县
+            
+            $map['phone'] = $phone;   //筛选条件
+            $map['email'] = $email;   //筛选条件
+            $map['province'] = $province;   //筛选条件
+            $map['city'] = $city;   //筛选条件
+            $map['area'] = $area;   //筛选条件
+
+            $result = UserModel::where($map)->find();
+            if (empty($result)) {
+                $jsonRes = ['msg' => 1];    //用户信息错误或不存在,返回1
+            }else{
+                if($password != $password_confirm){
+                    $jsonRes = ['msg' => 2];    //两次输入密码不一致,返回2
+                }else{
+                    $res = UserModel::where('email',$email)->update(['password' => $password]);
+                    if($res){
+                        $jsonRes = ['msg' => "success"];//修改密码成功 
+                    }else{
+                        $jsonRes = ['msg' => "fail"];//修改密码失败 
+                    }
+                }
+            }
+        }
+        return json($jsonRes);   //返回json数据
+    }
+
+
     /** 跳转到登录页面
      * @return mixed
      */
     public function show_login()
     {
         return $this->fetch("login"); // 请求该方法，跳转到登录页面
+    }
+
+    /** 跳转到忘记密码页面
+     * @return mixed
+     */
+    public function show_forget_password()
+    {
+        return $this->fetch("forget_password"); // 请求该方法，跳转到登录页面
     }
 
 

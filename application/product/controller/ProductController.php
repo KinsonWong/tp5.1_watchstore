@@ -203,7 +203,7 @@ class ProductController extends Controller
             }
             // 获取畅销
             $dataBigSell = [];
-            $types = WatchModel::field("type")->distinct(true)->limit(3)->select();   //指定查询type字段,并去除重复值
+            $types = WatchModel::field("type")->distinct(true)->limit(4)->select();   //指定查询type字段,并去除重复值
             foreach ($types as $type)
             {
                 $tempItem["type"] = $type["type"];

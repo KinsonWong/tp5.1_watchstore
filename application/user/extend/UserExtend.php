@@ -20,4 +20,22 @@ class UserExtend{
         return $jsonRes;
     }
 
+    public static function select_email($email)
+    {
+        try {
+            $result = UserModel::where(['email' => $email])->find();
+            //根据username查询数据表
+            if (!empty($result)) {
+                $jsonRes = ['msg' => 1];//如果查询有数据返回1
+            } else {
+                $jsonRes = ['msg' => 0];//如果查询没有数据返回0
+            }
+        } catch (Exception $e) {
+            $jsonRes = ['msg' => $e->getMessage()];
+        }
+        return $jsonRes;
+    }
+
+
+
 }

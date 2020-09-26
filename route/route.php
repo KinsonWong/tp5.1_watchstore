@@ -73,9 +73,12 @@ Route::post('coupon_check','product/product/coupon_check');//检查优惠码是�
 Route::get("show_user_order",'user/user/show_user_order'); //会员查看订单页面
 Route::get("user_logout",'user/user/user_logout'); //会员注销
 Route::post('user_check','user/user/user_check');//检查会员姓名是否重复
+Route::post('email_check','user/user/email_check');//忘记密码时检查会员邮箱是否存在
+Route::post('user_reset_password','user/user/user_reset_password');//会员忘记密码重置
 Route::post('user_register','user/user/user_register');//会员注册
 Route::post('user_login','user/user/user_login');//会员登录
 Route::get('show_login','user/user/show_login');//会员登录页面
+Route::get('show_forget_password','user/user/show_forget_password');//会员忘记密码页面
 Route::get('show_user_center','user/user/show_user_center');//会员个人中心页面
 Route::get('show_register','user/user/show_register');//会员注册页面
 Route::post('receive_confirm','user/user/receive_confirm');//会员订单确认收货

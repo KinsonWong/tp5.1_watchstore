@@ -1,4 +1,4 @@
-<?php /*a:4:{s:70:"D:\phpstudy_pro\WWW\watchstore\application\index\view\index\index.html";i:1601016482;s:40:"public/static/product/header/header.html";i:1601021806;s:40:"public/static/product/footer/footer.html";i:1600671831;s:40:"public/static/product/dialog/dialog.html";i:1600672004;}*/ ?>
+<?php /*a:4:{s:70:"D:\phpstudy_pro\WWW\watchstore\application\index\view\index\index.html";i:1601016482;s:40:"public/static/product/header/header.html";i:1601103929;s:40:"public/static/product/footer/footer.html";i:1600671831;s:40:"public/static/product/dialog/dialog.html";i:1600672004;}*/ ?>
 <!DOCTYPE html>
 <html
     class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
@@ -194,7 +194,7 @@
                                             </div>
                                         </li>
                                         <li><a href="<?php echo url('/show_plist'); ?>">畅销<i class="fa fa-angle-down"></i></a>
-                                            <div class="mega-menu mega-menu-2">
+                                            <div class="mega-menu">
                                                 <span v-for="item in result.dataBigSell">
                                                     <a :href="'<?php echo url('/show_plist'); ?>/type/'+item.type"
                                                         class="title">{{item.type}}</a>
@@ -243,7 +243,7 @@
                                             </div>
                                         </li>
                                         <li><a href="<?php echo url('/show_plist'); ?>">畅销<i class="fa fa-angle-down"></i></a>
-                                            <div class="mega-menu mega-menu-2">
+                                            <div class="mega-menu">
                                                 <span v-for="item in result.dataBigSell">
                                                     <a :href="'<?php echo url('/show_plist'); ?>/type/'+item.type"
                                                         class="title">{{item.type}}</a>

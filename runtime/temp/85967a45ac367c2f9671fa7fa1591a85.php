@@ -1,117 +1,32 @@
-<?php /*a:3:{s:74:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\user_center.html";i:1600830669;s:40:"public/static/product/header/header.html";i:1601103929;s:40:"public/static/product/footer/footer.html";i:1600671831;}*/ ?>
+<?php /*a:3:{s:78:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\forget_password.html";i:1601106480;s:40:"public/static/product/header/header.html";i:1601103929;s:40:"public/static/product/footer/footer.html";i:1600671831;}*/ ?>
 <!DOCTYPE html>
-<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
+<html
+    class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
     lang="en">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>用户中心</title>
+    <title>网上手表商城-Watch League</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Favicon -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/public/static/product/images/favicon.png">
+    <script type="text/javascript" src="/public/static/product/js/jsAddress.js"></script>
+    <!-- all css here -->
+    <!-- bootstrap v3.3.6 css -->
 
     <style>
-        .user_body {
-            position: relative;
-            height: 1200px;
-        }
-        
-        .user_body .user_content {
-            position: absolute;
-            left: 396.5px;
-            width: 1110px;
-        }
-        
-        .user_body .user_content .user_list {
-            float: left;
-            width: 350px;
-        }
-        
-        .user_body .user_content .user_info {
-            float: left;
-            height: 500px;
-            width: 760px;
-            padding-top: 7px;
-            color: black;
-            font-size: 18px;
-            font-weight: bold;
-        }
-        
-        .user_content .slide_list li {
-            display: block;
-            font-weight: bold;
-            margin: 50px 0 0 10px;
-            font-size: 18px;
-        }
-        
-        .slide_list li a {
-            color: black;
-        }
-        
-        .user_info span {
-            font-size: 14px;
-        }
-        
-        .user_info a {
-            color: black;
-            font-size: 16px;
-            text-decoration: underline;
+        .tips {
+            color: #ff3131e3;
+            line-height: 30px;
+            font-size: 15px;
             padding-left: 10px;
-        }
-        
-        .user_info .text_email {
-            padding-left: 10px;
-        }
-        
-        .user_info_basic {
-            padding: 20px 0 20px 0;
-            border: 1px solid #ccc;
-            border-left: 0;
-            border-right: 0;
-        }
-        
-        .edit_setting {
-            display: block;
-            padding: 1.875rem 0 0 23.625rem;
-        }
-        
-        .user_info_adderess {
-            padding-top: 40px;
-            height: 500px;
-        }
-        
-        .ad_biaoti {
-            position: relative;
-        }
-        
-        .ad_biaoti span {
-            position: absolute;
-        }
-        
-        .ad_biaoti_zi {
-            font-size: 24px;
-        }
-        
-        .ad_more {
-            right: 0;
-            padding-top: 0.5rem;
-        }
-        
-        .user_info_adderess .my_address {
-            padding: 7.8125rem 0 2.8125rem 0;
-        }
-        
-        .ad_list li {
-            height: 28px;
-            font-weight: normal;
-            font-size: 16px;
         }
     </style>
 </head>
 
-<body class="cart">
+<body class="register">
+
     <!DOCTYPE html>
 <html lang="en">
 
@@ -431,7 +346,6 @@
 </script>
 
 </html>
-
     <div class="breadcrumbs-area mb-70">
         <div class="container">
             <div class="row">
@@ -439,56 +353,93 @@
                     <div class="breadcrumbs-menu">
                         <ul>
                             <li><a href="<?php echo url('/show_index'); ?>">主页</a></li>
-                            <li><a href="javascript:void(0);" class="active">个人中心</a></li>
+                            <li><a href="javascript:void(0);" class="active">找回密码</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- breadcrumbs-area-end -->
-    <!-- entry-header-area-start -->
-    <div class="user_body">
-        <div class="user_content">
-            <div class="user_list">
-                <h1>个人中心</h1>
-                <ul class="slide_list">
-                    <li class=""><a href="#">概况</a></li>
-                    <li class=""><a href="#">订单</a></li>
-                    <li class=""><a href="#">我的邮箱</a></li>
-                    <li class=""><a href="#">我的地址</a></li>
-                    <li class=""><a href="#">个人信息</a></li>
-                </ul>
-            </div>
-            <div class="user_info">
-                <h3>设置账号</h3>
-                <div class="user_info_basic">
-                    <span>EMAIL:</span><span class="text_email"><?php echo htmlentities($user['email']); ?></span>
+    </div><!-- breadcrumbs-area-end -->
+    <!-- user-login-area-start -->
+    <div class="user-login-area mb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="login-title text-center mb-30">
+                        <h2>找回密码</h2>
+                        <p>请输入以下信息以确定您的身份</p>
+                    </div>
+                </div>
+                <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                    <div class="billing-fields">
+
+
+                        <div class="single-register">
+                            <form>
+                                <label>邮箱
+                                    <span>*</span>
+                                    <span class="tips" id="emailTips"></span>
+                                </label>
+                                <input type="text" name="email" id="email" autocomplete="off">
+                            </form>
+                        </div>
+
+                        <div class="single-register">
+                            <form>
+                                <label>电话
+                                    <span>*</span>
+                                    <span class="tips" id="phoneTips"></span>
+                                </label>
+                                <input type="text" name="phone" id="phone" autocomplete="off">
+                            </form>
+                        </div>
+
+                        <div class="single-register">
+                            <form>
+                                <label>所在地区
+                                    <span>*</span>
+                                </label>
+                                <select class="form-control" id="cmbProvince" name="province"></select>
+                                <select class="form-control" id="cmbCity" name="city"></select>
+                                <select class="form-control" id="cmbArea" name="area"></select>
+                            </form>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="single-register">
+                                    <form>
+                                        <label>新密码
+                                            <span>*</span>
+                                            <span class="tips" id="passwordTips"></span>
+                                        </label>
+                                        <input type="password" name="password" id="password" autocomplete="off">
+                                    </form>
+                                </div>
+                            </div>                          
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="single-register">
+                                    <form>
+                                        <label>确认密码
+                                            <span>*</span>
+                                            <span class="tips" id="passwordReTips"></span>
+                                        </label>
+                                        <input type="password" name="password_confirm" id="password_confirm" autocomplete="off">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                     <br>
-                    <span>PASSWORD:</span><a href="#" class="change_password">change password</a>
+                    <div class="single-register"><a onclick="reset_password()">重置密码</a></div>
                 </div>
-                <span class="edit_setting"><button type="button" class="btn btn-warning">EDIT ACCOUNT SETTING</button></span>
-                <div class="user_info_adderess">
 
-                    <div class="ad_biaoti "><span class="ad_biaoti_zi"><h3>地址</h3></span><span class="ad_more "><a href="#">更多地址</a></span></div>
-
-
-                    <div class="my_address ">
-                        <ul class="ad_list  ">
-                            <li><?php echo htmlentities($address['consignee']); ?></li>
-                            <li><?php echo htmlentities($address['contact']); ?></li>
-                            <li><?php echo htmlentities($address['province']); ?></li>
-                            <li><?php echo htmlentities($address['city']); ?></li>
-                            <li><?php echo htmlentities($address['area']); ?></li>
-                            <li><?php echo htmlentities($address['addr']); ?></li>
-                        </ul>
-                    </div>
-                </div>
             </div>
+
         </div>
-    </div>
-
-
+    </div><!-- user-login-area-end -->
+    <!-- footer-area-start -->
     <!DOCTYPE html>
 <html lang="en">
 
@@ -601,7 +552,87 @@
 </body>
 
 </html>
-
+    <div id="ext_overlay" class="ext_overlayBG" style="display: none; z-index: 2147483646;"></div>
 </body>
+<script type="text/javascript">
+
+    $("input").keyup(function () {
+        $(this).prev('label').find('#emailTips').html('');
+    });
+    $("#email").blur(function () {
+        var email = $("#email").val();
+        $.ajax({
+            type: "POST",//方法类型
+            dataType: "json",//预期服务器返回的数据类型
+            url: "<?php echo url('/email_check'); ?>",//url
+            data: {
+                email: email,
+            },
+            success: function (result) {
+                if (result.msg === 0) {
+                    $('#emailTips').removeClass('tipsGreen');
+                    $('#emailTips').html("邮箱信息不存在")
+                } else if (result.msg === 1) {
+                    $('#emailTips').addClass('tipsGreen');
+                    $('#emailTips').html("邮箱信息存在")
+
+                } else {
+                    $('#emailTips').html(result.msg);
+                }
+            },
+            error: function () {
+                alert("服务器繁忙,请稍后重试!");
+            }
+        });
+    });
+
+    function reset_password() {
+        let password = $("#password").val();
+        let password_confirm = $("#password_confirm").val();
+        let email = $("#email").val();
+        let phone = $("#phone").val();
+        let province = $("#cmbProvince").val();
+        let city = $("#cmbCity").val();
+        let area = $("#cmbArea").val();
+
+        $.ajax({
+            type: "POST",//方法类型
+            dataType: "json",//预期服务器返回的数据类型
+            url: "<?php echo url('/user_reset_password'); ?>",//url
+            data: {
+                password: password,
+                password_confirm: password_confirm,
+                email: email,
+                phone: phone,
+                province: province,
+                city: city,
+                area: area
+            },
+            success: function (result) {
+                if (result.msg === 0) {
+                    $('#emailTips').removeClass('tipsGreen');
+                    $('#emailTips').html("邮箱信息不存在")
+                } else if (result.msg === 1) {
+                    alert("用户信息错误或不存在");
+                } else if (result.msg === 2){
+                    $('#passwordReTips').html("两次密码不一致");
+                } else if (result.msg === 'success') {
+                    alert("密码重置成功");
+                    window.location.href = "<?php echo url('/show_login'); ?>"
+                } else {
+                    alert(result.msg);
+                }
+
+            },
+            error: function () {
+                alert("服务器繁忙,请稍后重试!");
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        addressInit('cmbProvince', 'cmbCity', 'cmbArea');
+    });
+</script>
 
 </html>

@@ -1,4 +1,4 @@
-<?php /*a:3:{s:71:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\register.html";i:1600671813;s:40:"public/static/product/header/header.html";i:1600761367;s:40:"public/static/product/footer/footer.html";i:1600671831;}*/ ?>
+<?php /*a:3:{s:71:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\register.html";i:1601106498;s:40:"public/static/product/header/header.html";i:1601103929;s:40:"public/static/product/footer/footer.html";i:1600671831;}*/ ?>
 <!DOCTYPE html>
 <html
     class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
@@ -190,7 +190,7 @@
                                                     <a :href="'<?php echo url('/show_plist'); ?>/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'<?php echo url('/show_details'); ?>/bid/'+info.bid"
-                                                        v-for="info in item.value">{{info.bname}}</a>
+                                                        v-for="info in item.value" class="bname">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
                                         </li>
@@ -201,17 +201,17 @@
                                                     <a :href="'<?php echo url('/show_plist'); ?>/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'<?php echo url('/show_details'); ?>/bid/'+info.bid"
-                                                        v-for="info in item.value">{{info.bname}}</a>
+                                                        v-for="info in item.value" class="bname">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
                                         </li>
                                         <li><a href="<?php echo url('/show_plist'); ?>">畅销<i class="fa fa-angle-down"></i></a>
-                                            <div class="mega-menu mega-menu-2">
+                                            <div class="mega-menu">
                                                 <span v-for="item in result.dataBigSell">
                                                     <a :href="'<?php echo url('/show_plist'); ?>/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'<?php echo url('/show_details'); ?>/bid/'+info.bid"
-                                                        v-for="info in item.value">{{info.bname}}</a>
+                                                        v-for="info in item.value" class="bname">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
                                         </li>
@@ -222,6 +222,7 @@
                     </div>
                 </div>
             </div><!-- main-menu-area-end -->
+
             <!-- mobile-menu-area-start -->
             <div class="mobile-menu-area hidden-md hidden-lg">
                 <div class="container">
@@ -239,7 +240,7 @@
                                                     <a :href="'<?php echo url('/show_plist'); ?>/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'<?php echo url('/show_details'); ?>/bid/'+info.bid"
-                                                        v-for="info in item.value">{{info.bname}}</a>
+                                                        v-for="info in item.value">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
                                         </li>
@@ -249,17 +250,17 @@
                                                     <a :href="'<?php echo url('/show_plist'); ?>/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'<?php echo url('/show_details'); ?>/bid/'+info.bid"
-                                                        v-for="info in item.value">{{info.bname}}</a>
+                                                        v-for="info in item.value">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
                                         </li>
                                         <li><a href="<?php echo url('/show_plist'); ?>">畅销<i class="fa fa-angle-down"></i></a>
-                                            <div class="mega-menu mega-menu-2">
+                                            <div class="mega-menu">
                                                 <span v-for="item in result.dataBigSell">
                                                     <a :href="'<?php echo url('/show_plist'); ?>/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'<?php echo url('/show_details'); ?>/bid/'+info.bid"
-                                                        v-for="info in item.value">{{info.bname}}</a>
+                                                        v-for="info in item.value" class="bname">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
                                         </li>
@@ -282,8 +283,20 @@
         product_num: "0",
     };
     var type_vm = new Vue({
+        //挂载点 <div class="_type">
         el: "._type",
         data: type_data,
+        name: 'bname',
+        filters: {
+            ellipsis (value) {
+            if (!value) return ''
+
+            if (value.length > 32) {
+                return value.slice(0,32) + '...'
+            }
+            return value
+            }
+        },
         methods: {
             //获取分类信息
             get_types: function () {
@@ -308,6 +321,7 @@
                 });
             }
         }
+
     });
 
     type_vm.get_types();
@@ -338,8 +352,8 @@
                 <div class="col-lg-12">
                     <div class="breadcrumbs-menu">
                         <ul>
-                            <li><a href="#">主页</a></li>
-                            <li><a href="#" class="active">注册用户</a></li>
+                            <li><a href="<?php echo url('/show_index'); ?>">主页</a></li>
+                            <li><a href="javascript:void(0);" class="active">注册用户</a></li>
                         </ul>
                     </div>
                 </div>
@@ -364,7 +378,7 @@
                                     <span>*</span>
                                     <span class="tips" id="userNameTips"></span>
                                 </label>
-                                <input type="text" name="username" id="username"></form>
+                                <input type="text" name="username" id="username" autocomplete="off"></form>
                         </div>
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -374,7 +388,7 @@
                                             <span>*</span>
                                             <span class="tips" id="passwordTips"></span>
                                         </label>
-                                        <input type="password" name="password" id="password"></form>
+                                        <input type="password" name="password" id="password" autocomplete="off"></form>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -384,7 +398,7 @@
                                             <span>*</span>
                                             <span class="tips" id="passwordReTips"></span>
                                         </label>
-                                        <input type="password" name="password_confirm" id="password_confirm"></form>
+                                        <input type="password" name="password_confirm" id="password_confirm" autocomplete="off"></form>
                                 </div>
                             </div>
                         </div>
@@ -395,7 +409,7 @@
                                     <span>*</span>
                                     <span class="tips" id="emailTips"></span>
                                 </label>
-                                <input type="text" name="email" id="email">
+                                <input type="text" name="email" id="email" autocomplete="off">
                             </form>
                         </div>
 
@@ -405,7 +419,7 @@
                                     <span>*</span>
                                     <span class="tips" id="phoneTips"></span>
                                 </label>
-                                <input type="text" name="phone" id="phone">
+                                <input type="text" name="phone" id="phone" autocomplete="off">
                             </form>
                         </div>
                         <div class="single-register">
