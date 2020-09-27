@@ -8,7 +8,7 @@ class UserValidate extends Validate
 {
     protected $rule = [
         'name' => 'require|max:25',
-        'password' => 'require|max:16|min:6|confirm',
+        'password' => 'require|confirm',
         'phone' => 'require|mobile',
         'email' => 'require|email',
         'province' => 'require',

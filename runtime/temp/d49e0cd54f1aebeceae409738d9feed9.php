@@ -1,4 +1,4 @@
-<?php /*a:3:{s:68:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\login.html";i:1601049951;s:40:"public/static/product/header/header.html";i:1601103929;s:40:"public/static/product/footer/footer.html";i:1600671831;}*/ ?>
+<?php /*a:3:{s:68:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\login.html";i:1601175734;s:40:"public/static/product/header/header.html";i:1601103929;s:40:"public/static/product/footer/footer.html";i:1600671831;}*/ ?>
 <!DOCTYPE html>
 <html
     class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
@@ -361,11 +361,11 @@
                     <form id="login-form">
                         <div class="login-form">
                             <div class="single-login"><label><span>*</span>用户名</label><input type="text" name="username"
-                                    autocomplete="off"></div>
+                                    autocomplete="off" id="username"></div>
                             <div class="single-login"><label><span>*</span>密码 </label><input type="password"
-                                    name="password" autocomplete="off"></div>
+                                    name="password" autocomplete="off" id="password"></div>
                             <div class="single-login"><label><span>*</span>验证码 </label><input type="text" name="code"
-                                    autocomplete="off" style="width:55%;"> 
+                                    autocomplete="off" style="width:55%;" id="code"> 
                                     <img id="verify_img" style="float:right;margin-top:-10px;" src="<?php echo captcha_src(); ?>" alt="验证码" onclick="refreshVerify()">
                             </div>
                             
@@ -494,6 +494,7 @@
     <a id="scrollUp" href="http://v.bootstrapmb.com/2018/7/rlrum1631/login.html#top"
         style="display: none; position: fixed; z-index: 2147483647;"><i class="fa fa-angle-up"></i></a>
 </body>
+<script type="text/javascript" src="/public/static/product/js/hex_sha.js"></script>
 <script>
     function refreshVerify() {
         var ts = Date.parse(new Date()) / 1000;
@@ -501,10 +502,18 @@
     }
 
     function submit_form() {
+        let username = $("#username").val();
+        let password = hex_sha1($("#password").val());
+        let code = $("#code").val();
+        //console.log(password);
         $.ajax({
             type: 'post',
             url: "<?php echo url('/user_login'); ?>",
-            data: $("#login-form").serialize(),
+            data: {
+                username:username,
+                password:password,
+                code,code
+            },
             success: function (data) {
                 if (data.msg != 1) {
                     alert(data.msg)

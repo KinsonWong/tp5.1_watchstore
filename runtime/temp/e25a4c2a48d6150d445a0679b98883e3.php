@@ -1,4 +1,4 @@
-<?php /*a:4:{s:70:"D:\phpstudy_pro\WWW\watchstore\application\index\view\index\index.html";i:1601016482;s:40:"public/static/product/header/header.html";i:1601103929;s:40:"public/static/product/footer/footer.html";i:1600671831;s:40:"public/static/product/dialog/dialog.html";i:1600672004;}*/ ?>
+<?php /*a:4:{s:70:"D:\phpstudy_pro\WWW\watchstore\application\index\view\index\index.html";i:1601194105;s:40:"public/static/product/header/header.html";i:1601103929;s:40:"public/static/product/footer/footer.html";i:1600671831;s:40:"public/static/product/dialog/dialog.html";i:1601193019;}*/ ?>
 <!DOCTYPE html>
 <html
     class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
@@ -339,7 +339,8 @@
             <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
                     <div class="single-banner">
-                        <div class="banner-img"><a href="javascript:void(0);"><img src="/public/static/product/images/40.png" alt="banner"></a></div>
+                        <div class="banner-img"><a href="javascript:void(0);"><img src="/public/static/product/images/40.png"
+                                    alt="banner"></a></div>
                         <div class="banner-text">
                             <h4>免费配送订单</h4>
                             <p>订单金额大于¥599</p>
@@ -348,7 +349,8 @@
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
                     <div class="single-banner">
-                        <div class="banner-img"><a href="javascript:void(0);"><img src="/public/static/product/images/2.png" alt="banner"></a></div>
+                        <div class="banner-img"><a href="javascript:void(0);"><img src="/public/static/product/images/2.png"
+                                    alt="banner"></a></div>
                         <div class="banner-text">
                             <h4>退款保证</h4>
                             <p>7天无理由退款</p>
@@ -357,7 +359,8 @@
                 </div>
                 <div class="col-lg-3 col-md-3 hidden-sm col-xs-12">
                     <div class="single-banner">
-                        <div class="banner-img"><a href="javascript:void(0);"><img src="/public/static/product/images/3.png" alt="banner"></a></div>
+                        <div class="banner-img"><a href="javascript:void(0);"><img src="/public/static/product/images/3.png"
+                                    alt="banner"></a></div>
                         <div class="banner-text">
                             <h4>货到付款</h4>
                             <p>支持货到付款</p>
@@ -366,7 +369,8 @@
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
                     <div class="single-banner mrg-none-xs">
-                        <div class="banner-img"><a href="javascript:void(0);"><img src="/public/static/product/images/4.png" alt="banner"></a></div>
+                        <div class="banner-img"><a href="javascript:void(0);"><img src="/public/static/product/images/4.png"
+                                    alt="banner"></a></div>
                         <div class="banner-text">
                             <h4>帮助 &amp; 支持</h4>
                             <p>联系我们 : xxx-xxxxxxxx</p>
@@ -492,7 +496,8 @@
                                                     <li><a href="#"><i class="fa fa-star"></i></a></li>
                                                 </ul>
                                             </div>
-                                            <h4><a href="<?php echo url('/show_details'); ?>/bid/<?php echo htmlentities($watch['bid']); ?>" style="height: 60px;"><?php echo htmlentities($watch['bname']); ?></a>
+                                            <h4><a href="<?php echo url('/show_details'); ?>/bid/<?php echo htmlentities($watch['bid']); ?>"
+                                                    style="height: 60px;"><?php echo htmlentities($watch['bname']); ?></a>
                                             </h4>
                                             <div class="product-price">
                                                 <ul>
@@ -509,7 +514,7 @@
                                                 <ul>
                                                     <li>
                                                         <a href="<?php echo url('/show_details'); ?>/bid/<?php echo htmlentities($watch['bid']); ?>"
-                                                            title="商品详情"><i class="fa fa-external-link"></i></a></li>
+                                                            title="商品详情"><i class="fa fa-info-circle"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -562,7 +567,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="banner-img-2"><a href="javascript:void(0);"><img src="/public/static/product/images/999.png" alt="banner"></a>
+                        <div class="banner-img-2"><a href="javascript:void(0);"><img src="/public/static/product/images/999.png"
+                                    alt="banner"></a>
                             <div class="banner-text">
                                 <h3>一个月内注册的新会员</h3>
                                 <h3 class="spe_text">
@@ -637,7 +643,7 @@
                                             <div class="add-to-link">
                                                 <ul>
                                                     <li><a href="<?php echo url('/show_details'); ?>/bid/<?php echo htmlentities($feature_watch1['bid']); ?>"
-                                                            title="商品详情"><i class="fa fa-external-link"></i></a></li>
+                                                            title="商品详情"><i class="fa fa-info-circle"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -697,7 +703,7 @@
                                             <div class="add-to-link">
                                                 <ul>
                                                     <li><a href="<?php echo url('/show_details'); ?>/bid/<?php echo htmlentities($feature_watch2['bid']); ?>"
-                                                            title="商品详情"><i class="fa fa-external-link"></i></a></li>
+                                                            title="商品详情"><i class="fa fa-info-circle"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -890,7 +896,7 @@
                                 <div class="owl-stage-outer">
                                     <div class="owl-stage"
                                         style="transform: translate3d(0px, 0px, 0px); transition: 0s;text-align: center">
-                                        <a class="active" v-for="item in b_detail.imgs" href="#">
+                                        <a class="active" v-for="item in b_detail.imgs" href="javascript:void(0);">
                                             <img style="width: 115px;height: 115px;margin: 2px"
                                                 :src="'/upload/img/'+item.img" alt="">
                                         </a>
@@ -920,6 +926,11 @@
                             <div>
                                 <span style="margin-right: 5px">
                                     商品类型：<span>{{b_detail.type}}</span>
+                                </span>
+                            </div>
+                            <div>
+                                <span style="margin-right: 5px">
+                                    销量：<span>{{b_detail.sell}}</span>
                                 </span>
                             </div>
                             <p style="height: 180px">
@@ -1007,6 +1018,7 @@
 </script>
 </body>
 <script type="text/javascript">
+
     function addCart(bid) {
         $.ajax({
             type: "POST",//方法类型

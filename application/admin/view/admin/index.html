@@ -33,6 +33,7 @@
                 <a href="javascript:;">{$Think.session.admin}</a>
                 <dl class="layui-nav-child">
                     <!-- 二级菜单 -->
+                    <dd><a href="{:url('/show_admin_resetPWD')}" target="x-iframe">修改密码</a></dd>
                     <dd><a href="{:url('/admin_logout')}">退出登录</a></dd>
                 </dl>
             </li>
@@ -105,7 +106,7 @@
             <div class="layui-tab-content">
                 <div class="layui-tab-item layui-show">
                     <iframe src="{:url('/show_admin_welcome')}" frameborder="0" scrolling="yes"
-                        class="x-iframe"></iframe>
+                        class="x-iframe" name="x-iframe"></iframe>
                 </div>
             </div>
         </div>

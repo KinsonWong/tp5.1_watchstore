@@ -1,4 +1,4 @@
-<?php /*a:1:{s:70:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\login.html";i:1600671591;}*/ ?>
+<?php /*a:1:{s:70:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\login.html";i:1601188715;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -8,6 +8,7 @@
     <title>网上手表商城后台登录</title>
     <link rel="stylesheet" href="/public/static/admin/css/login.css" media="all" />
     <link rel="stylesheet" href="/public/static/admin/lib/layui/css/layui.css" media="all" />
+    <script type="text/javascript" src="/public/static/product/js/hex_sha.js"></script>
     <style>
         /* 覆盖原框架样式 */
         .layui-elem-quote {
@@ -81,14 +82,14 @@
                 <div class="layui-col-sm12 layui-col-md12">
                     <div class="layui-form-item">
                         <input type="text" name="username" lay-verify="required" autocomplete="off" placeholder="管理员账号"
-                            class="layui-input">
+                            class="layui-input" id="username">
                         <i class="layui-icon layui-icon-username zyl_lofo_icon"></i>
                     </div>
                 </div>
                 <div class="layui-col-sm12 layui-col-md12">
                     <div class="layui-form-item">
                         <input type="password" name="password" lay-verify="required" autocomplete="off"
-                            placeholder="管理员密码" class="layui-input">
+                            placeholder="管理员密码" class="layui-input" id="password">
                         <i class="layui-icon layui-icon-password zyl_lofo_icon"></i>
                     </div>
                 </div>
@@ -97,7 +98,7 @@
                         <div class="layui-col-xs4 layui-col-sm4 layui-col-md4">
                             <div class="layui-form-item">
                                 <input type="text" name="code" lay-verify="required" autocomplete="off"
-                                    placeholder="验证码" class="layui-input">
+                                    placeholder="验证码" class="layui-input" id="code">
                                 <i class="layui-icon layui-icon-vercode zyl_lofo_icon"></i>
                             </div>
                         </div>
@@ -131,11 +132,18 @@
 
             //监听提交
             form.on('submit(demo1)', function (data) {
-                var resData = data.field;
+                //var resData = data.field;
+                let username = $("#username").val();
+                let password = hex_sha1($("#password").val());
+                let code = $("#code").val();
 
                 $.ajax({
                     type: "POST",
-                    data: resData,
+                    data: {
+                        username:username,
+                        password:password,
+                        code,code
+                    },
                     url: "<?php echo url('/admin_login'); ?>",
 
                     success: function (result) {

@@ -11,8 +11,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="__STATIC__/images/favicon.png">
     <script type="text/javascript" src="__STATIC__/js/jsAddress.js"></script>
-    <!-- all css here -->
-    <!-- bootstrap v3.3.6 css -->
 
     <style>
         .tips {
@@ -132,6 +130,7 @@
     {include file="public/static/product/footer/footer.html"}
     <div id="ext_overlay" class="ext_overlayBG" style="display: none; z-index: 2147483646;"></div>
 </body>
+<script type="text/javascript" src="__STATIC__/js/hex_sha.js"></script>
 <script type="text/javascript">
     Date.prototype.Format = function (fmt) {
         var o = {
@@ -183,13 +182,16 @@
 
     function register() {
         let username = $("#username").val();
-        let password = $("#password").val();
-        let password_confirm = $("#password_confirm").val();
+        let password = hex_sha1($("#password").val());
+        let password_confirm = hex_sha1($("#password_confirm").val());
         let email = $("#email").val();
         let phone = $("#phone").val();
         let province = $("#cmbProvince").val();
         let city = $("#cmbCity").val();
         let area = $("#cmbArea").val();
+
+        //console.log(password);
+        //console.log(password_confirm);
 
         $.ajax({
             type: "POST",//方法类型

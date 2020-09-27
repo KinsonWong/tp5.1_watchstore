@@ -117,4 +117,32 @@ class AdminController extends Controller
         }
     }
 
+    /**
+     * 显示管理员修改密码页面
+     * @return mixed
+     */
+    public function show_admin_resetPWD()
+    {
+        $this->have_session();
+        return $this->fetch('resetPWD');  //渲染模板
+    }
+
+    /**
+     * 管理员修改密码
+     * @return mixed
+     */
+    public function admin_resetPWD(Request $request)
+    {
+        $username=$request->post('username');
+        $PWD=$request->post('password');
+        $PWD_Rept=$request->post('password_confirm');
+        if($PWD!=$PWD_Rept){
+            $jsonRes = ['msg' => 0];// 两次密码不一致，返回json结果0
+        }else{
+            AdminModel::where('username',$username)->update(['password'=> $PWD]);
+            $jsonRes = ['msg' => 1];// 修改密码成功，返回json结果1
+        }
+        return json($jsonRes);
+    }
+
 }

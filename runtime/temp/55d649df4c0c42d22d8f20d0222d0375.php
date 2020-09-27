@@ -1,4 +1,4 @@
-<?php /*a:1:{s:70:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\index.html";i:1600671575;}*/ ?>
+<?php /*a:1:{s:70:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\index.html";i:1601190253;}*/ ?>
 <!doctype html>
 <html lang="en">
 
@@ -34,6 +34,7 @@
                 <a href="javascript:;"><?php echo htmlentities(app('session')->get('admin')); ?></a>
                 <dl class="layui-nav-child">
                     <!-- 二级菜单 -->
+                    <dd><a href="<?php echo url('/show_admin_resetPWD'); ?>" target="x-iframe">修改密码</a></dd>
                     <dd><a href="<?php echo url('/admin_logout'); ?>">退出登录</a></dd>
                 </dl>
             </li>
@@ -106,7 +107,7 @@
             <div class="layui-tab-content">
                 <div class="layui-tab-item layui-show">
                     <iframe src="<?php echo url('/show_admin_welcome'); ?>" frameborder="0" scrolling="yes"
-                        class="x-iframe"></iframe>
+                        class="x-iframe" name="x-iframe"></iframe>
                 </div>
             </div>
         </div>

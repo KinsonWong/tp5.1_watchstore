@@ -72,12 +72,14 @@
                                         </div>
                                     </div>
                                     <div class="product-social-links">
-                                        <div class="product-addto-links-text">{$watchData.brand}</div>
-                                        <div class="product-addto-links-text">{$watchData.type}</div>
-                                        <div class="product-addto-links-text">{$watchData.modelcode}</div>
+                                        <div class="product-addto-links-text">品牌：{$watchData.brand}</div>
+                                        <div class="product-addto-links-text">类型：{$watchData.type}</div>
+                                        <div class="product-addto-links-text">型号：{$watchData.modelcode}</div>
+                                        <div class="product-addto-links-text">销量：{$watchData.sell}</div>
                                         <div class="product-addto-links-text">
                                             <p>{$watchData.detail}</p>
                                         </div>
+                                        
                                     </div>
                                     <div class="product-add-form app">
                                         <form id="dialog-form" action="#">
@@ -155,7 +157,6 @@
                                                         <div class="product-price">
                                                             <ul>
                                                                 <li>￥{$item.price}</li>
-                                                                <li class="old-price">￥{$item.price}</li>
                                                             </ul>
                                                         </div>
                                                     </div>

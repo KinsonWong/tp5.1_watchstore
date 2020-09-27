@@ -1,4 +1,4 @@
-<?php /*a:3:{s:71:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\register.html";i:1601106498;s:40:"public/static/product/header/header.html";i:1601103929;s:40:"public/static/product/footer/footer.html";i:1600671831;}*/ ?>
+<?php /*a:3:{s:71:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\register.html";i:1601174822;s:40:"public/static/product/header/header.html";i:1601103929;s:40:"public/static/product/footer/footer.html";i:1600671831;}*/ ?>
 <!DOCTYPE html>
 <html
     class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
@@ -12,8 +12,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/public/static/product/images/favicon.png">
     <script type="text/javascript" src="/public/static/product/js/jsAddress.js"></script>
-    <!-- all css here -->
-    <!-- bootstrap v3.3.6 css -->
 
     <style>
         .tips {
@@ -562,6 +560,7 @@
 </html>
     <div id="ext_overlay" class="ext_overlayBG" style="display: none; z-index: 2147483646;"></div>
 </body>
+<script type="text/javascript" src="/public/static/product/js/hex_sha.js"></script>
 <script type="text/javascript">
     Date.prototype.Format = function (fmt) {
         var o = {
@@ -613,13 +612,16 @@
 
     function register() {
         let username = $("#username").val();
-        let password = $("#password").val();
-        let password_confirm = $("#password_confirm").val();
+        let password = hex_sha1($("#password").val());
+        let password_confirm = hex_sha1($("#password_confirm").val());
         let email = $("#email").val();
         let phone = $("#phone").val();
         let province = $("#cmbProvince").val();
         let city = $("#cmbCity").val();
         let area = $("#cmbArea").val();
+
+        console.log(password);
+        console.log(password_confirm);
 
         $.ajax({
             type: "POST",//方法类型

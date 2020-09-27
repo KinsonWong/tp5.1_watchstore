@@ -1,4 +1,4 @@
-<?php /*a:1:{s:83:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_member\member_edit.html";i:1600671646;}*/ ?>
+<?php /*a:1:{s:83:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_member\member_edit.html";i:1601192693;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -126,9 +126,10 @@
             </button>
         </div>
 
-
     </div>
 
+    
+    <script type="text/javascript" src="/public/static/product/js/hex_sha.js"></script>
     <script type="text/html" id="barDemo">
     <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
@@ -145,7 +146,7 @@
         function edit_member() {
             let uid = $("#uid").val();
             let username = $("#L_username").val();
-            let password = $("#L_pass").val();
+            let password = hex_sha1($("#L_pass").val());
             //let password_confirm = $("#password_confirm").val();
             let email = $("#L_email").val();
             let phone = $("#L_phone").val();

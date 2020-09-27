@@ -57,7 +57,7 @@
                                 <div class="owl-stage-outer">
                                     <div class="owl-stage"
                                         style="transform: translate3d(0px, 0px, 0px); transition: 0s;text-align: center">
-                                        <a class="active" v-for="item in b_detail.imgs" href="#">
+                                        <a class="active" v-for="item in b_detail.imgs" href="javascript:void(0);">
                                             <img style="width: 115px;height: 115px;margin: 2px"
                                                 :src="'__IMAGE__/'+item.img" alt="">
                                         </a>
@@ -87,6 +87,11 @@
                             <div>
                                 <span style="margin-right: 5px">
                                     商品类型：<span>{{b_detail.type}}</span>
+                                </span>
+                            </div>
+                            <div>
+                                <span style="margin-right: 5px">
+                                    销量：<span>{{b_detail.sell}}</span>
                                 </span>
                             </div>
                             <p style="height: 180px">

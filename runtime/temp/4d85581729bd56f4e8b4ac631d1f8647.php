@@ -1,4 +1,4 @@
-<?php /*a:3:{s:76:"D:\phpstudy_pro\WWW\watchstore\application\product\view\product\details.html";i:1600930015;s:40:"public/static/product/header/header.html";i:1600997570;s:40:"public/static/product/footer/footer.html";i:1600671831;}*/ ?>
+<?php /*a:3:{s:76:"D:\phpstudy_pro\WWW\watchstore\application\product\view\product\details.html";i:1601193364;s:40:"public/static/product/header/header.html";i:1601103929;s:40:"public/static/product/footer/footer.html";i:1600671831;}*/ ?>
 <!DOCTYPE html>
 <html
     class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
@@ -177,7 +177,7 @@
                                                     <a :href="'<?php echo url('/show_plist'); ?>/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'<?php echo url('/show_details'); ?>/bid/'+info.bid"
-                                                        v-for="info in item.value">{{info.bname}}</a>
+                                                        v-for="info in item.value" class="bname">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
                                         </li>
@@ -188,17 +188,17 @@
                                                     <a :href="'<?php echo url('/show_plist'); ?>/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'<?php echo url('/show_details'); ?>/bid/'+info.bid"
-                                                        v-for="info in item.value">{{info.bname}}</a>
+                                                        v-for="info in item.value" class="bname">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
                                         </li>
                                         <li><a href="<?php echo url('/show_plist'); ?>">畅销<i class="fa fa-angle-down"></i></a>
-                                            <div class="mega-menu mega-menu-2">
+                                            <div class="mega-menu">
                                                 <span v-for="item in result.dataBigSell">
                                                     <a :href="'<?php echo url('/show_plist'); ?>/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'<?php echo url('/show_details'); ?>/bid/'+info.bid"
-                                                        v-for="info in item.value">{{info.bname}}</a>
+                                                        v-for="info in item.value" class="bname">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
                                         </li>
@@ -209,6 +209,7 @@
                     </div>
                 </div>
             </div><!-- main-menu-area-end -->
+
             <!-- mobile-menu-area-start -->
             <div class="mobile-menu-area hidden-md hidden-lg">
                 <div class="container">
@@ -226,7 +227,7 @@
                                                     <a :href="'<?php echo url('/show_plist'); ?>/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'<?php echo url('/show_details'); ?>/bid/'+info.bid"
-                                                        v-for="info in item.value">{{info.bname}}</a>
+                                                        v-for="info in item.value">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
                                         </li>
@@ -236,17 +237,17 @@
                                                     <a :href="'<?php echo url('/show_plist'); ?>/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'<?php echo url('/show_details'); ?>/bid/'+info.bid"
-                                                        v-for="info in item.value">{{info.bname}}</a>
+                                                        v-for="info in item.value">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
                                         </li>
                                         <li><a href="<?php echo url('/show_plist'); ?>">畅销<i class="fa fa-angle-down"></i></a>
-                                            <div class="mega-menu mega-menu-2">
+                                            <div class="mega-menu">
                                                 <span v-for="item in result.dataBigSell">
                                                     <a :href="'<?php echo url('/show_plist'); ?>/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'<?php echo url('/show_details'); ?>/bid/'+info.bid"
-                                                        v-for="info in item.value">{{info.bname}}</a>
+                                                        v-for="info in item.value" class="bname">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
                                         </li>
@@ -272,6 +273,17 @@
         //挂载点 <div class="_type">
         el: "._type",
         data: type_data,
+        name: 'bname',
+        filters: {
+            ellipsis (value) {
+            if (!value) return ''
+
+            if (value.length > 32) {
+                return value.slice(0,32) + '...'
+            }
+            return value
+            }
+        },
         methods: {
             //获取分类信息
             get_types: function () {
@@ -296,6 +308,7 @@
                 });
             }
         }
+
     });
 
     type_vm.get_types();
@@ -378,12 +391,14 @@
                                         </div>
                                     </div>
                                     <div class="product-social-links">
-                                        <div class="product-addto-links-text"><?php echo htmlentities($watchData['brand']); ?></div>
-                                        <div class="product-addto-links-text"><?php echo htmlentities($watchData['type']); ?></div>
-                                        <div class="product-addto-links-text"><?php echo htmlentities($watchData['modelcode']); ?></div>
+                                        <div class="product-addto-links-text">品牌：<?php echo htmlentities($watchData['brand']); ?></div>
+                                        <div class="product-addto-links-text">类型：<?php echo htmlentities($watchData['type']); ?></div>
+                                        <div class="product-addto-links-text">型号：<?php echo htmlentities($watchData['modelcode']); ?></div>
+                                        <div class="product-addto-links-text">销量：<?php echo htmlentities($watchData['sell']); ?></div>
                                         <div class="product-addto-links-text">
                                             <p><?php echo htmlentities($watchData['detail']); ?></p>
                                         </div>
+                                        
                                     </div>
                                     <div class="product-add-form app">
                                         <form id="dialog-form" action="#">
@@ -461,7 +476,6 @@
                                                         <div class="product-price">
                                                             <ul>
                                                                 <li>￥<?php echo htmlentities($item['price']); ?></li>
-                                                                <li class="old-price">￥<?php echo htmlentities($item['price']); ?></li>
                                                             </ul>
                                                         </div>
                                                     </div>

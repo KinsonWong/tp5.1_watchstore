@@ -1,4 +1,4 @@
-<?php /*a:3:{s:78:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\forget_password.html";i:1601106480;s:40:"public/static/product/header/header.html";i:1601103929;s:40:"public/static/product/footer/footer.html";i:1600671831;}*/ ?>
+<?php /*a:3:{s:78:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\forget_password.html";i:1601176213;s:40:"public/static/product/header/header.html";i:1601103929;s:40:"public/static/product/footer/footer.html";i:1600671831;}*/ ?>
 <!DOCTYPE html>
 <html
     class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
@@ -554,6 +554,7 @@
 </html>
     <div id="ext_overlay" class="ext_overlayBG" style="display: none; z-index: 2147483646;"></div>
 </body>
+<script type="text/javascript" src="/public/static/product/js/hex_sha.js"></script>
 <script type="text/javascript">
 
     $("input").keyup(function () {
@@ -587,8 +588,8 @@
     });
 
     function reset_password() {
-        let password = $("#password").val();
-        let password_confirm = $("#password_confirm").val();
+        let password = hex_sha1($("#password").val());
+        let password_confirm = hex_sha1($("#password_confirm").val());
         let email = $("#email").val();
         let phone = $("#phone").val();
         let province = $("#cmbProvince").val();

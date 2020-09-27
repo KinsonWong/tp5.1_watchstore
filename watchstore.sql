@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version: 5.7.26)
-# Date: 2020-09-25 15:42:23
+# Date: 2020-09-27 16:13:02
 # Generator: MySQL-Front 5.3  (Build 4.234)
 
 /*!40101 SET NAMES utf8 */;
@@ -18,7 +18,7 @@ CREATE TABLE `admin` (
 # Data for table "admin"
 #
 
-INSERT INTO `admin` VALUES ('root','123456');
+INSERT INTO `admin` VALUES ('root','7c4a8d09ca3762af61e59520943dc26494f8941b');
 
 #
 # Structure for table "order_detail"
@@ -71,13 +71,13 @@ CREATE TABLE `user` (
   `area` varchar(255) DEFAULT NULL,
   `registertime` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`uid`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 #
 # Data for table "user"
 #
 
-INSERT INTO `user` VALUES (1,'kinson','123456','18900000008','666666666@qq.com','广东','广州市','番禺区','2020-09-04'),(2,'sam','123456','17600000009','888888888@qq.com','广东','东莞市','东莞市','2020-09-08'),(6,'ggko','123456','13170000008','437241304@qq.com','广东','东莞市','东莞市','2020-09-13');
+INSERT INTO `user` VALUES (1,'kinson','7c4a8d09ca3762af61e59520943dc26494f8941b','18900000008','666666666@qq.com','广东','广州市','番禺区','2020-09-04'),(2,'sam','7c4a8d09ca3762af61e59520943dc26494f8941b','17600000009','888888888@qq.com','广东','东莞市','东莞市','2020-09-08'),(6,'ggko','7c4a8d09ca3762af61e59520943dc26494f8941b','13170000008','437241304@qq.com','广东','东莞市','东莞市','2020-09-13'),(9,'johnson','7c4a8d09ca3762af61e59520943dc26494f8941b','18900006578','479520136@qq.com','北京','市辖区','东城区','2020-09-27');
 
 #
 # Structure for table "user_address"
@@ -162,7 +162,7 @@ CREATE TABLE `watch_order` (
   `l_msg` varchar(255) DEFAULT NULL,
   `payment` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`o_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 #
 # Data for table "watch_order"

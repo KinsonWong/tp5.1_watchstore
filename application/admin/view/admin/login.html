@@ -80,14 +80,14 @@
                 <div class="layui-col-sm12 layui-col-md12">
                     <div class="layui-form-item">
                         <input type="text" name="username" lay-verify="required" autocomplete="off" placeholder="管理员账号"
-                            class="layui-input">
+                            class="layui-input" id="username">
                         <i class="layui-icon layui-icon-username zyl_lofo_icon"></i>
                     </div>
                 </div>
                 <div class="layui-col-sm12 layui-col-md12">
                     <div class="layui-form-item">
                         <input type="password" name="password" lay-verify="required" autocomplete="off"
-                            placeholder="管理员密码" class="layui-input">
+                            placeholder="管理员密码" class="layui-input" id="password">
                         <i class="layui-icon layui-icon-password zyl_lofo_icon"></i>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
                         <div class="layui-col-xs4 layui-col-sm4 layui-col-md4">
                             <div class="layui-form-item">
                                 <input type="text" name="code" lay-verify="required" autocomplete="off"
-                                    placeholder="验证码" class="layui-input">
+                                    placeholder="验证码" class="layui-input" id="code">
                                 <i class="layui-icon layui-icon-vercode zyl_lofo_icon"></i>
                             </div>
                         </div>
@@ -116,6 +116,7 @@
     <script type="text/javascript" src="__ADMIN__/lib/layui/layui.all.js"></script>
     <script type="text/javascript" src="__ADMIN__/js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="__ADMIN__/js/jparticle.min.js"></script>
+    <script type="text/javascript" src="__STATIC__/js/hex_sha.js"></script>
 
     <script>
         //点击刷新验证码
@@ -130,11 +131,18 @@
 
             //监听提交
             form.on('submit(demo1)', function (data) {
-                var resData = data.field;
+                //var resData = data.field;
+                let username = $("#username").val();
+                let password = hex_sha1($("#password").val());
+                let code = $("#code").val();
 
                 $.ajax({
                     type: "POST",
-                    data: resData,
+                    data: {
+                        username:username,
+                        password:password,
+                        code,code
+                    },
                     url: "{:url('/admin_login')}",
 
                     success: function (result) {

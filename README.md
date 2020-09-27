@@ -9,3 +9,6 @@ apache 的配置文件：开启rewrite模块 文件中找到 AllowOverride None 
 创建一个watchstore数据库，导入sql文件
 
 数据库用户名、密码和端口请根据实际情况填写
+
+密码  散列sha1加密存储
+
