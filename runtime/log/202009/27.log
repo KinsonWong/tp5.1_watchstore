@@ -14081,3 +14081,120 @@
 [2020-09-27T16:10:02+08:00] 127.0.0.1 GET www.mystore666.com/upload/img/undefined
 [运行时间：0.027525s] [吞吐率：36.33req/s] [内存消耗：1,628.16kb] [文件加载：53]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[2020-09-27T16:57:10+08:00] 127.0.0.1 GET www.mystore666.com/
+[运行时间：0.433226s] [吞吐率：2.31req/s] [内存消耗：4,070.41kb] [文件加载：82]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.mystore666.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\index\view\index\index.html [ array (
+  0 => 'randWatch',
+  1 => 'featureOne',
+  2 => 'featureTwo',
+  3 => 'type',
+  4 => 'watches',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.018950s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch` [ RunTime:0.006413s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` ORDER BY rand() LIMIT 1 [ RunTime:0.000969s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` ORDER BY rand() LIMIT 10 [ RunTime:0.000678s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` ORDER BY rand() LIMIT 10 [ RunTime:0.000659s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` ORDER BY `date` DESC LIMIT 10 [ RunTime:0.000632s ]
+---------------------------------------------------------------
+[2020-09-27T16:57:11+08:00] 127.0.0.1 POST www.mystore666.com/watch_header
+[运行时间：0.083660s] [吞吐率：11.95req/s] [内存消耗：3,377.80kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'watch_header',
+  'route' => 'product/product/watch_header',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=6rg2odeqkuanld2gjrdukia9p1',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore666.com/',
+  'origin' => 'http://www.mystore666.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'www.mystore666.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014445s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch` [ RunTime:0.002182s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `type` FROM `watch` LIMIT 4 [ RunTime:0.000619s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '电子表' [ RunTime:0.000623s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '石英表' [ RunTime:0.000541s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '机械表' [ RunTime:0.000514s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid` FROM `watch` WHERE  `type` = '智能手表' [ RunTime:0.000537s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `type` FROM `watch` LIMIT 4 [ RunTime:0.000540s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '电子表' ORDER BY `date` DESC [ RunTime:0.000663s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '石英表' ORDER BY `date` DESC [ RunTime:0.000594s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '机械表' ORDER BY `date` DESC [ RunTime:0.000607s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`date` FROM `watch` WHERE  `type` = '智能手表' ORDER BY `date` DESC [ RunTime:0.000584s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `type` FROM `watch` LIMIT 4 [ RunTime:0.000563s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`sell` FROM `watch` WHERE  `type` = '电子表' ORDER BY `sell` DESC [ RunTime:0.000584s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`sell` FROM `watch` WHERE  `type` = '石英表' ORDER BY `sell` DESC [ RunTime:0.000588s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`sell` FROM `watch` WHERE  `type` = '机械表' ORDER BY `sell` DESC [ RunTime:0.000581s ]
+[ sql ] [ SQL ] SELECT `bname`,`bid`,`sell` FROM `watch` WHERE  `type` = '智能手表' ORDER BY `sell` DESC [ RunTime:0.000539s ]
+---------------------------------------------------------------
+[2020-09-27T16:57:12+08:00] 127.0.0.1 POST www.mystore666.com/get_cart_info
+[运行时间：0.037651s] [吞吐率：26.56req/s] [内存消耗：2,019.05kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'get_cart_info',
+  'route' => 'product/product/get_cart_info',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=6rg2odeqkuanld2gjrdukia9p1',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.mystore666.com/',
+  'origin' => 'http://www.mystore666.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'www.mystore666.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2020-09-27T16:57:12+08:00] 127.0.0.1 GET www.mystore666.com/upload/img/undefined
+[运行时间：0.028442s] [吞吐率：35.16req/s] [内存消耗：1,628.16kb] [文件加载：53]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[2020-09-27T16:57:14+08:00] 127.0.0.1 GET www.mystore666.com/public/static/product/images/favicon.png
+[运行时间：0.030586s] [吞吐率：32.69req/s] [内存消耗：1,541.00kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php

@@ -1,4 +1,4 @@
-<?php /*a:4:{s:74:"D:\phpstudy_pro\WWW\watchstore\application\product\view\product\plist.html";i:1601002346;s:40:"public/static/product/header/header.html";i:1601103929;s:40:"public/static/product/dialog/dialog.html";i:1601193019;s:40:"public/static/product/footer/footer.html";i:1600671831;}*/ ?>
+<?php /*a:4:{s:74:"D:\phpstudy_pro\WWW\watchstore\application\product\view\product\plist.html";i:1601256014;s:40:"public/static/product/header/header.html";i:1601103929;s:40:"public/static/product/dialog/dialog.html";i:1601193019;s:40:"public/static/product/footer/footer.html";i:1600671831;}*/ ?>
 <!DOCTYPE html>
 <html
     class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
@@ -439,8 +439,10 @@
                     </div>
                 </div>
                 <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-                    <div class="category-image mb-30"><a href="javascript:void(0);"><img src="/public/static/product/images/77.jpg"
-                                alt="banner"></a></div>
+
+                    <div class="banner-img-2"><a href="javascript:void(0);"><img src="/public/static/product/images/77.jpg"
+                        alt="banner"></a></div>
+        <!-- bestseller-area-start -->
                     <div class="section-title-5 mb-30">
                         <h2>列表</h2>
                     </div>
@@ -508,7 +510,7 @@
                                                     <li>
                                                         <a href="<?php echo url('/show_details'); ?>/bid/<?php echo htmlentities($watchDataItem['bid']); ?>"
                                                             title="详细">
-                                                            <i class="fa fa-external-link"></i>
+                                                            <i class="fa fa-info-circle"></i>
                                                         </a>
                                                     </li>
                                                 </ul>

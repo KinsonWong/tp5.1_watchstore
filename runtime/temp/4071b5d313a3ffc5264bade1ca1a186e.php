@@ -1,4 +1,4 @@
-<?php /*a:1:{s:70:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\login.html";i:1601188715;}*/ ?>
+<?php /*a:1:{s:70:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\login.html";i:1601191766;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -8,7 +8,6 @@
     <title>网上手表商城后台登录</title>
     <link rel="stylesheet" href="/public/static/admin/css/login.css" media="all" />
     <link rel="stylesheet" href="/public/static/admin/lib/layui/css/layui.css" media="all" />
-    <script type="text/javascript" src="/public/static/product/js/hex_sha.js"></script>
     <style>
         /* 覆盖原框架样式 */
         .layui-elem-quote {
@@ -118,6 +117,7 @@
     <script type="text/javascript" src="/public/static/admin/lib/layui/layui.all.js"></script>
     <script type="text/javascript" src="/public/static/admin/js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="/public/static/admin/js/jparticle.min.js"></script>
+    <script type="text/javascript" src="/public/static/product/js/hex_sha.js"></script>
 
     <script>
         //点击刷新验证码

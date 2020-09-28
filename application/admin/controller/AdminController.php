@@ -75,6 +75,24 @@ class AdminController extends Controller
         return $this->fetch('index');  //渲染模板
     }
 
+    function arr_format($arr){
+        $res = array();
+        foreach ( $arr as $key => $value ) {
+            foreach( $value as $k=>$v ){
+                    if ( isset($res[$key][$k]) ){
+                        if ( $k == 'orderdate' ) { // 相同键值相加
+                            $res[$key][$k] += $v;
+                        }
+                    }else{
+                        $res[$key][$k] = $v;
+                    }
+                
+            }
+        }
+        return $res;
+     }
+
+
     /**
      * 显示欢迎页面的基本信息
      * @return mixed
@@ -129,7 +147,7 @@ class AdminController extends Controller
 
     /**
      * 管理员修改密码
-     * @return mixed
+     * @param Request $request
      */
     public function admin_resetPWD(Request $request)
     {
@@ -143,6 +161,53 @@ class AdminController extends Controller
             $jsonRes = ['msg' => 1];// 修改密码成功，返回json结果1
         }
         return json($jsonRes);
+    }
+
+    /**
+     * 获取订单图表数据
+     * @return mixed
+     */
+    public function get_week_order_data(){
+        try {     
+            $nowdate = date('Y-m-d', time());
+            $beginDate = date('Y-m-d', strtotime('-6 days'));
+
+            $keys = array_map(function ($time) {
+            return date("Y-m-d", $time);
+            }, range(strtotime($beginDate), strtotime($nowdate),24 * 3600));
+
+            $list=[];
+            for($i=0;$i<count($keys);$i++){
+                $list[$i]=array('orderdate'=>$keys[$i],'count'=>0);
+            }
+        
+        $sql = "SELECT str_to_date( date, '%Y-%m-%d' ) AS orderdate,count(*) as count FROM watch_order 
+            WHERE str_to_date( date, '%Y-%m-%d' )>'$beginDate' AND str_to_date( date, '%Y-%m-%d' )<='$nowdate' GROUP BY str_to_date( date, '%Y-%m-%d' )";
+        $result = Db::query($sql);
+
+        $Data = array_merge_recursive($list, $result);
+        $Data = array_unique($Data, SORT_REGULAR);
+
+        $new = [];
+        foreach($Data as $k => $v){
+            if(isset($new[$v['orderdate']])){
+            $new[$v['orderdate']]['count'] += $v['count'];
+            }else{
+                $new[$v['orderdate']] = $v;
+            }
+        }
+        $new = array_values($new);
+
+        $date = array_column($new,'orderdate');
+        array_multisort($date,SORT_ASC,$new);
+  
+            $res = [
+                'code'=>200,
+                'result'=>$new
+            ];
+            } catch (DbException $e) {
+        }
+        return json($res);
     }
 
 }

@@ -17,6 +17,7 @@ Route::get('show_admin_login','admin/admin/show_admin_login');//管理员登录�
 Route::get('show_admin_welcome','admin/admin/show_admin_welcome');//管理员欢迎界面
 Route::get('show_admin_index','admin/admin/show_admin_index');//显示管理员主页
 Route::get('show_admin_resetPWD','admin/admin/show_admin_resetPWD');//显示管理员修改密码页面
+Route::get('get_week_order_data','admin/admin/get_week_order_data');//周订单数据接口
 Route::post('admin_resetPWD','admin/admin/admin_resetPWD');//管理员修改密码
 Route::get('admin_logout','admin/admin/admin_logout');//管理员退出
 Route::post('admin_login','admin/admin/admin_login');//管理员登录

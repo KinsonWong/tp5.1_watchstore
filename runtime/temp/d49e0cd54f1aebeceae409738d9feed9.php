@@ -1,4 +1,4 @@
-<?php /*a:3:{s:68:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\login.html";i:1601175734;s:40:"public/static/product/header/header.html";i:1601103929;s:40:"public/static/product/footer/footer.html";i:1600671831;}*/ ?>
+<?php /*a:3:{s:68:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\login.html";i:1601261787;s:40:"public/static/product/header/header.html";i:1601103929;s:40:"public/static/product/footer/footer.html";i:1600671831;}*/ ?>
 <!DOCTYPE html>
 <html
     class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"

@@ -1,4 +1,4 @@
-<?php /*a:1:{s:72:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\welcome.html";i:1600671602;}*/ ?>
+<?php /*a:1:{s:72:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\welcome.html";i:1601298009;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -21,12 +21,13 @@
             <span class="x-red"><?php echo htmlentities(app('session')->get('admin')); ?></span> ! 当前时间：<span id="nowtime"></span></blockquote>
         <fieldset class="layui-elem-field">
             <legend>数据统计</legend>
-            <div class="layui-field-box">
-                <div class="layui-col-md12">
+
+            <div class="layui-row layui-col-space15">
+                <div class="layui-col-xs6 layui-col-md4 ">
                     <div class="layui-card">
                         <div class="layui-card-body">
                             <div class="layui-carousel x-admin-carousel x-admin-backlog" lay-anim=""
-                                lay-indicator="inside" lay-arrow="none" style="width: 100%; height: 90px;">
+                                lay-indicator="inside" lay-arrow="none" style="width: 100%; height: 110px;">
                                 <div carousel-item="">
                                     <ul class="layui-row layui-col-space10 layui-this">
 
@@ -59,8 +60,20 @@
                         </div>
                     </div>
                 </div>
+                <div class="layui-col-xs12 layui-col-md8">
+                    <div class="layui-card">
+                        <div class="layui-card-body">
+                            <div id="EchartZhe" style="width: 1100px;height: 350px;"> </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </fieldset>
+
+
+
+
         <fieldset class="layui-elem-field">
             <legend>系统信息</legend>
             <div class="layui-field-box">
@@ -125,13 +138,14 @@
     </div>
 </body>
 
+<script type="text/javascript" src="/public/static/admin/js/echarts.js"></script>
+<script type="text/javascript" src="/public/static/admin/lib/layui/layui.all.js"></script>
 <script>
     //页面加载调用
     window.onload = function () {
         //每1秒刷新时间
         setInterval("NowTime()", 1000);
     }
-
     function NowTime() {
         var myDate = new Date();
         var y = myDate.getFullYear();
@@ -155,6 +169,77 @@
         var num = (i < 10) ? ("0" + i) : i;
         return num;
     }
+
+    layui.config({
+        version: 1,
+        base: '/public/static/admin/js/' //这个就是你放Echart.js的目录
+    }).use(['element', 'echarts'], function () {
+        var element = layui.element,
+            $ = layui.jquery,
+            echarts = layui.echarts;
+
+        var chartZhe = echarts.init(document.getElementById('EchartZhe'));
+
+        var date = [],num = [];
+        function getNumber(){
+            $.ajax({
+                url:"<?php echo url('/get_week_order_data'); ?>",
+                async:false,
+                dataType:'json',
+    
+                success:function(msg){
+                    var result = msg.result;
+                    //console.log(result);
+                    if(msg.code === 200){
+                        for(var i = 0 ; i < result.length; i++){
+                            date.push(result[i].orderdate);
+                            num.push(result[i].count);
+                        }
+                    }
+                }
+            });
+        };
+        getNumber();
+
+        //console.log(date);
+        //console.log(num);
+
+        var optionchartZhe = {
+            title: {
+                text: '订单数据图'
+            },
+            tooltip: {},
+            legend: { //顶部显示 与series中的数据类型的name一致
+                data: ['日订单']
+            },
+            xAxis: {    //x坐标，日期
+                // type: 'category',
+                // boundaryGap: false, //从起点开始
+                //data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+                data: date
+            },
+            yAxis: {    //y坐标 订单数
+                type: 'value'
+            },
+            series: [{
+                name: '日订单',
+                type: 'line', //线性
+                //data: [145, 230, 701, 734, 1090, 1130, 1120],
+                data: num,
+            },]
+        };
+
+        chartZhe.setOption(optionchartZhe, true);
+
+        //自适应div大小
+        window.addEventListener("resize", function() {
+	        chartZhe.resize();
+        });
+
+    });
+
+    
+
 </script>
 
 </html>
