@@ -1,4 +1,4 @@
-<?php /*a:1:{s:83:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_product\watch_list.html";i:1600930740;}*/ ?>
+<?php /*a:1:{s:83:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_product\watch_list.html";i:1601345187;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -34,10 +34,22 @@
   <div class="x-body">
 
     <xblock>
+
       <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>
       <a class="layui-btn" href="<?php echo url('/show_watch_add'); ?>" style="text-decoration:none;">添加</a>
       <span class="x-right" style="line-height:40px">共有数据：<?php echo htmlentities($watch_count); ?> 条</span>
     </xblock>
+
+    <div class="watchSearch">
+      <div class="demoTable layui-form-item">
+        <div class="layui-inline">
+          <div class="layui-input-inline">
+            <input class="layui-input" name="watchName" id="textdemo" autocomplete="off" placeholder="请输入商品关键字">
+          </div>
+        </div>
+        <div class="layui-btn" data-type="reload">搜索</div>
+      </div>
+    </div>
 
     <table class="layui-hide" id="demo" lay-filter="demo"></table>
 
@@ -78,7 +90,33 @@
           { field: 'store', title: '库存', width: 80, sort: true },
           { title: '操作', width: 120, toolbar: '#barDemo' }
         ]],
-        text: { none: '暂无相关数据', }
+        text: { none: '暂无相关数据', },
+        id: 'textreload'
+      });
+
+      var $ = layui.$, active = {
+        reload: function () {
+          var textdemo = $('#textdemo').val();
+          table.reload('textreload', {
+            url: "<?php echo url('/search_watch'); ?>",
+            method: 'post',
+            limit: 10,
+            page: { curr: 1 },
+            where: {
+              name: textdemo,
+            }
+          })
+
+        }
+      }
+      $('.watchSearch .layui-btn').on('click', function () {
+        var type = $(this).data('type');
+
+        if ($('#textdemo').val() == "") {
+          layer.msg('查询项目不能为空');
+          return false;
+        }
+        active[type] ? active[type].call(this) : '';
       });
 
       //监听行工作事件

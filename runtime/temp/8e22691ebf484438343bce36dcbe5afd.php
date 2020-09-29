@@ -1,4 +1,4 @@
-<?php /*a:1:{s:72:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\welcome.html";i:1601298009;}*/ ?>
+<?php /*a:1:{s:72:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\welcome.html";i:1601348748;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -21,13 +21,12 @@
             <span class="x-red"><?php echo htmlentities(app('session')->get('admin')); ?></span> ! 当前时间：<span id="nowtime"></span></blockquote>
         <fieldset class="layui-elem-field">
             <legend>数据统计</legend>
-
-            <div class="layui-row layui-col-space15">
-                <div class="layui-col-xs6 layui-col-md4 ">
+            <div class="layui-field-box">
+                <div class="layui-col-md12">
                     <div class="layui-card">
                         <div class="layui-card-body">
                             <div class="layui-carousel x-admin-carousel x-admin-backlog" lay-anim=""
-                                lay-indicator="inside" lay-arrow="none" style="width: 100%; height: 110px;">
+                                lay-indicator="inside" lay-arrow="none" style="width: 100%; height: 90px;">
                                 <div carousel-item="">
                                     <ul class="layui-row layui-col-space10 layui-this">
 
@@ -60,18 +59,31 @@
                         </div>
                     </div>
                 </div>
-                <div class="layui-col-xs12 layui-col-md8">
+            </div>
+        </fieldset>
+
+        <fieldset class="layui-elem-field">
+            <legend>订单数据总览</legend>
+            <div class="layui-field-box">
+                <div class="layui-col-xs6 layui-col-md6">
                     <div class="layui-card">
                         <div class="layui-card-body">
-                            <div id="EchartZhe" style="width: 1100px;height: 350px;"> </div>
+                            <div id="EchartZhe" style="width: 850px;height: 400px;"> </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="layui-col-xs6 layui-col-md6">
+                    <div class="layui-card">
+                        <div class="layui-card-body">
+                            <div id="EchartZhu" style="width: 850px;height: 400px;"> </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </fieldset>
-
-
 
 
         <fieldset class="layui-elem-field">
@@ -179,66 +191,118 @@
             echarts = layui.echarts;
 
         var chartZhe = echarts.init(document.getElementById('EchartZhe'));
+        var chartZhu = echarts.init(document.getElementById('EchartZhu'));
 
-        var date = [],num = [];
-        function getNumber(){
+        var date1 = [], num = [];
+        var date2 = [], sell = [];
+        function getOrderNumber() {
             $.ajax({
-                url:"<?php echo url('/get_week_order_data'); ?>",
-                async:false,
-                dataType:'json',
-    
-                success:function(msg){
+                url: "<?php echo url('/get_week_order_data'); ?>",
+                async: false,
+                dataType: 'json',
+
+                success: function (msg) {
                     var result = msg.result;
                     //console.log(result);
-                    if(msg.code === 200){
-                        for(var i = 0 ; i < result.length; i++){
-                            date.push(result[i].orderdate);
+                    if (msg.code === 200) {
+                        for (var i = 0; i < result.length; i++) {
+                            date1.push(result[i].orderdate);
                             num.push(result[i].count);
                         }
                     }
                 }
             });
         };
-        getNumber();
+
+        function getOrderSell() {
+            $.ajax({
+                url: "<?php echo url('/get_week_order_sell'); ?>",
+                async: false,
+                dataType: 'json',
+
+                success: function (msg) {
+                    var result = msg.result;
+                    //console.log(result);
+                    if (msg.code === 200) {
+                        for (var i = 0; i < result.length; i++) {
+                            date2.push(result[i].orderdate);
+                            sell.push(result[i].sell);
+                        }
+                    }
+                }
+            });
+        };
+
+        getOrderNumber();
+        getOrderSell();
 
         //console.log(date);
         //console.log(num);
 
+        var optionchartZhu = {
+            title: {
+                text: '近7日销售额'
+            },
+            tooltip: {},
+            legend: {
+                data: ['销售额']
+            },
+            xAxis: {
+                data: date2
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [{
+                name: '销售额',
+                type: 'bar', //柱状
+                data: sell,
+                itemStyle: {
+                    normal: { //柱子颜色
+                        color: '#009688'
+                    }
+                },
+            }]
+        };
+
         var optionchartZhe = {
             title: {
-                text: '订单数据图'
+                text: '近7日订单数'
             },
             tooltip: {},
             legend: { //顶部显示 与series中的数据类型的name一致
-                data: ['日订单']
+                data: ['日订单总数']
             },
             xAxis: {    //x坐标，日期
-                // type: 'category',
-                // boundaryGap: false, //从起点开始
-                //data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
-                data: date
+                data: date1
             },
             yAxis: {    //y坐标 订单数
                 type: 'value'
             },
             series: [{
-                name: '日订单',
+                name: '日订单总数',
                 type: 'line', //线性
-                //data: [145, 230, 701, 734, 1090, 1130, 1120],
                 data: num,
-            },]
+                itemStyle: {
+                    normal: { //柱子颜色
+                        color: '#009688'
+                    }
+                },
+            }]
         };
 
+        chartZhu.setOption(optionchartZhu, true);
         chartZhe.setOption(optionchartZhe, true);
 
         //自适应div大小
-        window.addEventListener("resize", function() {
-	        chartZhe.resize();
+        window.addEventListener("resize", function () {
+            chartZhe.resize();
+            chartZhu.resize();
         });
 
     });
 
-    
+
 
 </script>
 

@@ -164,7 +164,7 @@ class AdminController extends Controller
     }
 
     /**
-     * 获取订单图表数据
+     * 获取近7日订单每日总数数据
      * @return mixed
      */
     public function get_week_order_data(){
@@ -192,6 +192,53 @@ class AdminController extends Controller
         foreach($Data as $k => $v){
             if(isset($new[$v['orderdate']])){
             $new[$v['orderdate']]['count'] += $v['count'];
+            }else{
+                $new[$v['orderdate']] = $v;
+            }
+        }
+        $new = array_values($new);
+
+        $date = array_column($new,'orderdate');
+        array_multisort($date,SORT_ASC,$new);
+  
+            $res = [
+                'code'=>200,
+                'result'=>$new
+            ];
+            } catch (DbException $e) {
+        }
+        return json($res);
+    }
+
+    /**
+     * 获取近7日订单每日销售额数据
+     * @return mixed
+     */
+    public function get_week_order_sell(){
+        try {     
+            $nowdate = date('Y-m-d', time());
+            $beginDate = date('Y-m-d', strtotime('-6 days'));
+
+            $keys = array_map(function ($time) {
+            return date("Y-m-d", $time);
+            }, range(strtotime($beginDate), strtotime($nowdate),24 * 3600));
+
+            $list=[];
+            for($i=0;$i<count($keys);$i++){
+                $list[$i]=array('orderdate'=>$keys[$i],'sell'=>0);
+            }
+        
+        $sql = "SELECT str_to_date( date, '%Y-%m-%d' ) AS orderdate,sum(pay) as sell FROM watch_order 
+            WHERE str_to_date( date, '%Y-%m-%d' )>'$beginDate' AND str_to_date( date, '%Y-%m-%d' )<='$nowdate' GROUP BY str_to_date( date, '%Y-%m-%d' )";
+        $result = Db::query($sql);
+
+        $Data = array_merge_recursive($list, $result);
+        $Data = array_unique($Data, SORT_REGULAR);
+
+        $new = [];
+        foreach($Data as $k => $v){
+            if(isset($new[$v['orderdate']])){
+            $new[$v['orderdate']]['sell'] += $v['sell'];
             }else{
                 $new[$v['orderdate']] = $v;
             }

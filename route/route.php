@@ -18,6 +18,7 @@ Route::get('show_admin_welcome','admin/admin/show_admin_welcome');//管理员欢
 Route::get('show_admin_index','admin/admin/show_admin_index');//显示管理员主页
 Route::get('show_admin_resetPWD','admin/admin/show_admin_resetPWD');//显示管理员修改密码页面
 Route::get('get_week_order_data','admin/admin/get_week_order_data');//周订单数据接口
+Route::get('get_week_order_sell','admin/admin/get_week_order_sell');//周订单销售额数据接口
 Route::post('admin_resetPWD','admin/admin/admin_resetPWD');//管理员修改密码
 Route::get('admin_logout','admin/admin/admin_logout');//管理员退出
 Route::post('admin_login','admin/admin/admin_login');//管理员登录
@@ -46,6 +47,7 @@ Route::post('watch_delete','admin/admin_product/watch_delete');//商品删除
 Route::post('watch_edit','admin/admin_product/watch_edit');//商品编辑
 Route::post('watch_delete_s','admin/admin_product/watch_delete_s');//商品批量删除
 Route::post("watch_add",'admin/admin_product/watch_add');//添加商品
+Route::post("search_watch",'admin/admin_product/search_watch');//搜索商品
 
 //Admin_Order
 Route::get('show_order_list','admin/admin_order/show_order_list');//订单列表页面

@@ -229,4 +229,30 @@ class AdminProductController extends Controller
 
     }
 
+    /**
+     * 搜索商品
+     * @param Request $request
+     * @return \think\response\Json
+     */
+    public function search_watch(Request $request)
+    {
+        $name = $request->post('name');
+        $page = $request->post('page');
+        $limit = $request->post('limit');
+        $start=$limit*($page-1);
+
+        $watch = new WatchModel();
+        $watchpage = $watch->order('bid','asc')->limit($start,$limit)->where('bname','like','%'.$name.'%')->select();
+        $count = count($watchpage);
+
+        $data = array(  // 拼装成为前端需要的JSON
+            'code'=>0,
+            'msg'=>'返回成功',
+            'count'=>$count,
+            'data'=>$watchpage
+        );
+        return json($data);
+
+    }
+
 }
