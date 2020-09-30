@@ -119,6 +119,7 @@ class AdminController extends Controller
             'su_space' => round((disk_free_space('.') / (1024 * 1024)), 2) . 'M',
 
         );//查询一系列的系统信息并传递回模板页面
+
         $this->assign('info', $info);
         $this->assign('time', $time);
         $this->assign('count', $count);

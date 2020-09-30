@@ -58,6 +58,13 @@ Route::post('order_deliver','admin/admin_order/order_deliver');//订单发货
 Route::post('order_delete_s','adminadmin_order/order_delete_s');//订单批量删除
 Route::post('order_update','admin/admin_order/order_update');//订单更新
 
+//Admin_Log
+Route::get('show_userlog_list','admin/admin_log/show_userlog_list');//会员登录日志列表页面
+Route::get('get_userlog_list','admin/admin_log/get_userlog_list');//会员登录日志列表数据接口
+Route::post('userlog_delete','admin/admin_log/userlog_delete');//删除会员登录日志
+Route::post('userlog_delete_s','admin/admin_log/userlog_delete_s');//会员登录日志批量删除
+Route::post("search_log",'admin/admin_log/search_log');//搜索登录日志
+
 
 //Product
 Route::get('show_details','product/product/show_details');//商品详情页面

@@ -7,6 +7,7 @@ use app\product\model\UserAddressModel;
 use app\product\model\OrderDetailModel;
 use app\user\extend\UserExtend;
 use app\user\model\UserModel;
+use app\user\model\UserLogModel;
 use app\user\validate\UserValidate;
 use think\Controller;
 use think\db\exception\DataNotFoundException;
@@ -193,9 +194,19 @@ class UserController extends Controller
     {
         $captcha = new Captcha();
         $code=$request->post('code');
+        $res = UserModel::where([
+            "username" => $request->username
+        ])->find();
         try {
             if(!$captcha->check($code)){
                 $jsonRes = ['msg' => "验证码错误！"];// 登录失败，验证码错误
+                UserLogModel::create([
+                    'user_id'=> $res['uid'],
+                    'username'=>$request->username,
+                    'ip'=> $request->ip(),
+                    'login_time'=> date("Y-m-d H:i:s"),
+                    'description'=> "登录失败：验证码错误！"
+                ]);
             }
             else{
                 $result = UserModel::where([
@@ -207,8 +218,22 @@ class UserController extends Controller
                     Session::set("username", $request->username); 
                     Session::set("uid", $result["uid"]);
                     $jsonRes = ['msg' => 1];     //登录成功
+                    UserLogModel::create([
+                        'user_id'=> $result['uid'],
+                        'username'=>$request->username,
+                        'ip'=> $request->ip(),
+                        'login_time'=> date("Y-m-d H:i:s"),
+                        'description'=> "登录成功！"
+                    ]);
                 } else {
                     $jsonRes = ["msg" => "用户名或密码错误！"]; // 登录失败
+                    UserLogModel::create([
+                        'user_id'=> $result['uid'],
+                        'username'=>$request->username,
+                        'ip'=> $request->ip(),
+                        'login_time'=> date("Y-m-d H:i:s"),
+                        'description'=> "登录失败：密码错误！"
+                    ]);
                 }
             }       
         } catch (Exception $e) {

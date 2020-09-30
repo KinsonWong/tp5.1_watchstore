@@ -1,4 +1,4 @@
-<?php /*a:1:{s:70:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\index.html";i:1601190253;}*/ ?>
+<?php /*a:1:{s:70:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\index.html";i:1601471982;}*/ ?>
 <!doctype html>
 <html lang="en">
 
@@ -80,7 +80,7 @@
                 </li>
                 <li>
                     <a href="javascript:;">
-                        <i class="iconfont">&#xe723;</i>
+                        <i class="iconfont">&#59124;</i>
                         <cite>商品管理</cite>
                         <i class="iconfont nav_right">&#xe697;</i>
                     </a>
@@ -89,6 +89,21 @@
                             <a _href="<?php echo url('/show_watch_list'); ?>">
                                 <i class="iconfont">&#xe6a7;</i>
                                 <cite>商品列表</cite>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <i class="iconfont">&#59123;</i>
+                        <cite>日志管理</cite>
+                        <i class="iconfont nav_right">&#xe697;</i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a _href="<?php echo url('/show_userlog_list'); ?>">
+                                <i class="iconfont">&#xe6a7;</i>
+                                <cite>会员登录日志</cite>
                             </a>
                         </li>
                     </ul>
