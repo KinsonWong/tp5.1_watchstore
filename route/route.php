@@ -11,6 +11,7 @@
 
 //Index
 Route::get('show_index','index/index/show_index');//商城主页页面
+Route::get('show_brand_story','index/index/show_brand_story');//显示品牌故事页面
 
 //Admin
 Route::get('show_admin_login','admin/admin/show_admin_login');//管理员登录页面
@@ -94,6 +95,8 @@ Route::get('show_forget_password','user/user/show_forget_password');//会员忘�
 Route::get('show_user_center','user/user/show_user_center');//会员个人中心页面
 Route::get('show_register','user/user/show_register');//会员注册页面
 Route::post('receive_confirm','user/user/receive_confirm');//会员订单确认收货
+Route::post('change_password','user/user/change_password');//修改密码
+Route::post("user_add_address",'user/user/user_add_address');//会员地址添加
 
 return [
 

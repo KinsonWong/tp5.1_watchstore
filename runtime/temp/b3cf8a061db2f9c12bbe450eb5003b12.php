@@ -1,4 +1,4 @@
-<?php /*a:3:{s:74:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\user_center.html";i:1601559852;s:40:"public/static/product/header/header.html";i:1601560530;s:40:"public/static/product/footer/footer.html";i:1600671831;}*/ ?>
+<?php /*a:3:{s:76:"D:\phpstudy_pro\WWW\watchstore\application\index\view\index\brand_story.html";i:1601557747;s:40:"public/static/product/header/header.html";i:1601556419;s:40:"public/static/product/footer/footer.html";i:1600671831;}*/ ?>
 <!DOCTYPE html>
 <html
     class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
@@ -7,73 +7,49 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>用户中心</title>
+    <title>品牌故事</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/public/static/product/images/favicon.png">
-    <link rel="stylesheet" href="/public/static/admin/lib/layui/css/layui.css">
-    <script type="text/javascript" src="/public/static/admin/lib/layui/layui.js" charset="utf-8"></script>
-    <script type="text/javascript" src="/public/static/product/js/jsAddress.js"></script>
+
     <style>
         .top_height {
-            margin-bottom: 60px;
+            height: 405px;
+            background: #e8e8e8;
+            margin-bottom: 2rem;
         }
 
-        .bl {
-            border-left: 1px solid #e5e5e5;
+        .text_small {
+            font-size: 0.8rem;
         }
 
-        a:hover {
+        .my_img1 {
+            margin-left: 27px;
+            margin-top: 20px;
+            width: 85%;
+            transition: transform 1s;
+        }
+
+        .my_img1:hover {
+            transform: scale(1.1);
+        }
+
+        ._text {
+            margin-left: 27px;
+            margin-top: 20px;
+            width: 85%;
+            text-indent: 20px;
+        }
+
+        .tt {
+            margin-bottom: 35px;
             color: #F07c29;
-        }
-
-        .tx {
-            font-weight: light;
-            color: #000000;
-            font-size: 30px;
-            margin-left: 15px;
-        }
-
-        .nt {
-            font-weight: normal;
-            color: #000000;
-            font-size: 20px;
-            margin-left: 30px;
-        }
-
-        .nt1 {
-            text-align: center;
-        }
-
-        .b {
-            color: #333333;
-        }
-
-        .bc {
-            background-color: #e8e8e8;
-        }
-
-        .nav-pills>li.active>a,
-        .nav-pills>li.active>a:hover,
-        .nav-pills>li.active>a:focus {
-            color: #fff;
-            background-color: #f07c29 !important;
-        }
-
-        table .t-default {
-            display: block;
-            width: 80px;
-            height: 30px;
-            text-align: center;
-            border-radius: 3px;
-            background: #ffd6cc;
-            color: #f30;
         }
     </style>
 </head>
 
-<body style="height:100%;">
+<body>
     <!DOCTYPE html>
 <html lang="en">
 
@@ -92,7 +68,6 @@
     <script type="text/javascript" src="/public/static/product/js/jquery-3.2.1.min.js"></script>
     <script src="/public/static/product/js/modernizr-2.8.3.min.js"></script>
     <script src="/public/static/product/js/vue.js"></script>
-    <script type="text/javascript" src="/public/static/admin/lib/layui/layui.js" charset="utf-8"></script>
     <style>
         .search-btn {
             background: #f07c29 none repeat scroll 0 0;
@@ -139,7 +114,7 @@
                                 <ul>
                                     <?php if(app('session')->get('username') != null): ?>
                                     <li><a href="<?php echo url('/show_user_center'); ?>"><?php echo htmlentities(app('session')->get('username')); ?></a></li>
-                                    <li><a onclick="show_order()">订单列表</a></li>
+                                    <li><a href="<?php echo url('/show_user_order'); ?>">订单列表</a></li>
                                     <li><a href="<?php echo url('/user_logout'); ?>">退出</a></li>
                                     <?php else: ?>
                                     <li><a href="<?php echo url('/show_register'); ?>">注册</a></li>
@@ -238,8 +213,7 @@
                                                     <a :href="'<?php echo url('/show_plist'); ?>/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'<?php echo url('/show_details'); ?>/bid/'+info.bid"
-                                                        v-for="info in item.value"
-                                                        class="bname">{{info.bname|ellipsis}}</a>
+                                                        v-for="info in item.value" class="bname">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
                                         </li>
@@ -250,8 +224,7 @@
                                                     <a :href="'<?php echo url('/show_plist'); ?>/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'<?php echo url('/show_details'); ?>/bid/'+info.bid"
-                                                        v-for="info in item.value"
-                                                        class="bname">{{info.bname|ellipsis}}</a>
+                                                        v-for="info in item.value" class="bname">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
                                         </li>
@@ -261,8 +234,7 @@
                                                     <a :href="'<?php echo url('/show_plist'); ?>/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'<?php echo url('/show_details'); ?>/bid/'+info.bid"
-                                                        v-for="info in item.value"
-                                                        class="bname">{{info.bname|ellipsis}}</a>
+                                                        v-for="info in item.value" class="bname">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
                                         </li>
@@ -314,8 +286,7 @@
                                                     <a :href="'<?php echo url('/show_plist'); ?>/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'<?php echo url('/show_details'); ?>/bid/'+info.bid"
-                                                        v-for="info in item.value"
-                                                        class="bname">{{info.bname|ellipsis}}</a>
+                                                        v-for="info in item.value" class="bname">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
                                         </li>
@@ -343,13 +314,13 @@
         data: type_data,
         name: 'bname',
         filters: {
-            ellipsis(value) {
-                if (!value) return ''
+            ellipsis (value) {
+            if (!value) return ''
 
-                if (value.length > 32) {
-                    return value.slice(0, 32) + '...'
-                }
-                return value
+            if (value.length > 32) {
+                return value.slice(0,32) + '...'
+            }
+            return value
             }
         },
         methods: {
@@ -398,21 +369,6 @@
             }
         });
     }
-
-    //弹出显示订单
-    function show_order() {
-        layui.use("layer", function () {
-            var layer = layui.layer;  //layer初始化
-            layer.open({
-                type: 2,
-                area: ['1200px', '800px'],
-                fixed: false, //不固定
-                maxmin: true,
-                content: "<?php echo url('/show_user_order'); ?>"
-            });
-        });
-
-    }
 </script>
 
 </html>
@@ -424,7 +380,7 @@
                     <div class="breadcrumbs-menu">
                         <ul>
                             <li><a href="<?php echo url('/show_index'); ?>">主页</a></li>
-                            <li><a href="javascript:void(0);" class="active">个人中心</a></li>
+                            <li><a href="javascript:void(0);" class="active">品牌故事</a></li>
                         </ul>
                     </div>
                 </div>
@@ -434,199 +390,92 @@
     <!-- breadcrumbs-area-end -->
     <!-- entry-header-area-start -->
     <div class="container">
-        <div class="col-lg-2">
-            <div class="text-left row no-gutters">
-                <h1>账号管理</h1>
-                <ul class="h2 d-flex flex-column nav nav-pills">
-                    <li class="mt-50 nav-item active">
-                        <a data-toggle="pill" class="text-muted nav-link" href="#q1">个人信息</a>
-                    </li>
-                    <li class="mt-50 nav-item">
-                        <a data-toggle="pill" class="text-muted nav-link" href="#q2">我的订单</a>
-                    </li>
-                    <li class="mt-50  nav-item">
-                        <a data-toggle="pill" class="text-muted nav-link" href="#q3">我的地址</a>
-                    </li>
-                    <li class="mt-50 mb-50 nav-item">
-                        <a data-toggle="pill" class="text-muted nav-link" href="#q4">登录日志</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="col-lg-10 tab-content bl">
-            <div class="top_height tab-pane fade in active" id="q1">
-                <div>
-                    <p class="tx">你的基础信息</p>
-                    <div class="nt b">
-                        <input type="hidden" value="<?php echo htmlentities(app('session')->get('uid')); ?>" name="uid" id="uid">
-                        <p>用户名：<?php echo htmlentities($user['username']); ?></p>
-                        <p>手机号：<?php echo htmlentities($user['phone']); ?></p>
-                        <p>电子邮箱：<?php echo htmlentities($user['email']); ?></p>
-                        <p>注册日期：<?php echo htmlentities($user['registertime']); ?></p>
-                        <p>所在地区：<?php echo htmlentities($user['province']); ?> <?php echo htmlentities($user['city']); ?> <?php echo htmlentities($user['area']); ?></p>
-                        <span class="edit_PWD"><button type="button" class="btn btn-warning"
-                                onclick="change_password()">修改密码</button></span>
+        <div class="row no-gutters">
+            <h1 class="tt">品牌故事</h1>
+            <div class="col-lg-4 col-sm-12">
+                <div class="mr-lg-1 top_height">
+                    <img class="my_img1" src="/public/static/product/images/1.jpg" alt="">
+                    <div class="_text">
+                        <p>精工(SEIKO)由日本表匠服部金太郎于1892年创立，并在1968荣获日内瓦天文台竞赛之“最佳机械腕表”。精工于1969推出世界第一只石英腕表Astron,并在1895年成功推出日本制造的TIME
+                            KEEPER怀表，其在腕表界的地位得以奠定，创始人金太郎也被日本新闻界尊称为“日本时计之王”。</p>
                     </div>
                 </div>
             </div>
 
-
-            <div class="top_height tab-pane fade" id="q2" style="margin-top: -60px;">
-                <p class="mb-50 tx">订单列表</p>
-                <table class="table table-bordered table-hover">
-                    <thead class="bc b">
-                        <tr>
-                            <th>
-                                <nobr>订单编号</nobr>
-                            </th>
-                            <th>
-                                <nobr>商品名称</nobr>
-                            </th>
-                            <th>
-                                <nobr>支付方式</nobr>
-                            </th>
-                            <th>
-                                <nobr>实付金额(元)</nobr>
-                            </th>
-                            <th>
-                                <nobr>收货人</nobr>
-                            </th>
-                            <th>
-                                <nobr>收货地址</nobr>
-                            </th>
-                            <th>
-                                <nobr>联系电话</nobr>
-                            </th>
-                            <th>
-                                <nobr>发货状态</nobr>
-                            </th>
-                            <th>
-                                <nobr>快递单号</nobr>
-                            </th>
-                            <th>
-                                <nobr>下单时间</nobr>
-                            </th>
-                            <th>
-                                <nobr>操作</nobr>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody class="b">
-                        <?php foreach($user_orders as $values): ?>
-                        <tr>
-                            <td><?php echo htmlentities($values['o_id']); ?></td>
-                            <td><?php foreach($values['bname'] as $key=>$value): ?>
-                                <?php echo htmlentities($value['bname']); ?> * <?php echo htmlentities($value['user_buy_num']); ?><br>
-                                <?php endforeach; ?></td>
-                            <td><?php echo htmlentities($values['payment']); ?></td>
-                            <td><?php echo htmlentities($values['pay']); ?></td>
-                            <td><?php echo htmlentities($values['user']['consignee']); ?></td>
-                            <td><?php echo htmlentities($values['user']['province']); ?><?php echo htmlentities($values['user']['city']); ?><?php echo htmlentities($values['user']['area']); ?><?php echo htmlentities($values['user']['addr']); ?></td>
-                            <td><?php echo htmlentities($values['user']['contact']); ?></td>
-                            <?php if(($values['status']==1)): ?>
-                            <td>待发货</td>
-                            <?php elseif(($values['status']==2)): ?>
-                            <td>已发货</td>
-                            <?php else: ?><td>已收货</td>
-                            <?php endif; ?>
-                            <td><?php echo htmlentities($values['expressNum']); ?></td>
-                            <td><?php echo htmlentities($values['date']); ?></td>
-                            <?php if(($values['status']==1)): ?>
-                            <td>-</td>
-                            <?php elseif(($values['status']==2)): ?>
-                            <td><a class="layui-btn layui-btn-normal layui-btn-xs"
-                                    onclick="receive_confirm(this, '<?php echo htmlentities($values['o_id']); ?>')" href="javascript:;">确认收货</a></td>
-                            <?php else: ?><td>-</td>
-                            <?php endif; ?>
-                        </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
-
-            </div>
-
-
-            <div class="top_height tab-pane fade" id="q3" style="margin-top: -60px;">
-                <p class="mb-50 tx">新增收货地址</p>
-                <div class="col-lg-6">
-                    <form action="" class="mb-50">
-                        <div class="single-register b">*收货人姓名：
-                            <input type="hidden" name="uid" id="uid" value="<?php echo htmlentities(app('session')->get('uid')); ?>">
-                            <input type="text" class="form-control" placeholder="长度不超过25个字符" id="consignee"
-                                name="consignee" autocomplete="off"></div>
-                        <div class="single-register b">*手机号码：<input type="text" class="form-control"
-                                placeholder="请输入您的收货号码" id="contact" name="contact" autocomplete="off"></div>
-                        <div class="single-register b">*所在地区：
-                            <select class="form-control" id="cmbProvince" name="province"></select>
-                            <select class="form-control" id="cmbCity" name="city"></select>
-                            <select class="form-control" id="cmbArea" name="area"></select>
-                        </div>
-                        <div class="single-register b">*详细地址：
-                            <textarea name="addr" id="addr" placeholder="详细地址" class="form-control"
-                                placeholder="请输入详细地址信息，如道路、门牌号、小区、楼栋号等信息"></textarea></div>
-                        <button class="btn btn-warning w-25" onclick="add_address()">保存</button>
-                    </form>
+            <div class="col-lg-4 col-sm-12">
+                <div class="mr-lg-1 top_height">
+                    <img class="my_img1" src="/public/static/product/images/2.jpg" alt="">
+                    <div class="_text">
+                        <p>佳明(Garmin)成立于1989年，注册地为瑞士沙夫豪森。近30年前，Garmin 以尖端的航空
+                            GPS导航产品进入市场，目前已是航空、航海、车用、运动健身产品等市场的领先者。腕表品类包括智能腕表、户外腕表、航空腕表、和MARQ时尚腕表等系列。结合惊艳设计、卓越质量与优异可靠度，创造绝佳的产品体验，搭配完整的产品生态圈，Garmin矢志成为每位热爱生活的使用者喜爱的品牌。
+                        </p>
+                    </div>
                 </div>
-
-
-
-                <table class="table table-bordered table-hover">
-                    <thead class="bc b">
-                        <th>收货人</th>
-                        <th>省</th>
-                        <th>市</th>
-                        <th>区/县</th>
-                        <th>详细地址</th>
-                        <th>电话</th>
-                        <th>操作</th>
-                    </thead>
-                    <tbody class="b">
-                        <?php if(is_array($address) || $address instanceof \think\Collection || $address instanceof \think\Paginator): $i = 0; $__LIST__ = $address;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                        <tr>
-                            <td><?php echo htmlentities($vo['consignee']); ?></td>
-                            <td><?php echo htmlentities($vo['province']); ?></td>
-                            <td><?php echo htmlentities($vo['city']); ?></td>
-                            <td><?php echo htmlentities($vo['area']); ?></td>
-                            <td><?php echo htmlentities($vo['addr']); ?></td>
-                            <td><?php echo htmlentities($vo['contact']); ?></td>
-                            <td><button class="layui-btn layui-btn-xs" href="javascript:void(0);">编辑</button>
-                                <button class="layui-btn layui-btn-danger layui-btn-xs"
-                                    href="javascript:void(0);">删除</button>
-                            </td>
-                        </tr>
-                        <?php endforeach; endif; else: echo "" ;endif; ?>
-                    </tbody>
-                </table>
             </div>
 
-            <div class="top_height tab-pane fade" id="q4" style="margin-top: -60px;">
-                <p class="mb-50 tx">查看登录日志(只显示近10次登录)</p>
+            <div class="col-lg-4 col-sm-12">
+                <div class="top_height">
+                    <img class="my_img1" src="/public/static/product/images/3.jpg" alt="">
+                    <div class="_text">
+                        <p>卡西欧(CASIO)品牌源于日本，创立于1957年。卡西欧腕表将高、精、尖的先进科技结合新型液晶技术恰当的运用于腕上时计，坚持不懈地开发无以伦比的“腕上科技产品”。卡西欧腕表推广集多功能和新时尚为一体的运动休闲手表品牌G-Shock和Baby-G,经过市场开拓期的品牌塑造活动，成为新潮、时尚、高科技、功能多元化的电子腕表的代名词。
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-                <table class="table table-bordered table-hover">
-                    <thead class="bc b">
-                        <th>日志编号</th>
-                        <th>用户名</th>
-                        <th>登录IP</th>
-                        <th>登录时间</th>
-                        <th>描述</th>
-                    </thead>
-                    <tbody class="b">
-                        <?php if(is_array($user_log) || $user_log instanceof \think\Collection || $user_log instanceof \think\Paginator): $i = 0; $__LIST__ = $user_log;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                        <tr>
-                            <td><?php echo htmlentities($vo['log_id']); ?></td>
-                            <td><?php echo htmlentities($vo['username']); ?></td>
-                            <td><?php echo htmlentities($vo['ip']); ?></td>
-                            <td><?php echo htmlentities($vo['login_time']); ?></td>
-                            <td><?php echo htmlentities($vo['description']); ?></td>
-                        </tr>
-                        <?php endforeach; endif; else: echo "" ;endif; ?>
-                    </tbody>
-                </table>
+            <div class="col-lg-4 col-sm-12">
+                <div class="mr-lg-1 top_height">
+                    <img class="my_img1" src="/public/static/product/images/4.jpg" alt="">
+                    <div class="_text">
+                        <p>安普里奥·阿玛尼(Emporio Armani)是意大利著名奢侈品品牌Giorgio
+                            Armani旗下的，针对年轻人设计的副线品牌。1981年成立于意大利米兰，经营产品有鞋履、香水、饰物等。Emporio Armani挟着主牌Giorgio
+                            Armani的威势，一上市便大受欢迎，分店从欧洲迅速遍及美洲和亚洲。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-12">
+                <div class="mr-lg-1 top_height">
+                    <img class="my_img1" src="/public/static/product/images/5.jpg" alt="">
+                    <div class="_text">
+                        <p>浪琴(LONGINES)于1832年在瑞士索伊米亚创立，拥有逾180多年的悠久历史与精湛工艺，在运动计时领域亦拥有显赫传统与卓越经验。浪琴作为世界锦标赛的计时器及国际联合会的合作伙伴，以其优雅的钟表享誉全球，并以飞翼沙漏为标志的浪琴表以优雅著称于世。作为全球领先钟表制造商斯沃琪集团旗下的著名品牌，浪琴表已遍布世界150多个国家。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-12">
+                <div class="top_height">
+                    <img class="my_img1" src="/public/static/product/images/6.jpg" alt="">
+                    <div class="_text">
+                        <p>天梭(TISSOT)由查理费里西安·天梭创立于1853年，1983年加入Swatch集团。天梭融合了160年的创意和传统的瑞士制表工艺，是瑞士制表业中的佼佼者。第一间天梭制表工作室位于瑞士小镇力洛克，2014年天梭表已成功畅销全球五大洲150个国家，并且成为代表瑞士产品的质量和精确度的品牌。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-12">
+                <div class="top_height">
+                    <img class="my_img1" src="/public/static/product/images/7.jpg" alt="">
+                    <div class="_text">
+                        <p>天美时(TIMEX)是始创于1854年的美国钟表品牌，以其悠久的制表历史和时尚的外观闻名。天美时户外系列手表有着强大的功能性与实用性，是科技与设计的完美结合。TIMEX手表深受众多明星政要的喜爱，并对它爱不释手，最有名的当属美国历任总统，如奥巴马、乔治布什、克林顿、戈尔等。所以天美时又被称为“永远被总统选戴的TIMEX".
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-12">
+                <div class="top_height">
+                    <img class="my_img1" src="/public/static/product/images/loading.gif" alt="pic" >
+                    <div class="_text" style="text-align: center;">
+                        <p>品牌故事陆续更新中，敬请期待！</p>
+                    </div>
+                </div>
             </div>
 
         </div>
     </div>
+
 
     <!DOCTYPE html>
 <html lang="en">
@@ -742,130 +591,5 @@
 </html>
 
 </body>
-<script type="text/javascript" src="/public/static/product/js/hex_sha.js"></script>
-<script type="text/javascript">
-
-    function change_password() {
-        var uid = $("#uid").val();
-        layui.use("layer", function () {
-            var layer = layui.layer;  //layer初始化
-            layer.prompt({
-                formType: 1,
-                offset: 'c',
-                value: '',  //初始值
-                title: '请输入新密码'
-            }, function (value, index, elem) {
-                var confirm_password = hex_sha1($("#PWDconfirm").val());
-                var password = value;
-                var password = hex_sha1(password);
-                layer.close(index);
-                layer.confirm('确认要修改吗？', function (index) {
-                    // 异步后台处理
-                    $.ajax({
-                        type: "POST",//方法类型
-                        dataType: "json",//预期服务器返回的数据类型
-                        url: "<?php echo url('/change_password'); ?>",//url
-                        data: {
-                            uid: uid,
-                            password: password,
-                            confirm_password: confirm_password,
-                        },
-                        success: function (result) {
-                            if (result.msg == 1) {
-                                layer.msg('已成功修改', { icon: 1, time: 1000 }, function () {
-                                    window.location.href =
-                                        "<?php echo url('/show_user_center'); ?>";
-                                });
-                            } else if (result.msg == 2) {
-                                layer.msg("两次输入密码不一致", { icon: 0, time: 1000 });
-                            } else {
-                                layer.msg(result.msg, { icon: 0, time: 1000 });
-                            }
-                        },
-                        error: function (result) {
-                            console.log(result)
-                            layer.msg("服务器繁忙,请稍后重试!", { icon: 0, time: 1000 })
-                        }
-                    });
-                });
-            });
-            $(".layui-layer-content").append("<br/><input type=\"password\" id= \"PWDconfirm\" class=\"layui-input\" placeholder=\"请再次输入密码\"/>")
-        });
-    }
-
-    //订单确认收货
-    function receive_confirm(obj, id) {
-        layui.use("layer", function () {
-            var layer = layui.layer;  //layer初始化
-
-            layer.confirm('确认收到货了吗？', function (index) {
-                // 异步后台处理
-                $.ajax({
-                    type: "POST",//方法类型
-                    dataType: "json",//预期服务器返回的数据类型
-                    url: "<?php echo url('/receive_confirm'); ?>",//url
-                    data: {
-                        oid: id,
-                    },
-                    success: function (result) {
-                        if (result.msg == 1) {
-                            layer.msg('已确认收货', { icon: 1, time: 1000 }, function () {
-                                window.location.href = ("<?php echo url('/show_user_center'); ?>");
-                            });
-                        } else {
-                            layer.msg(result.msg, { icon: 1, time: 1000 });
-                        }
-                    },
-                    error: function (result) {
-                        console.log(result)
-                        layer.msg("服务器繁忙,请稍后重试!", { icon: 0, time: 1000 })
-                    }
-                });
-            });
-        });
-    }
-
-    function add_address() {
-        let uid = $("#uid").val();
-        let consignee = $("#consignee").val();
-        let contact = $("#contact").val();
-        let province = $("#cmbProvince").val();
-        let city = $("#cmbCity").val();
-        let area = $("#cmbArea").val();
-        let addr = $("#addr").val();
-
-        $.ajax({
-            type: "POST",//方法类型
-            dataType: "json",//预期服务器返回的数据类型
-            url: "<?php echo url('/user_add_address'); ?>",//url
-            data: {
-                uid: uid,
-                consignee: consignee,
-                contact: contact,
-                province: province,
-                city: city,
-                area: area,
-                addr: addr
-            },
-            success: function (result) {
-                if (result.msg === 'success') {
-                    alert("保存成功");
-                    window.location.href = "<?php echo url('/show_user_center'); ?>"
-                } else {
-                    alert(result.msg);
-                }
-            },
-            error: function () {
-                alert("服务器繁忙,请稍后重试!");
-            }
-        });
-    }
-
-    $(document).ready(function () {
-        addressInit('cmbProvince', 'cmbCity', 'cmbArea');
-    });
-
-
-</script>
 
 </html>

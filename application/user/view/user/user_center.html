@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
+<html
+    class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
     lang="en">
 
 <head>
@@ -10,107 +11,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="__STATIC__/images/favicon.png">
-
+    <link rel="stylesheet" href="__ADMIN__/lib/layui/css/layui.css">
+    <script type="text/javascript" src="__ADMIN__/lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="__STATIC__/js/jsAddress.js"></script>
     <style>
-        .user_body {
-            position: relative;
-            height: 1200px;
+        .top_height {
+            margin-bottom: 60px;
         }
-        
-        .user_body .user_content {
-            position: absolute;
-            left: 396.5px;
-            width: 1110px;
+
+        .bl {
+            border-left: 1px solid #e5e5e5;
         }
-        
-        .user_body .user_content .user_list {
-            float: left;
-            width: 350px;
+
+        a:hover {
+            color: #F07c29;
         }
-        
-        .user_body .user_content .user_info {
-            float: left;
-            height: 500px;
-            width: 760px;
-            padding-top: 7px;
-            color: black;
-            font-size: 18px;
-            font-weight: bold;
+
+        .tx {
+            font-weight: light;
+            color: #000000;
+            font-size: 30px;
+            margin-left: 15px;
         }
-        
-        .user_content .slide_list li {
-            display: block;
-            font-weight: bold;
-            margin: 50px 0 0 10px;
-            font-size: 18px;
-        }
-        
-        .slide_list li a {
-            color: black;
-        }
-        
-        .user_info span {
-            font-size: 14px;
-        }
-        
-        .user_info a {
-            color: black;
-            font-size: 16px;
-            text-decoration: underline;
-            padding-left: 10px;
-        }
-        
-        .user_info .text_email {
-            padding-left: 10px;
-        }
-        
-        .user_info_basic {
-            padding: 20px 0 20px 0;
-            border: 1px solid #ccc;
-            border-left: 0;
-            border-right: 0;
-        }
-        
-        .edit_setting {
-            display: block;
-            padding: 1.875rem 0 0 23.625rem;
-        }
-        
-        .user_info_adderess {
-            padding-top: 40px;
-            height: 500px;
-        }
-        
-        .ad_biaoti {
-            position: relative;
-        }
-        
-        .ad_biaoti span {
-            position: absolute;
-        }
-        
-        .ad_biaoti_zi {
-            font-size: 24px;
-        }
-        
-        .ad_more {
-            right: 0;
-            padding-top: 0.5rem;
-        }
-        
-        .user_info_adderess .my_address {
-            padding: 7.8125rem 0 2.8125rem 0;
-        }
-        
-        .ad_list li {
-            height: 28px;
+
+        .nt {
             font-weight: normal;
-            font-size: 16px;
+            color: #000000;
+            font-size: 20px;
+            margin-left: 30px;
+        }
+
+        .nt1 {
+            text-align: center;
+        }
+
+        .b {
+            color: #333333;
+        }
+
+        .bc {
+            background-color: #e8e8e8;
+        }
+
+        .nav-pills>li.active>a,
+        .nav-pills>li.active>a:hover,
+        .nav-pills>li.active>a:focus {
+            color: #fff;
+            background-color: #f07c29 !important;
+        }
+
+        table .t-default {
+            display: block;
+            width: 80px;
+            height: 30px;
+            text-align: center;
+            border-radius: 3px;
+            background: #ffd6cc;
+            color: #f30;
         }
     </style>
 </head>
 
-<body class="cart">
+<body style="height:100%;">
     {include file="public/static/product/header/header.html"}
 
     <div class="breadcrumbs-area mb-70">
@@ -129,49 +91,328 @@
     </div>
     <!-- breadcrumbs-area-end -->
     <!-- entry-header-area-start -->
-    <div class="user_body">
-        <div class="user_content">
-            <div class="user_list">
-                <h1>个人中心</h1>
-                <ul class="slide_list">
-                    <li class=""><a href="#">概况</a></li>
-                    <li class=""><a href="#">订单</a></li>
-                    <li class=""><a href="#">我的邮箱</a></li>
-                    <li class=""><a href="#">我的地址</a></li>
-                    <li class=""><a href="#">个人信息</a></li>
+    <div class="container">
+        <div class="col-lg-2">
+            <div class="text-left row no-gutters">
+                <h1>账号管理</h1>
+                <ul class="h2 d-flex flex-column nav nav-pills">
+                    <li class="mt-50 nav-item active">
+                        <a data-toggle="pill" class="text-muted nav-link" href="#q1">个人信息</a>
+                    </li>
+                    <li class="mt-50 nav-item">
+                        <a data-toggle="pill" class="text-muted nav-link" href="#q2">我的订单</a>
+                    </li>
+                    <li class="mt-50  nav-item">
+                        <a data-toggle="pill" class="text-muted nav-link" href="#q3">我的地址</a>
+                    </li>
+                    <li class="mt-50 mb-50 nav-item">
+                        <a data-toggle="pill" class="text-muted nav-link" href="#q4">登录日志</a>
+                    </li>
                 </ul>
             </div>
-            <div class="user_info">
-                <h3>设置账号</h3>
-                <div class="user_info_basic">
-                    <span>EMAIL:</span><span class="text_email">{$user.email}</span>
-                    <br>
-                    <span>PASSWORD:</span><a href="#" class="change_password">change password</a>
-                </div>
-                <span class="edit_setting"><button type="button" class="btn btn-warning">EDIT ACCOUNT SETTING</button></span>
-                <div class="user_info_adderess">
+        </div>
 
-                    <div class="ad_biaoti "><span class="ad_biaoti_zi"><h3>地址</h3></span><span class="ad_more "><a href="#">更多地址</a></span></div>
-
-
-                    <div class="my_address ">
-                        <ul class="ad_list  ">
-                            <li>{$address.consignee}</li>
-                            <li>{$address.contact}</li>
-                            <li>{$address.province}</li>
-                            <li>{$address.city}</li>
-                            <li>{$address.area}</li>
-                            <li>{$address.addr}</li>
-                        </ul>
+        <div class="col-lg-10 tab-content bl">
+            <div class="top_height tab-pane fade in active" id="q1">
+                <div>
+                    <p class="tx">你的基础信息</p>
+                    <div class="nt b">
+                        <input type="hidden" value="{$Think.session.uid}" name="uid" id="uid">
+                        <p>用户名：{$user.username}</p>
+                        <p>手机号：{$user.phone}</p>
+                        <p>电子邮箱：{$user.email}</p>
+                        <p>注册日期：{$user.registertime}</p>
+                        <p>所在地区：{$user.province} {$user.city} {$user.area}</p>
+                        <span class="edit_PWD"><button type="button" class="btn btn-warning"
+                                onclick="change_password()">修改密码</button></span>
                     </div>
                 </div>
             </div>
+
+
+            <div class="top_height tab-pane fade" id="q2" style="margin-top: -60px;">
+                <p class="mb-50 tx">订单列表</p>
+                <table class="table table-bordered table-hover">
+                    <thead class="bc b">
+                        <tr>
+                            <th>
+                                <nobr>订单编号</nobr>
+                            </th>
+                            <th>
+                                <nobr>商品名称</nobr>
+                            </th>
+                            <th>
+                                <nobr>支付方式</nobr>
+                            </th>
+                            <th>
+                                <nobr>实付金额(元)</nobr>
+                            </th>
+                            <th>
+                                <nobr>收货人</nobr>
+                            </th>
+                            <th>
+                                <nobr>收货地址</nobr>
+                            </th>
+                            <th>
+                                <nobr>联系电话</nobr>
+                            </th>
+                            <th>
+                                <nobr>发货状态</nobr>
+                            </th>
+                            <th>
+                                <nobr>快递单号</nobr>
+                            </th>
+                            <th>
+                                <nobr>下单时间</nobr>
+                            </th>
+                            <th>
+                                <nobr>操作</nobr>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="b">
+                        {foreach $user_orders as $values}
+                        <tr>
+                            <td>{$values.o_id}</td>
+                            <td>{foreach $values.bname as $key=>$value }
+                                {$value.bname} * {$value.user_buy_num}<br>
+                                {/foreach}</td>
+                            <td>{$values.payment}</td>
+                            <td>{$values.pay}</td>
+                            <td>{$values.user.consignee}</td>
+                            <td>{$values.user.province}{$values.user.city}{$values.user.area}{$values.user.addr}</td>
+                            <td>{$values.user.contact}</td>
+                            {if ($values.status==1)}
+                            <td>待发货</td>
+                            {elseif ($values.status==2) /}
+                            <td>已发货</td>
+                            {else /}<td>已收货</td>
+                            {/if}
+                            <td>{$values.expressNum}</td>
+                            <td>{$values.date}</td>
+                            {if ($values.status==1)}
+                            <td>-</td>
+                            {elseif ($values.status==2) /}
+                            <td><a class="layui-btn layui-btn-normal layui-btn-xs"
+                                    onclick="receive_confirm(this, '{$values.o_id}')" href="javascript:;">确认收货</a></td>
+                            {else /}<td>-</td>
+                            {/if}
+                        </tr>
+                        {/foreach}
+                    </tbody>
+                </table>
+
+            </div>
+
+
+            <div class="top_height tab-pane fade" id="q3" style="margin-top: -60px;">
+                <p class="mb-50 tx">新增收货地址</p>
+                <div class="col-lg-6">
+                    <form action="" class="mb-50">
+                        <div class="single-register b">*收货人姓名：
+                            <input type="hidden" name="uid" id="uid" value="{$Think.session.uid}">
+                            <input type="text" class="form-control" placeholder="长度不超过25个字符" id="consignee"
+                                name="consignee" autocomplete="off"></div>
+                        <div class="single-register b">*手机号码：<input type="text" class="form-control"
+                                placeholder="请输入您的收货号码" id="contact" name="contact" autocomplete="off"></div>
+                        <div class="single-register b">*所在地区：
+                            <select class="form-control" id="cmbProvince" name="province"></select>
+                            <select class="form-control" id="cmbCity" name="city"></select>
+                            <select class="form-control" id="cmbArea" name="area"></select>
+                        </div>
+                        <div class="single-register b">*详细地址：
+                            <textarea name="addr" id="addr" placeholder="详细地址" class="form-control"
+                                placeholder="请输入详细地址信息，如道路、门牌号、小区、楼栋号等信息"></textarea></div>
+                        <button class="btn btn-warning w-25" onclick="add_address()">保存</button>
+                    </form>
+                </div>
+
+
+
+                <table class="table table-bordered table-hover">
+                    <thead class="bc b">
+                        <th>收货人</th>
+                        <th>省</th>
+                        <th>市</th>
+                        <th>区/县</th>
+                        <th>详细地址</th>
+                        <th>电话</th>
+                        <th>操作</th>
+                    </thead>
+                    <tbody class="b">
+                        {volist name='address' id='vo' }
+                        <tr>
+                            <td>{$vo.consignee}</td>
+                            <td>{$vo.province}</td>
+                            <td>{$vo.city}</td>
+                            <td>{$vo.area}</td>
+                            <td>{$vo.addr}</td>
+                            <td>{$vo.contact}</td>
+                            <td><button class="layui-btn layui-btn-xs" href="javascript:void(0);">编辑</button>
+                                <button class="layui-btn layui-btn-danger layui-btn-xs"
+                                    href="javascript:void(0);">删除</button>
+                            </td>
+                        </tr>
+                        {/volist}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="top_height tab-pane fade" id="q4" style="margin-top: -60px;">
+                <p class="mb-50 tx">查看登录日志(只显示近10次登录)</p>
+
+                <table class="table table-bordered table-hover">
+                    <thead class="bc b">
+                        <th>日志编号</th>
+                        <th>用户名</th>
+                        <th>登录IP</th>
+                        <th>登录时间</th>
+                        <th>描述</th>
+                    </thead>
+                    <tbody class="b">
+                        {volist name='user_log' id='vo' }
+                        <tr>
+                            <td>{$vo.log_id}</td>
+                            <td>{$vo.username}</td>
+                            <td>{$vo.ip}</td>
+                            <td>{$vo.login_time}</td>
+                            <td>{$vo.description}</td>
+                        </tr>
+                        {/volist}
+                    </tbody>
+                </table>
+            </div>
+
         </div>
     </div>
-
 
     {include file="public/static/product/footer/footer.html"}
 
 </body>
+<script type="text/javascript" src="__STATIC__/js/hex_sha.js"></script>
+<script type="text/javascript">
+
+    function change_password() {
+        var uid = $("#uid").val();
+        layui.use("layer", function () {
+            var layer = layui.layer;  //layer初始化
+            layer.prompt({
+                formType: 1,
+                offset: 'c',
+                value: '',  //初始值
+                title: '请输入新密码'
+            }, function (value, index, elem) {
+                var confirm_password = hex_sha1($("#PWDconfirm").val());
+                var password = value;
+                var password = hex_sha1(password);
+                layer.close(index);
+                layer.confirm('确认要修改吗？', function (index) {
+                    // 异步后台处理
+                    $.ajax({
+                        type: "POST",//方法类型
+                        dataType: "json",//预期服务器返回的数据类型
+                        url: "{:url('/change_password')}",//url
+                        data: {
+                            uid: uid,
+                            password: password,
+                            confirm_password: confirm_password,
+                        },
+                        success: function (result) {
+                            if (result.msg == 1) {
+                                layer.msg('已成功修改', { icon: 1, time: 1000 }, function () {
+                                    window.location.href =
+                                        "{:url('/show_user_center')}";
+                                });
+                            } else if (result.msg == 2) {
+                                layer.msg("两次输入密码不一致", { icon: 0, time: 1000 });
+                            } else {
+                                layer.msg(result.msg, { icon: 0, time: 1000 });
+                            }
+                        },
+                        error: function (result) {
+                            console.log(result)
+                            layer.msg("服务器繁忙,请稍后重试!", { icon: 0, time: 1000 })
+                        }
+                    });
+                });
+            });
+            $(".layui-layer-content").append("<br/><input type=\"password\" id= \"PWDconfirm\" class=\"layui-input\" placeholder=\"请再次输入密码\"/>")
+        });
+    }
+
+    //订单确认收货
+    function receive_confirm(obj, id) {
+        layui.use("layer", function () {
+            var layer = layui.layer;  //layer初始化
+
+            layer.confirm('确认收到货了吗？', function (index) {
+                // 异步后台处理
+                $.ajax({
+                    type: "POST",//方法类型
+                    dataType: "json",//预期服务器返回的数据类型
+                    url: "{:url('/receive_confirm')}",//url
+                    data: {
+                        oid: id,
+                    },
+                    success: function (result) {
+                        if (result.msg == 1) {
+                            layer.msg('已确认收货', { icon: 1, time: 1000 }, function () {
+                                window.location.href = ("{:url('/show_user_center')}");
+                            });
+                        } else {
+                            layer.msg(result.msg, { icon: 1, time: 1000 });
+                        }
+                    },
+                    error: function (result) {
+                        console.log(result)
+                        layer.msg("服务器繁忙,请稍后重试!", { icon: 0, time: 1000 })
+                    }
+                });
+            });
+        });
+    }
+
+    function add_address() {
+        let uid = $("#uid").val();
+        let consignee = $("#consignee").val();
+        let contact = $("#contact").val();
+        let province = $("#cmbProvince").val();
+        let city = $("#cmbCity").val();
+        let area = $("#cmbArea").val();
+        let addr = $("#addr").val();
+
+        $.ajax({
+            type: "POST",//方法类型
+            dataType: "json",//预期服务器返回的数据类型
+            url: "{:url('/user_add_address')}",//url
+            data: {
+                uid: uid,
+                consignee: consignee,
+                contact: contact,
+                province: province,
+                city: city,
+                area: area,
+                addr: addr
+            },
+            success: function (result) {
+                if (result.msg === 'success') {
+                    alert("保存成功");
+                    window.location.href = "{:url('/show_user_center')}"
+                } else {
+                    alert(result.msg);
+                }
+            },
+            error: function () {
+                alert("服务器繁忙,请稍后重试!");
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        addressInit('cmbProvince', 'cmbCity', 'cmbArea');
+    });
+
+
+</script>
 
 </html>

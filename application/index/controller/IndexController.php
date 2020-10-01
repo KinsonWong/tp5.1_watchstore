@@ -75,5 +75,14 @@ class IndexController extends Controller
             $e->getMessage();
         }
     }
+
+    /**
+     * 跳转到品牌故事页面
+     * @return mixed
+     */
+    public function show_brand_story()  
+    {
+        return $this->fetch("brand_story");
+    }
 }
 

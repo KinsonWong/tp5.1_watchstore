@@ -1,4 +1,4 @@
-<?php /*a:3:{s:74:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\user_center.html";i:1601559852;s:40:"public/static/product/header/header.html";i:1601560530;s:40:"public/static/product/footer/footer.html";i:1600671831;}*/ ?>
+<?php /*a:3:{s:74:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\user_centre.html";i:1601553931;s:40:"public/static/product/header/header.html";i:1601556368;s:40:"public/static/product/footer/footer.html";i:1600671831;}*/ ?>
 <!DOCTYPE html>
 <html
     class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
@@ -92,7 +92,6 @@
     <script type="text/javascript" src="/public/static/product/js/jquery-3.2.1.min.js"></script>
     <script src="/public/static/product/js/modernizr-2.8.3.min.js"></script>
     <script src="/public/static/product/js/vue.js"></script>
-    <script type="text/javascript" src="/public/static/admin/lib/layui/layui.js" charset="utf-8"></script>
     <style>
         .search-btn {
             background: #f07c29 none repeat scroll 0 0;
@@ -139,7 +138,7 @@
                                 <ul>
                                     <?php if(app('session')->get('username') != null): ?>
                                     <li><a href="<?php echo url('/show_user_center'); ?>"><?php echo htmlentities(app('session')->get('username')); ?></a></li>
-                                    <li><a onclick="show_order()">订单列表</a></li>
+                                    <li><a href="<?php echo url('/show_user_order'); ?>">订单列表</a></li>
                                     <li><a href="<?php echo url('/user_logout'); ?>">退出</a></li>
                                     <?php else: ?>
                                     <li><a href="<?php echo url('/show_register'); ?>">注册</a></li>
@@ -238,8 +237,7 @@
                                                     <a :href="'<?php echo url('/show_plist'); ?>/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'<?php echo url('/show_details'); ?>/bid/'+info.bid"
-                                                        v-for="info in item.value"
-                                                        class="bname">{{info.bname|ellipsis}}</a>
+                                                        v-for="info in item.value" class="bname">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
                                         </li>
@@ -250,8 +248,7 @@
                                                     <a :href="'<?php echo url('/show_plist'); ?>/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'<?php echo url('/show_details'); ?>/bid/'+info.bid"
-                                                        v-for="info in item.value"
-                                                        class="bname">{{info.bname|ellipsis}}</a>
+                                                        v-for="info in item.value" class="bname">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
                                         </li>
@@ -261,13 +258,12 @@
                                                     <a :href="'<?php echo url('/show_plist'); ?>/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'<?php echo url('/show_details'); ?>/bid/'+info.bid"
-                                                        v-for="info in item.value"
-                                                        class="bname">{{info.bname|ellipsis}}</a>
+                                                        v-for="info in item.value" class="bname">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
                                         </li>
                                         <li>
-                                            <a href="<?php echo url('/show_brand_story'); ?>">品牌故事<i class="fa "></i></a>
+                                            <a href="<?php echo url('/show_brand_story'); ?>">品牌故事<i class="fa fa-angle-down"></i></a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -314,8 +310,7 @@
                                                     <a :href="'<?php echo url('/show_plist'); ?>/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'<?php echo url('/show_details'); ?>/bid/'+info.bid"
-                                                        v-for="info in item.value"
-                                                        class="bname">{{info.bname|ellipsis}}</a>
+                                                        v-for="info in item.value" class="bname">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
                                         </li>
@@ -343,13 +338,13 @@
         data: type_data,
         name: 'bname',
         filters: {
-            ellipsis(value) {
-                if (!value) return ''
+            ellipsis (value) {
+            if (!value) return ''
 
-                if (value.length > 32) {
-                    return value.slice(0, 32) + '...'
-                }
-                return value
+            if (value.length > 32) {
+                return value.slice(0,32) + '...'
+            }
+            return value
             }
         },
         methods: {
@@ -398,21 +393,6 @@
             }
         });
     }
-
-    //弹出显示订单
-    function show_order() {
-        layui.use("layer", function () {
-            var layer = layui.layer;  //layer初始化
-            layer.open({
-                type: 2,
-                area: ['1200px', '800px'],
-                fixed: false, //不固定
-                maxmin: true,
-                content: "<?php echo url('/show_user_order'); ?>"
-            });
-        });
-
-    }
 </script>
 
 </html>
@@ -438,18 +418,12 @@
             <div class="text-left row no-gutters">
                 <h1>账号管理</h1>
                 <ul class="h2 d-flex flex-column nav nav-pills">
-                    <li class="mt-50 nav-item active">
-                        <a data-toggle="pill" class="text-muted nav-link" href="#q1">个人信息</a>
+                    <li class="mt-50 nav-item active"><a data-toggle="pill" class="text-muted nav-link"
+                            href="#q1">个人信息</a></li>
+                    <li class="mt-50 nav-item"><a data-toggle="pill" class="text-muted nav-link" href="#q2">我的订单</a>
                     </li>
-                    <li class="mt-50 nav-item">
-                        <a data-toggle="pill" class="text-muted nav-link" href="#q2">我的订单</a>
-                    </li>
-                    <li class="mt-50  nav-item">
-                        <a data-toggle="pill" class="text-muted nav-link" href="#q3">我的地址</a>
-                    </li>
-                    <li class="mt-50 mb-50 nav-item">
-                        <a data-toggle="pill" class="text-muted nav-link" href="#q4">登录日志</a>
-                    </li>
+                    <li class="mt-50 mb-50 nav-item"><a data-toggle="pill" class="text-muted nav-link"
+                            href="#q3">我的地址</a></li>
                 </ul>
             </div>
         </div>
@@ -472,7 +446,7 @@
             </div>
 
 
-            <div class="top_height tab-pane fade" id="q2" style="margin-top: -60px;">
+            <div class="top_height tab-pane fade" id="q2">
                 <p class="mb-50 tx">订单列表</p>
                 <table class="table table-bordered table-hover">
                     <thead class="bc b">
@@ -547,7 +521,7 @@
             </div>
 
 
-            <div class="top_height tab-pane fade" id="q3" style="margin-top: -60px;">
+            <div class="top_height tab-pane fade" id="q3">
                 <p class="mb-50 tx">新增收货地址</p>
                 <div class="col-lg-6">
                     <form action="" class="mb-50">
@@ -590,41 +564,14 @@
                             <td><?php echo htmlentities($vo['area']); ?></td>
                             <td><?php echo htmlentities($vo['addr']); ?></td>
                             <td><?php echo htmlentities($vo['contact']); ?></td>
-                            <td><button class="layui-btn layui-btn-xs" href="javascript:void(0);">编辑</button>
-                                <button class="layui-btn layui-btn-danger layui-btn-xs"
-                                    href="javascript:void(0);">删除</button>
+                            <td><button class="layui-btn layui-btn-xs" href="javascript:void(0);">编辑</button> 
+                                <button class="layui-btn layui-btn-danger layui-btn-xs" href="javascript:void(0);">删除</button>
                             </td>
                         </tr>
                         <?php endforeach; endif; else: echo "" ;endif; ?>
                     </tbody>
                 </table>
             </div>
-
-            <div class="top_height tab-pane fade" id="q4" style="margin-top: -60px;">
-                <p class="mb-50 tx">查看登录日志(只显示近10次登录)</p>
-
-                <table class="table table-bordered table-hover">
-                    <thead class="bc b">
-                        <th>日志编号</th>
-                        <th>用户名</th>
-                        <th>登录IP</th>
-                        <th>登录时间</th>
-                        <th>描述</th>
-                    </thead>
-                    <tbody class="b">
-                        <?php if(is_array($user_log) || $user_log instanceof \think\Collection || $user_log instanceof \think\Paginator): $i = 0; $__LIST__ = $user_log;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                        <tr>
-                            <td><?php echo htmlentities($vo['log_id']); ?></td>
-                            <td><?php echo htmlentities($vo['username']); ?></td>
-                            <td><?php echo htmlentities($vo['ip']); ?></td>
-                            <td><?php echo htmlentities($vo['login_time']); ?></td>
-                            <td><?php echo htmlentities($vo['description']); ?></td>
-                        </tr>
-                        <?php endforeach; endif; else: echo "" ;endif; ?>
-                    </tbody>
-                </table>
-            </div>
-
         </div>
     </div>
 

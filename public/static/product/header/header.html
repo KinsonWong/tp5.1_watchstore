@@ -16,6 +16,7 @@
     <script type="text/javascript" src="__STATIC__/js/jquery-3.2.1.min.js"></script>
     <script src="__STATIC__/js/modernizr-2.8.3.min.js"></script>
     <script src="__STATIC__/js/vue.js"></script>
+    <script type="text/javascript" src="__ADMIN__/lib/layui/layui.js" charset="utf-8"></script>
     <style>
         .search-btn {
             background: #f07c29 none repeat scroll 0 0;
@@ -62,7 +63,7 @@
                                 <ul>
                                     {if $Think.session.username != null }
                                     <li><a href="{:url('/show_user_center')}">{$Think.session.username}</a></li>
-                                    <li><a href="{:url('/show_user_order')}">订单列表</a></li>
+                                    <li><a href="javascript:void(0);" onclick="show_order()">订单列表</a></li>
                                     <li><a href="{:url('/user_logout')}">退出</a></li>
                                     {else /}
                                     <li><a href="{:url('/show_register')}">注册</a></li>
@@ -161,7 +162,8 @@
                                                     <a :href="'{:url('/show_plist')}/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'{:url('/show_details')}/bid/'+info.bid"
-                                                        v-for="info in item.value" class="bname">{{info.bname|ellipsis}}</a>
+                                                        v-for="info in item.value"
+                                                        class="bname">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
                                         </li>
@@ -172,7 +174,8 @@
                                                     <a :href="'{:url('/show_plist')}/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'{:url('/show_details')}/bid/'+info.bid"
-                                                        v-for="info in item.value" class="bname">{{info.bname|ellipsis}}</a>
+                                                        v-for="info in item.value"
+                                                        class="bname">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
                                         </li>
@@ -182,9 +185,13 @@
                                                     <a :href="'{:url('/show_plist')}/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'{:url('/show_details')}/bid/'+info.bid"
-                                                        v-for="info in item.value" class="bname">{{info.bname|ellipsis}}</a>
+                                                        v-for="info in item.value"
+                                                        class="bname">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
+                                        </li>
+                                        <li>
+                                            <a href="{:url('/show_brand_story')}">品牌故事<i class="fa "></i></a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -231,7 +238,8 @@
                                                     <a :href="'{:url('/show_plist')}/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'{:url('/show_details')}/bid/'+info.bid"
-                                                        v-for="info in item.value" class="bname">{{info.bname|ellipsis}}</a>
+                                                        v-for="info in item.value"
+                                                        class="bname">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
                                         </li>
@@ -259,13 +267,13 @@
         data: type_data,
         name: 'bname',
         filters: {
-            ellipsis (value) {
-            if (!value) return ''
+            ellipsis(value) {
+                if (!value) return ''
 
-            if (value.length > 32) {
-                return value.slice(0,32) + '...'
-            }
-            return value
+                if (value.length > 32) {
+                    return value.slice(0, 32) + '...'
+                }
+                return value
             }
         },
         methods: {
@@ -313,6 +321,21 @@
                 }
             }
         });
+    }
+
+    //弹出显示订单
+    function show_order() {
+        layui.use("layer", function () {
+            var layer = layui.layer;  //layer初始化
+            layer.open({
+                type: 2,
+                area: ['1600px', '850px'],
+                fixed: false, //不固定
+                maxmin: true,
+                content: "{:url('/show_user_order')}"
+            });
+        });
+
     }
 </script>
 

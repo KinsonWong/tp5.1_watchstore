@@ -1,4 +1,4 @@
-<?php /*a:1:{s:73:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\user_order.html";i:1601019703;}*/ ?>
+<?php /*a:1:{s:73:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\user_order.html";i:1601540357;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -95,7 +95,7 @@
   <script>
     //console.log("<?php echo htmlentities($user_orders); ?>");
 
-    //订单发货
+    //订单确认收货
     function receive_confirm(obj, id) {
       layer.confirm('确认收到货了吗？', function (index) {
         // 异步后台处理
