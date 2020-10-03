@@ -97,6 +97,10 @@ Route::get('show_register','user/user/show_register');//会员注册页面
 Route::post('receive_confirm','user/user/receive_confirm');//会员订单确认收货
 Route::post('change_password','user/user/change_password');//修改密码
 Route::post("user_add_address",'user/user/user_add_address');//会员地址添加
+Route::get('show_user_address_edit/:h_a_id','user/user/show_user_address_edit');//会员收货地址修改页面
+Route::get('show_user_edit/:uid','user/user/show_user_edit');//会员个人信息修改页面
+Route::post('user_edit','user/user/user_edit');  //编辑个人信息
+
 
 return [
 

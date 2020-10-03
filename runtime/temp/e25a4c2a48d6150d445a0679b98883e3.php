@@ -1,4 +1,4 @@
-<?php /*a:4:{s:70:"D:\phpstudy_pro\WWW\watchstore\application\index\view\index\index.html";i:1601194105;s:40:"public/static/product/header/header.html";i:1601560651;s:40:"public/static/product/footer/footer.html";i:1600671831;s:40:"public/static/product/dialog/dialog.html";i:1601193019;}*/ ?>
+<?php /*a:4:{s:70:"D:\phpstudy_pro\WWW\watchstore\application\index\view\index\index.html";i:1601194105;s:40:"public/static/product/header/header.html";i:1601560651;s:40:"public/static/product/footer/footer.html";i:1601605638;s:40:"public/static/product/dialog/dialog.html";i:1601193019;}*/ ?>
 <!DOCTYPE html>
 <html
     class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
@@ -812,10 +812,10 @@
                                     </div>
                                     <div class="footer-mid-menu">
                                         <ul>
-                                            <li><a href="javascript:void(0);">收货地址</a></li>
-                                            <li><a href="javascript:void(0);">绑定银行卡</a></li>
-                                            <li><a href="<?php echo url('/show_user_order'); ?>">我的订单</a></li>
-                                            <li><a href="javascript:void(0);">个人信息</a></li>
+                                            <li><a href="<?php echo url('/show_user_center'); ?>">个人信息</a></li>
+                                            <li><a href="javascript:void(0);" onclick="show_order()">我的订单</a></li>
+                                            <li><a href="<?php echo url('/show_user_center'); ?>?3">收货地址</a></li>
+                                            <li><a href="<?php echo url('/show_user_center'); ?>?4">登录日志</a></li>
                                         </ul>
                                     </div>
                                 </div>

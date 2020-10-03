@@ -229,9 +229,7 @@ class AdminMemberController extends Controller
      */
     public function address_delete(Request $request)
     {
-        try {
-            // 判断是否登录
-            $this->have_session();
+        try {     
             UserAddressModel::where('h_a_id', $request->id)->delete();     //删除对应地址
         } catch (Exception $e) {
             return json(['msg' => $e->getMessage()]);
@@ -248,8 +246,6 @@ class AdminMemberController extends Controller
     public function address_update(Request $request)
     {
         try {
-            // 判断是否登录
-            $this->have_session();
             // 修改收货地址信息
             UserAddressModel::where('h_a_id', $request->h_a_id)->update([
                 'consignee' => $request->consignee,   //收件人

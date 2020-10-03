@@ -276,8 +276,6 @@ class ProductController extends Controller
             foreach ($goods as $good) {
                 $watchItem = WatchModel::where("bid", $good["bid"])->find();
                 $all_price += $watchItem["price"] * $good["num"];
-                WatchModel::where("bid", $good["bid"])->setInc('sell',$good["num"]);  //销量增加
-                WatchModel::where("bid", $good["bid"])->setDec('store',$good["num"]);  //库存减少
             }
             if($all_price < 599){   //订单金额小于599元，加收15元运费
                 $all_price += 15;
@@ -289,6 +287,12 @@ class ProductController extends Controller
             }else{
                 $payment="货到付款";
             }
+
+            foreach ($goods as $good) {
+                WatchModel::where("bid", $good["bid"])->setInc('sell',$good["num"]);  //销量增加
+                WatchModel::where("bid", $good["bid"])->setDec('store',$good["num"]);  //库存减少
+            }
+
             // 发布订单
             $WatchOrderModel = new WatchOrderModel();
             $WatchOrderModel->u_id = Session::get("uid");

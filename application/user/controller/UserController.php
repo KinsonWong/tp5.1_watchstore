@@ -379,4 +379,32 @@ class UserController extends Controller
         return json($jsonRes);//返回json数据
     }
 
+
+    /**
+     * 显示用户收货地址编辑界面
+     * @param $h_a_id
+     * @return mixed
+     */
+    public function show_user_address_edit($h_a_id)
+    {
+        $address = UserAddressModel::get($h_a_id);
+        //传递参数回页面
+        $this->assign('address', $address);
+        return $this->fetch('user_address_edit');
+    }
+
+
+    /**
+     * 显示用户信息编辑界面
+     * @param $uid
+     * @return mixed
+     */
+    public function show_user_edit($uid)
+    {
+        $user = UserModel::get($uid);
+        //传递参数回页面
+        $this->assign('user', $user);
+        return $this->fetch('user_edit');
+    }
+
 }

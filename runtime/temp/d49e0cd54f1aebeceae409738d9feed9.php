@@ -1,4 +1,4 @@
-<?php /*a:3:{s:68:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\login.html";i:1601262157;s:40:"public/static/product/header/header.html";i:1601103929;s:40:"public/static/product/footer/footer.html";i:1600671831;}*/ ?>
+<?php /*a:3:{s:68:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\login.html";i:1601262157;s:40:"public/static/product/header/header.html";i:1601560651;s:40:"public/static/product/footer/footer.html";i:1601605638;}*/ ?>
 <!DOCTYPE html>
 <html
     class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
@@ -44,6 +44,7 @@
     <script type="text/javascript" src="/public/static/product/js/jquery-3.2.1.min.js"></script>
     <script src="/public/static/product/js/modernizr-2.8.3.min.js"></script>
     <script src="/public/static/product/js/vue.js"></script>
+    <script type="text/javascript" src="/public/static/admin/lib/layui/layui.js" charset="utf-8"></script>
     <style>
         .search-btn {
             background: #f07c29 none repeat scroll 0 0;
@@ -90,7 +91,7 @@
                                 <ul>
                                     <?php if(app('session')->get('username') != null): ?>
                                     <li><a href="<?php echo url('/show_user_center'); ?>"><?php echo htmlentities(app('session')->get('username')); ?></a></li>
-                                    <li><a href="<?php echo url('/show_user_order'); ?>">订单列表</a></li>
+                                    <li><a href="javascript:void(0);" onclick="show_order()">订单列表</a></li>
                                     <li><a href="<?php echo url('/user_logout'); ?>">退出</a></li>
                                     <?php else: ?>
                                     <li><a href="<?php echo url('/show_register'); ?>">注册</a></li>
@@ -189,7 +190,8 @@
                                                     <a :href="'<?php echo url('/show_plist'); ?>/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'<?php echo url('/show_details'); ?>/bid/'+info.bid"
-                                                        v-for="info in item.value" class="bname">{{info.bname|ellipsis}}</a>
+                                                        v-for="info in item.value"
+                                                        class="bname">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
                                         </li>
@@ -200,7 +202,8 @@
                                                     <a :href="'<?php echo url('/show_plist'); ?>/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'<?php echo url('/show_details'); ?>/bid/'+info.bid"
-                                                        v-for="info in item.value" class="bname">{{info.bname|ellipsis}}</a>
+                                                        v-for="info in item.value"
+                                                        class="bname">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
                                         </li>
@@ -210,9 +213,13 @@
                                                     <a :href="'<?php echo url('/show_plist'); ?>/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'<?php echo url('/show_details'); ?>/bid/'+info.bid"
-                                                        v-for="info in item.value" class="bname">{{info.bname|ellipsis}}</a>
+                                                        v-for="info in item.value"
+                                                        class="bname">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
+                                        </li>
+                                        <li>
+                                            <a href="<?php echo url('/show_brand_story'); ?>">品牌故事<i class="fa "></i></a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -259,7 +266,8 @@
                                                     <a :href="'<?php echo url('/show_plist'); ?>/type/'+item.type"
                                                         class="title">{{item.type}}</a>
                                                     <a :href="'<?php echo url('/show_details'); ?>/bid/'+info.bid"
-                                                        v-for="info in item.value" class="bname">{{info.bname|ellipsis}}</a>
+                                                        v-for="info in item.value"
+                                                        class="bname">{{info.bname|ellipsis}}</a>
                                                 </span>
                                             </div>
                                         </li>
@@ -287,13 +295,13 @@
         data: type_data,
         name: 'bname',
         filters: {
-            ellipsis (value) {
-            if (!value) return ''
+            ellipsis(value) {
+                if (!value) return ''
 
-            if (value.length > 32) {
-                return value.slice(0,32) + '...'
-            }
-            return value
+                if (value.length > 32) {
+                    return value.slice(0, 32) + '...'
+                }
+                return value
             }
         },
         methods: {
@@ -341,6 +349,21 @@
                 }
             }
         });
+    }
+
+    //弹出显示订单
+    function show_order() {
+        layui.use("layer", function () {
+            var layer = layui.layer;  //layer初始化
+            layer.open({
+                type: 2,
+                area: ['1600px', '850px'],
+                fixed: false, //不固定
+                maxmin: true,
+                content: "<?php echo url('/show_user_order'); ?>"
+            });
+        });
+
     }
 </script>
 
@@ -443,10 +466,10 @@
                                     </div>
                                     <div class="footer-mid-menu">
                                         <ul>
-                                            <li><a href="javascript:void(0);">收货地址</a></li>
-                                            <li><a href="javascript:void(0);">绑定银行卡</a></li>
-                                            <li><a href="<?php echo url('/show_user_order'); ?>">我的订单</a></li>
-                                            <li><a href="javascript:void(0);">个人信息</a></li>
+                                            <li><a href="<?php echo url('/show_user_center'); ?>">个人信息</a></li>
+                                            <li><a href="javascript:void(0);" onclick="show_order()">我的订单</a></li>
+                                            <li><a href="<?php echo url('/show_user_center'); ?>?3">收货地址</a></li>
+                                            <li><a href="<?php echo url('/show_user_center'); ?>?4">登录日志</a></li>
                                         </ul>
                                     </div>
                                 </div>

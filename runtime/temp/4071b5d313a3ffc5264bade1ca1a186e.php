@@ -1,4 +1,4 @@
-<?php /*a:1:{s:70:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\login.html";i:1601471037;}*/ ?>
+<?php /*a:1:{s:70:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\login.html";i:1601471047;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -107,11 +107,10 @@
                     </div>
                 </div>
                 <br>
-                <div class="layui-form-item">
+                
                 <div class="layui-col-sm12 layui-col-md12">
                     <button class="layui-btn layui-btn-fluid" lay-submit="" lay-filter="demo1">立即登录</button>
                 </div>
-            </div>
             </form>
         </div>
     </div>

@@ -1,4 +1,4 @@
-<?php /*a:3:{s:74:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\user_center.html";i:1601559852;s:40:"public/static/product/header/header.html";i:1601560530;s:40:"public/static/product/footer/footer.html";i:1600671831;}*/ ?>
+<?php /*a:3:{s:74:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\user_center.html";i:1601733558;s:40:"public/static/product/header/header.html";i:1601560651;s:40:"public/static/product/footer/footer.html";i:1601605638;}*/ ?>
 <!DOCTYPE html>
 <html
     class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
@@ -139,7 +139,7 @@
                                 <ul>
                                     <?php if(app('session')->get('username') != null): ?>
                                     <li><a href="<?php echo url('/show_user_center'); ?>"><?php echo htmlentities(app('session')->get('username')); ?></a></li>
-                                    <li><a onclick="show_order()">订单列表</a></li>
+                                    <li><a href="javascript:void(0);" onclick="show_order()">订单列表</a></li>
                                     <li><a href="<?php echo url('/user_logout'); ?>">退出</a></li>
                                     <?php else: ?>
                                     <li><a href="<?php echo url('/show_register'); ?>">注册</a></li>
@@ -405,7 +405,7 @@
             var layer = layui.layer;  //layer初始化
             layer.open({
                 type: 2,
-                area: ['1200px', '800px'],
+                area: ['1600px', '850px'],
                 fixed: false, //不固定
                 maxmin: true,
                 content: "<?php echo url('/show_user_order'); ?>"
@@ -437,18 +437,18 @@
         <div class="col-lg-2">
             <div class="text-left row no-gutters">
                 <h1>账号管理</h1>
-                <ul class="h2 d-flex flex-column nav nav-pills">
+                <ul class="h2 d-flex flex-column nav nav-pills" id="myTab">
                     <li class="mt-50 nav-item active">
-                        <a data-toggle="pill" class="text-muted nav-link" href="#q1">个人信息</a>
+                        <a data-toggle="pill" class="text-muted nav-link" href="#q1" id="t1">个人信息</a>
                     </li>
                     <li class="mt-50 nav-item">
-                        <a data-toggle="pill" class="text-muted nav-link" href="#q2">我的订单</a>
+                        <a data-toggle="pill" class="text-muted nav-link" href="#q2" id="t2">我的订单</a>
                     </li>
                     <li class="mt-50  nav-item">
-                        <a data-toggle="pill" class="text-muted nav-link" href="#q3">我的地址</a>
+                        <a data-toggle="pill" class="text-muted nav-link" href="#q3" id="t3">我的地址</a>
                     </li>
                     <li class="mt-50 mb-50 nav-item">
-                        <a data-toggle="pill" class="text-muted nav-link" href="#q4">登录日志</a>
+                        <a data-toggle="pill" class="text-muted nav-link" href="#q4" id="t4">登录日志</a>
                     </li>
                 </ul>
             </div>
@@ -457,7 +457,7 @@
         <div class="col-lg-10 tab-content bl">
             <div class="top_height tab-pane fade in active" id="q1">
                 <div>
-                    <p class="tx">你的基础信息</p>
+                    <p class="tx">您的基础信息</p>
                     <div class="nt b">
                         <input type="hidden" value="<?php echo htmlentities(app('session')->get('uid')); ?>" name="uid" id="uid">
                         <p>用户名：<?php echo htmlentities($user['username']); ?></p>
@@ -465,8 +465,9 @@
                         <p>电子邮箱：<?php echo htmlentities($user['email']); ?></p>
                         <p>注册日期：<?php echo htmlentities($user['registertime']); ?></p>
                         <p>所在地区：<?php echo htmlentities($user['province']); ?> <?php echo htmlentities($user['city']); ?> <?php echo htmlentities($user['area']); ?></p>
-                        <span class="edit_PWD"><button type="button" class="btn btn-warning"
-                                onclick="change_password()">修改密码</button></span>
+                        <span class="edit_PWD">
+                            <button type="button" class="btn btn-info" onclick="edit_user('<?php echo htmlentities($user['uid']); ?>')">编辑信息</button>
+                            <button type="button" class="btn btn-warning" onclick="change_password()">修改密码</button></span>
                     </div>
                 </div>
             </div>
@@ -590,9 +591,9 @@
                             <td><?php echo htmlentities($vo['area']); ?></td>
                             <td><?php echo htmlentities($vo['addr']); ?></td>
                             <td><?php echo htmlentities($vo['contact']); ?></td>
-                            <td><button class="layui-btn layui-btn-xs" href="javascript:void(0);">编辑</button>
+                            <td><button class="layui-btn layui-btn-xs" href="javascript:void(0);" onclick="editAddress('<?php echo htmlentities($vo['h_a_id']); ?>')">编辑</button>
                                 <button class="layui-btn layui-btn-danger layui-btn-xs"
-                                    href="javascript:void(0);">删除</button>
+                                    href="javascript:void(0);" onclick="delAddress('<?php echo htmlentities($vo['h_a_id']); ?>')">删除</button>
                             </td>
                         </tr>
                         <?php endforeach; endif; else: echo "" ;endif; ?>
@@ -693,10 +694,10 @@
                                     </div>
                                     <div class="footer-mid-menu">
                                         <ul>
-                                            <li><a href="javascript:void(0);">收货地址</a></li>
-                                            <li><a href="javascript:void(0);">绑定银行卡</a></li>
-                                            <li><a href="<?php echo url('/show_user_order'); ?>">我的订单</a></li>
-                                            <li><a href="javascript:void(0);">个人信息</a></li>
+                                            <li><a href="<?php echo url('/show_user_center'); ?>">个人信息</a></li>
+                                            <li><a href="javascript:void(0);" onclick="show_order()">我的订单</a></li>
+                                            <li><a href="<?php echo url('/show_user_center'); ?>?3">收货地址</a></li>
+                                            <li><a href="<?php echo url('/show_user_center'); ?>?4">登录日志</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -744,6 +745,30 @@
 </body>
 <script type="text/javascript" src="/public/static/product/js/hex_sha.js"></script>
 <script type="text/javascript">
+
+    var type = window.location.search;
+    if(type == "?3"){
+        $('#myTab li:eq(2) a').tab('show')
+    }
+    if(type == "?4"){
+        $('#myTab li:eq(3) a').tab('show')
+    }
+
+    //编辑个人信息
+    function edit_user(uid){
+        layui.use("layer", function () {
+            var layer = layui.layer;  //layer初始化
+            layer.open({
+                title: "编辑个人信息",
+                type: 2,
+                area: ['50%', '50%'],
+                fixed: false, //不固定
+                maxmin: true,
+                content: "<?php echo url('/show_user_edit'); ?>/"+uid
+            });
+        });
+
+    }
 
     function change_password() {
         var uid = $("#uid").val();
@@ -793,6 +818,55 @@
         });
     }
 
+    //删除地址
+    function delAddress(h_a_id){
+        layui.use("layer", function () {
+            var layer = layui.layer;  //layer初始化
+            
+            layer.confirm('确认删除该地址吗？', function (index) {
+                // 异步后台处理
+                $.ajax({
+                    type: "POST",//方法类型
+                    dataType: "json",//预期服务器返回的数据类型
+                    url: "<?php echo url('/address_delete'); ?>",//url
+                    data: {
+                        id: h_a_id,
+                    },
+                    success: function (result) {
+                        if (result.msg == 1) {
+                            layer.msg('删除成功', { icon: 1, time: 1000 }, function () {
+                                window.location.href = ("<?php echo url('/show_user_center'); ?>");
+                            });
+                        } else {
+                            layer.msg(result.msg, { icon: 1, time: 1000 });
+                        }
+                    },
+                    error: function (result) {
+                        console.log(result)
+                        layer.msg("服务器繁忙,请稍后重试!", { icon: 0, time: 1000 })
+                    }
+                });
+            });
+
+        });
+    }
+
+    //编辑地址
+    function editAddress(h_a_id){
+        layui.use("layer", function () {
+            var layer = layui.layer;  //layer初始化
+            layer.open({
+                title: "编辑收货地址",
+                type: 2,
+                area: ['50%', '50%'],
+                fixed: false, //不固定
+                maxmin: true,
+                content: "<?php echo url('/show_user_address_edit'); ?>/"+h_a_id
+            });
+        });
+
+    }
+
     //订单确认收货
     function receive_confirm(obj, id) {
         layui.use("layer", function () {
@@ -825,6 +899,7 @@
         });
     }
 
+    //添加地址
     function add_address() {
         let uid = $("#uid").val();
         let consignee = $("#consignee").val();
