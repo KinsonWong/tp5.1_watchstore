@@ -63,7 +63,7 @@
                                 <ul>
                                     {if $Think.session.username != null }
                                     <li><a href="{:url('/show_user_center')}">{$Think.session.username}</a></li>
-                                    <li><a href="javascript:void(0);" onclick="show_order()">订单列表</a></li>
+                                    <li><a href="javascript:void(0);" onclick="show_order()">我的订单</a></li>
                                     <li><a href="{:url('/user_logout')}">退出</a></li>
                                     {else /}
                                     <li><a href="{:url('/show_register')}">注册</a></li>

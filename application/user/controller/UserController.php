@@ -172,6 +172,9 @@ class UserController extends Controller
      */
     public function show_user_center()
     {
+
+        $this->have_session();
+        
         $uid = Session::get('uid');
 
         //用户基本信息

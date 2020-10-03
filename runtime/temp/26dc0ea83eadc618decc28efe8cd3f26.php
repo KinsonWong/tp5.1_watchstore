@@ -1,4 +1,4 @@
-<?php /*a:3:{s:74:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\user_center.html";i:1601733558;s:40:"public/static/product/header/header.html";i:1601560651;s:40:"public/static/product/footer/footer.html";i:1601605638;}*/ ?>
+<?php /*a:3:{s:74:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\user_center.html";i:1601734588;s:40:"public/static/product/header/header.html";i:1601734125;s:40:"public/static/product/footer/footer.html";i:1601605638;}*/ ?>
 <!DOCTYPE html>
 <html
     class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
@@ -139,7 +139,7 @@
                                 <ul>
                                     <?php if(app('session')->get('username') != null): ?>
                                     <li><a href="<?php echo url('/show_user_center'); ?>"><?php echo htmlentities(app('session')->get('username')); ?></a></li>
-                                    <li><a href="javascript:void(0);" onclick="show_order()">订单列表</a></li>
+                                    <li><a href="javascript:void(0);" onclick="show_order()">我的订单</a></li>
                                     <li><a href="<?php echo url('/user_logout'); ?>">退出</a></li>
                                     <?php else: ?>
                                     <li><a href="<?php echo url('/show_register'); ?>">注册</a></li>
@@ -467,7 +467,8 @@
                         <p>所在地区：<?php echo htmlentities($user['province']); ?> <?php echo htmlentities($user['city']); ?> <?php echo htmlentities($user['area']); ?></p>
                         <span class="edit_PWD">
                             <button type="button" class="btn btn-info" onclick="edit_user('<?php echo htmlentities($user['uid']); ?>')">编辑信息</button>
-                            <button type="button" class="btn btn-warning" onclick="change_password()">修改密码</button></span>
+                            <button type="button" class="btn btn-warning"
+                                onclick="change_password()">修改密码</button></span>
                     </div>
                 </div>
             </div>
@@ -591,9 +592,10 @@
                             <td><?php echo htmlentities($vo['area']); ?></td>
                             <td><?php echo htmlentities($vo['addr']); ?></td>
                             <td><?php echo htmlentities($vo['contact']); ?></td>
-                            <td><button class="layui-btn layui-btn-xs" href="javascript:void(0);" onclick="editAddress('<?php echo htmlentities($vo['h_a_id']); ?>')">编辑</button>
-                                <button class="layui-btn layui-btn-danger layui-btn-xs"
-                                    href="javascript:void(0);" onclick="delAddress('<?php echo htmlentities($vo['h_a_id']); ?>')">删除</button>
+                            <td><button class="layui-btn layui-btn-xs" href="javascript:void(0);"
+                                    onclick="editAddress('<?php echo htmlentities($vo['h_a_id']); ?>')">编辑</button>
+                                <button class="layui-btn layui-btn-danger layui-btn-xs" href="javascript:void(0);"
+                                    onclick="delAddress('<?php echo htmlentities($vo['h_a_id']); ?>')">删除</button>
                             </td>
                         </tr>
                         <?php endforeach; endif; else: echo "" ;endif; ?>
@@ -746,16 +748,19 @@
 <script type="text/javascript" src="/public/static/product/js/hex_sha.js"></script>
 <script type="text/javascript">
 
-    var type = window.location.search;
-    if(type == "?3"){
-        $('#myTab li:eq(2) a').tab('show')
-    }
-    if(type == "?4"){
-        $('#myTab li:eq(3) a').tab('show')
-    }
+    $(function () {
+
+        var type = window.location.search;
+        if (type == "?3") {
+            $('#myTab li:eq(2) a').tab('show')
+        }
+        if (type == "?4") {
+            $('#myTab li:eq(3) a').tab('show')
+        }
+    });
 
     //编辑个人信息
-    function edit_user(uid){
+    function edit_user(uid) {
         layui.use("layer", function () {
             var layer = layui.layer;  //layer初始化
             layer.open({
@@ -764,7 +769,7 @@
                 area: ['50%', '50%'],
                 fixed: false, //不固定
                 maxmin: true,
-                content: "<?php echo url('/show_user_edit'); ?>/"+uid
+                content: "<?php echo url('/show_user_edit'); ?>/" + uid
             });
         });
 
@@ -819,10 +824,10 @@
     }
 
     //删除地址
-    function delAddress(h_a_id){
+    function delAddress(h_a_id) {
         layui.use("layer", function () {
             var layer = layui.layer;  //layer初始化
-            
+
             layer.confirm('确认删除该地址吗？', function (index) {
                 // 异步后台处理
                 $.ajax({
@@ -852,7 +857,7 @@
     }
 
     //编辑地址
-    function editAddress(h_a_id){
+    function editAddress(h_a_id) {
         layui.use("layer", function () {
             var layer = layui.layer;  //layer初始化
             layer.open({
@@ -861,7 +866,7 @@
                 area: ['50%', '50%'],
                 fixed: false, //不固定
                 maxmin: true,
-                content: "<?php echo url('/show_user_address_edit'); ?>/"+h_a_id
+                content: "<?php echo url('/show_user_address_edit'); ?>/" + h_a_id
             });
         });
 

@@ -35,7 +35,6 @@ return [
     'tpl_replace_string' => [
         '__STATIC__'=>'/public/static/product',
         '__ADMIN__'=>'/public/static/admin',
-        '__IMAGE__'=>'/upload/img',
-        '__ALIPAY__'=>'/extend/alipay'
+        '__IMAGE__'=>'/upload/img'
     ]
 ];

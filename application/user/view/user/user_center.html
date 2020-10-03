@@ -125,7 +125,8 @@
                         <p>所在地区：{$user.province} {$user.city} {$user.area}</p>
                         <span class="edit_PWD">
                             <button type="button" class="btn btn-info" onclick="edit_user('{$user.uid}')">编辑信息</button>
-                            <button type="button" class="btn btn-warning" onclick="change_password()">修改密码</button></span>
+                            <button type="button" class="btn btn-warning"
+                                onclick="change_password()">修改密码</button></span>
                     </div>
                 </div>
             </div>
@@ -249,9 +250,10 @@
                             <td>{$vo.area}</td>
                             <td>{$vo.addr}</td>
                             <td>{$vo.contact}</td>
-                            <td><button class="layui-btn layui-btn-xs" href="javascript:void(0);" onclick="editAddress('{$vo.h_a_id}')">编辑</button>
-                                <button class="layui-btn layui-btn-danger layui-btn-xs"
-                                    href="javascript:void(0);" onclick="delAddress('{$vo.h_a_id}')">删除</button>
+                            <td><button class="layui-btn layui-btn-xs" href="javascript:void(0);"
+                                    onclick="editAddress('{$vo.h_a_id}')">编辑</button>
+                                <button class="layui-btn layui-btn-danger layui-btn-xs" href="javascript:void(0);"
+                                    onclick="delAddress('{$vo.h_a_id}')">删除</button>
                             </td>
                         </tr>
                         {/volist}
@@ -293,16 +295,19 @@
 <script type="text/javascript" src="__STATIC__/js/hex_sha.js"></script>
 <script type="text/javascript">
 
-    var type = window.location.search;
-    if(type == "?3"){
-        $('#myTab li:eq(2) a').tab('show')
-    }
-    if(type == "?4"){
-        $('#myTab li:eq(3) a').tab('show')
-    }
+    $(function () {
+
+        var type = window.location.search;
+        if (type == "?3") {
+            $('#myTab li:eq(2) a').tab('show')
+        }
+        if (type == "?4") {
+            $('#myTab li:eq(3) a').tab('show')
+        }
+    });
 
     //编辑个人信息
-    function edit_user(uid){
+    function edit_user(uid) {
         layui.use("layer", function () {
             var layer = layui.layer;  //layer初始化
             layer.open({
@@ -311,7 +316,7 @@
                 area: ['50%', '50%'],
                 fixed: false, //不固定
                 maxmin: true,
-                content: "{:url('/show_user_edit')}/"+uid
+                content: "{:url('/show_user_edit')}/" + uid
             });
         });
 
@@ -366,10 +371,10 @@
     }
 
     //删除地址
-    function delAddress(h_a_id){
+    function delAddress(h_a_id) {
         layui.use("layer", function () {
             var layer = layui.layer;  //layer初始化
-            
+
             layer.confirm('确认删除该地址吗？', function (index) {
                 // 异步后台处理
                 $.ajax({
@@ -399,7 +404,7 @@
     }
 
     //编辑地址
-    function editAddress(h_a_id){
+    function editAddress(h_a_id) {
         layui.use("layer", function () {
             var layer = layui.layer;  //layer初始化
             layer.open({
@@ -408,7 +413,7 @@
                 area: ['50%', '50%'],
                 fixed: false, //不固定
                 maxmin: true,
-                content: "{:url('/show_user_address_edit')}/"+h_a_id
+                content: "{:url('/show_user_address_edit')}/" + h_a_id
             });
         });
 
