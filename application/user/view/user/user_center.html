@@ -188,12 +188,17 @@
                             <td>待发货</td>
                             {elseif ($values.status==2) /}
                             <td>已发货</td>
+                            {elseif ($values.status==0) /}
+                            <td>待付款</td>
                             {else /}<td>已收货</td>
                             {/if}
                             <td>{$values.expressNum}</td>
                             <td>{$values.date}</td>
                             {if ($values.status==1)}
                             <td>-</td>
+                            {elseif ($values.status==0) /}
+                            <td><a class="layui-btn layui-btn-normal layui-btn-xs"
+                                    onclick="payNow(this, '{$values.o_id}')" href="javascript:;">立即付款</a></td>
                             {elseif ($values.status==2) /}
                             <td><a class="layui-btn layui-btn-normal layui-btn-xs"
                                     onclick="receive_confirm(this, '{$values.o_id}')" href="javascript:;">确认收货</a></td>
@@ -296,8 +301,10 @@
 <script type="text/javascript">
 
     $(function () {
-
         var type = window.location.search;
+        if (type == "?2") {
+            $('#myTab li:eq(1) a').tab('show')
+        }
         if (type == "?3") {
             $('#myTab li:eq(2) a').tab('show')
         }
@@ -417,6 +424,11 @@
             });
         });
 
+    }
+
+     //线上订单付款
+     function payNow(obj, id) {
+      window.location.href = "{:url('/show_order_pay/')}"+id;
     }
 
     //订单确认收货

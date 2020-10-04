@@ -59,7 +59,7 @@ class AdminOrderController extends Controller
             $start=$limit*($page-1);
 
             $WatchOrderModel = new WatchOrderModel();
-            $watchOrderData = $WatchOrderModel->order('o_id','asc')->limit($start,$limit)->select();
+            $watchOrderData = $WatchOrderModel->order('o_id','desc')->limit($start,$limit)->select();
 
             foreach ($watchOrderData as &$watchOrderItem) {
                 $watchOrderItem['status'] = OrderStateModel::where('os_id', $watchOrderItem['status'])->value('state');   //获取发货状态字段

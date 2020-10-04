@@ -1,4 +1,4 @@
-<?php /*a:1:{s:73:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\user_order.html";i:1601540357;}*/ ?>
+<?php /*a:1:{s:73:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\user_order.html";i:1601799303;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -74,12 +74,17 @@
           <td>待发货</td>
           <?php elseif(($values['status']==2)): ?>
           <td>已发货</td>
+          <?php elseif(($values['status']==0)): ?>
+          <td>待付款</td>
           <?php else: ?><td>已收货</td>
           <?php endif; ?>
           <td><?php echo htmlentities($values['expressNum']); ?></td>
           <td><?php echo htmlentities($values['date']); ?></td>
           <?php if(($values['status']==1)): ?>
           <td>-</td>
+          <?php elseif(($values['status']==0)): ?>
+          <td><a class="layui-btn layui-btn-normal layui-btn-xs" onclick="payNow(this, '<?php echo htmlentities($values['o_id']); ?>')"
+              href="javascript:;">立即付款</a></td>
           <?php elseif(($values['status']==2)): ?>
           <td><a class="layui-btn layui-btn-normal layui-btn-xs" onclick="receive_confirm(this, '<?php echo htmlentities($values['o_id']); ?>')"
               href="javascript:;">确认收货</a></td>
@@ -121,6 +126,11 @@
           }
         });
       });
+    }
+
+    //线上订单付款
+    function payNow(obj, id) {
+      window.location.href = "<?php echo url('/show_order_pay/'); ?>"+id;
     }
   </script>
 </body>

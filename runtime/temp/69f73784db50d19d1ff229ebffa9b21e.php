@@ -1,4 +1,4 @@
-<?php /*a:3:{s:74:"D:\phpstudy_pro\WWW\watchstore\application\product\view\product\check.html";i:1601626910;s:40:"public/static/product/header/header.html";i:1601560651;s:40:"public/static/product/footer/footer.html";i:1601605638;}*/ ?>
+<?php /*a:3:{s:74:"D:\phpstudy_pro\WWW\watchstore\application\product\view\product\check.html";i:1601798989;s:40:"public/static/product/header/header.html";i:1601734125;s:40:"public/static/product/footer/footer.html";i:1601781026;}*/ ?>
 <!DOCTYPE html>
 <html
     class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
@@ -118,7 +118,7 @@
                                 <ul>
                                     <?php if(app('session')->get('username') != null): ?>
                                     <li><a href="<?php echo url('/show_user_center'); ?>"><?php echo htmlentities(app('session')->get('username')); ?></a></li>
-                                    <li><a href="javascript:void(0);" onclick="show_order()">订单列表</a></li>
+                                    <li><a href="javascript:void(0);" onclick="show_order()">我的订单</a></li>
                                     <li><a href="<?php echo url('/user_logout'); ?>">退出</a></li>
                                     <?php else: ?>
                                     <li><a href="<?php echo url('/show_register'); ?>">注册</a></li>
@@ -473,8 +473,10 @@
 
                     <div class="different-address">
                         <div class="checkout-form-list"><label for="checkout-mess">支付方式</label>
-                            <label style="margin: 0 0 10px;"><input id="cbox" type="radio" v-model="payment" value="online-pay" checked/>线上支付</label>
-                            <label style="margin: 0 0 10px;"><input id="cbox" type="radio" v-model="payment" value="cash-pay"/>货到付款</label>
+                            <label style="margin: 0 0 10px;"><input id="cbox" type="radio" v-model="payment"
+                                    value="online-pay" checked />线上支付</label>
+                            <label style="margin: 0 0 10px;"><input id="cbox" type="radio" v-model="payment"
+                                    value="cash-pay" />货到付款</label>
                         </div>
 
                         <div class="order-notes">
@@ -573,8 +575,8 @@
                                 <h3>其它</h3>
                             </div>
                             <div class="footer-contact">
-                                <p><span>联系我们：</span>xxx-xxxxxxxx</p>
-                                <p><span>Email：</span> xxxxx@mail.com</p>
+                                <p><span>联系我们：</span>888-88888888</p>
+                                <p><span>Email：</span> watch-league@gmail.com</p>
                             </div>
                         </div>
                     </div>
@@ -608,7 +610,7 @@
 <script>
     var data = {
         l_mes: "",
-        payment:"online-pay",
+        payment: "online-pay",
         is_add_harvest: false
     }
     var vm = new Vue({
@@ -634,20 +636,39 @@
                 if (vm.l_mes != "") {
                     params += "&l_msg=" + vm.l_mes;
                 }
-                $.ajax({
-                    type: "POST",//方法类型
-                    url: "<?php echo url('/check_out'); ?>",//url
-                    data: params,
-                    success: function (result) {
-                        if (result.msg == 1) {
-                            alert("购买成功！请耐心等待商品到达您的手中！")
-                            window.location = "<?php echo url('/show_plist'); ?>";
+                if (vm.payment == 'online-pay') {
+                    $.ajax({
+                        type: "POST",//方法类型
+                        url: "<?php echo url('/check_out_online'); ?>",//url   线上支付
+                        data: params,
+                        success: function (result) {
+                            if (result.msg == 1) {
+                                alert("创建订单成功，前去支付")
+                                window.location = "<?php echo url('/show_order_pay/'); ?>"+result.oid;    //跳转到订单支付页
+                            }
+                        },
+                        error: function (result) {
+                            alert("服务器繁忙,请稍后重试!")
                         }
-                    },
-                    error: function (result) {
-                        alert("服务器繁忙,请稍后重试!")
-                    }
-                });
+                    });
+                } else {
+                    $.ajax({
+                        type: "POST",//方法类型
+                        url: "<?php echo url('/check_out_cash'); ?>",//url   货到付款
+                        data: params,
+                        success: function (result) {
+                            if (result.msg == 1) {
+                                alert("购买成功！请耐心等待商品到达您的手中！")
+                                window.location = "<?php echo url('/show_user_center'); ?>?2";    //跳转到个人中心订单页
+                            }
+                        },
+                        error: function (result) {
+                            alert("服务器繁忙,请稍后重试!")
+                        }
+                    });
+
+                }
+
             }
         },
     });

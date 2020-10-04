@@ -66,7 +66,6 @@ Route::post('userlog_delete','admin/admin_log/userlog_delete');//删除会员登
 Route::post('userlog_delete_s','admin/admin_log/userlog_delete_s');//会员登录日志批量删除
 Route::post("search_log",'admin/admin_log/search_log');//搜索登录日志
 
-
 //Product
 Route::get('show_details','product/product/show_details');//商品详情页面
 Route::post("watch_detail",'product/product/watch_detail');//获取商品详情信息
@@ -74,13 +73,21 @@ Route::post("add_cart",'product/product/add_cart');//添加购物车
 Route::post("watch_header",'product/product/watch_header'); //获取商品分类
 Route::post("remove_cart_item",'product/product/remove_cart_item');//删除购物车项
 Route::post("cart_item_num",'product/product/cart_item_num');//改变购物车项数
-Route::post("check_out",'product/product/check_out');//购物车结算
+Route::post("check_out_cash",'product/product/check_out_cash');//购物车结算,货到付款
+Route::post("check_out_online",'product/product/check_out_online');//购物车结算,网上支付
 Route::post("get_cart_info",'product/product/get_cart_info');//获取购物车前三项
 Route::post("delete_cart_item",'product/product/delete_cart_item');//删除购物车项
 Route::get('show_plist','product/product/show_plist');//商品列表页面
 Route::get('show_check','product/product/show_check');//商品结算页面
 Route::get('show_cart','product/product/show_cart');//购物车页面
 Route::post('coupon_check','product/product/coupon_check');//检查优惠码是否可用
+Route::get('show_order_pay/:oid','product/product/show_order_pay');//支付订单页面
+
+//Alipay
+Route::post('payPage','product/alipay/payPage');//支付宝支付
+Route::get('return_url','product/alipay/return_url');//支付宝回调
+Route::post('notify_url','product/alipay/notify_url');//支付宝异步回调
+
 
 //User
 Route::get("show_user_order",'user/user/show_user_order'); //会员查看订单页面

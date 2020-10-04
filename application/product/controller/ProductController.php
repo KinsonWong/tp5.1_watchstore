@@ -237,13 +237,15 @@ class ProductController extends Controller
     }
 
     /**
-     * 购物车结算
+     * 购物车结算货到付款
      * @param Request $request
      * @return \think\response\Json
      */
-    public function check_out(Request $request)
+    public function check_out_cash(Request $request)
     {
         try{
+            $payment="货到付款";
+
             $address=[
                 "u_id"=>Session::get("uid"),
                 "consignee"=>$request->consignee,
@@ -269,28 +271,28 @@ class ProductController extends Controller
             }else{
                 $h_a_id = $request->h_a_id;
             }
-            $coupon_flag = Session::get("coupon");   //获取优惠券状态
+  
             // 把购物车的商品全部结算
             $goods = Session::get("cart");
             $all_price = 0;
             foreach ($goods as $good) {
                 $watchItem = WatchModel::where("bid", $good["bid"])->find();
                 $all_price += $watchItem["price"] * $good["num"];
+                WatchModel::where("bid", $good["bid"])->setInc('sell',$good["num"]);  //销量增加
+                WatchModel::where("bid", $good["bid"])->setDec('store',$good["num"]);  //库存减少
             }
             if($all_price < 599){   //订单金额小于599元，加收15元运费
                 $all_price += 15;
             }
 
-            $orderpayment=$request->payment;
-            if($orderpayment=="online-pay"){
-                $payment="线上支付";
-            }else{
-                $payment="货到付款";
+            $coupon_flag = Session::get("coupon");   //获取优惠券状态
+            if($coupon_flag == 1){
+                $discounts = $all_price*0.2;
+                $pay = $all_price*0.8;
             }
-
-            foreach ($goods as $good) {
-                WatchModel::where("bid", $good["bid"])->setInc('sell',$good["num"]);  //销量增加
-                WatchModel::where("bid", $good["bid"])->setDec('store',$good["num"]);  //库存减少
+            else{
+                $discounts = 0;
+                $pay = $all_price;
             }
 
             // 发布订单
@@ -302,14 +304,9 @@ class ProductController extends Controller
             $WatchOrderModel->l_msg = $request->l_msg;
             $WatchOrderModel->payment = $payment;
             $WatchOrderModel->all_price = $all_price;
-            if($coupon_flag == 1){
-                $WatchOrderModel->discounts = $all_price*0.2;
-                $WatchOrderModel->pay = $all_price*0.8;
-            }
-            else{
-                $WatchOrderModel->discounts = 0;
-                $WatchOrderModel->pay = $all_price;
-            }
+            $WatchOrderModel->discounts = $discounts;
+            $WatchOrderModel->pay = $pay;
+
             $WatchOrderModel->save();
             $o_id = $WatchOrderModel->o_id;
             // 插入订单详情
@@ -322,11 +319,120 @@ class ProductController extends Controller
             }
             Session::set("cart", []);
             return json(["msg"=>1]);
+        
         }catch (Exception $e){
             $this->error($e->getMessage());
         }
         return json(["msg"=>'']);
     }
+
+
+    /**
+     * 购物车结算线上支付
+     * @param Request $request
+     * @return \think\response\Json
+     */
+    public function check_out_online(Request $request)
+    {
+        try{
+            $payment="线上支付";
+
+            $address=[
+                "u_id"=>Session::get("uid"),
+                "consignee"=>$request->consignee,
+                "province"=>$request->province,
+                "area"=>$request->area,
+                "city"=>$request->city,
+                "addr"=>$request->addr,
+                "contact"=>$request->contact,
+            ];
+            //如果无保存地址则新建收货地址
+            if($request->h_a_id == null){
+                $UserAddressModel = new UserAddressModel();
+                $UserAddressModel->u_id = $address["u_id"];
+                $UserAddressModel->consignee = $address["consignee"];
+                $UserAddressModel->province = $address["province"];
+                $UserAddressModel->city = $address["city"];
+                $UserAddressModel->area = $address["area"];
+                $UserAddressModel->addr = $address["addr"];
+                $UserAddressModel->contact = $address["contact"];
+                $UserAddressModel->save();
+                // 获取自增ID
+                $h_a_id = $UserAddressModel->h_a_id;
+            }else{
+                $h_a_id = $request->h_a_id;
+            }
+  
+            // 把购物车的商品全部结算
+            $goods = Session::get("cart");
+            $all_price = 0;
+            foreach ($goods as $good) {
+                $watchItem = WatchModel::where("bid", $good["bid"])->find();
+                $all_price += $watchItem["price"] * $good["num"];
+                WatchModel::where("bid", $good["bid"])->setInc('sell',$good["num"]);  //销量增加
+                WatchModel::where("bid", $good["bid"])->setDec('store',$good["num"]);  //库存减少
+            }
+            if($all_price < 599){   //订单金额小于599元，加收15元运费
+                $all_price += 15;
+            }
+
+            $coupon_flag = Session::get("coupon");   //获取优惠券状态
+            if($coupon_flag == 1){
+                $discounts = $all_price*0.2;
+                $pay = $all_price*0.8;
+            }
+            else{
+                $discounts = 0;
+                $pay = $all_price;
+            }
+
+            // 发布订单
+            $WatchOrderModel = new WatchOrderModel();
+            $WatchOrderModel->u_id = Session::get("uid");
+            $WatchOrderModel->status = 0;    //0为待支付状态
+            $WatchOrderModel->date = date("Y-m-d H:i:s");
+            $WatchOrderModel->h_a_id = $h_a_id;
+            $WatchOrderModel->l_msg = $request->l_msg;
+            $WatchOrderModel->payment = $payment;
+            $WatchOrderModel->all_price = $all_price;
+            $WatchOrderModel->discounts = $discounts;
+            $WatchOrderModel->pay = $pay;
+
+            $WatchOrderModel->save();
+            $o_id = $WatchOrderModel->o_id;
+            // 插入订单详情
+            foreach ($goods as $good) {
+                Db::name("order_detail")->insert([
+                    "b_o_id"=>$o_id,
+                    "b_id"=>$good["bid"],
+                    "num"=>$good["num"]
+                ]);
+            }
+            Session::set("cart", []);
+
+            return json(["msg"=>1,"oid"=>$o_id]);
+        
+        }catch (Exception $e){
+            $this->error($e->getMessage());
+        }
+        return json(["msg"=>'']);
+    }
+
+
+    /**
+     * 显示支付订单页面界面
+     * @param $oid
+     * @return mixed
+     */
+    public function show_order_pay($oid)
+    {
+        $thisorder = WatchOrderModel::get($oid);
+        //传递参数回页面
+        $this->assign('thisorder', $thisorder);
+        return $this->fetch('order_pay');
+    }
+
+
 
     /**
      * 判断用户是否登录

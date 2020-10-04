@@ -1,4 +1,4 @@
-<?php /*a:3:{s:68:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\login.html";i:1601262157;s:40:"public/static/product/header/header.html";i:1601560651;s:40:"public/static/product/footer/footer.html";i:1601605638;}*/ ?>
+<?php /*a:3:{s:68:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\login.html";i:1601262157;s:40:"public/static/product/header/header.html";i:1601734125;s:40:"public/static/product/footer/footer.html";i:1601781026;}*/ ?>
 <!DOCTYPE html>
 <html
     class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
@@ -91,7 +91,7 @@
                                 <ul>
                                     <?php if(app('session')->get('username') != null): ?>
                                     <li><a href="<?php echo url('/show_user_center'); ?>"><?php echo htmlentities(app('session')->get('username')); ?></a></li>
-                                    <li><a href="javascript:void(0);" onclick="show_order()">订单列表</a></li>
+                                    <li><a href="javascript:void(0);" onclick="show_order()">我的订单</a></li>
                                     <li><a href="<?php echo url('/user_logout'); ?>">退出</a></li>
                                     <?php else: ?>
                                     <li><a href="<?php echo url('/show_register'); ?>">注册</a></li>
@@ -482,8 +482,8 @@
                                 <h3>其它</h3>
                             </div>
                             <div class="footer-contact">
-                                <p><span>联系我们：</span>xxx-xxxxxxxx</p>
-                                <p><span>Email：</span> xxxxx@mail.com</p>
+                                <p><span>联系我们：</span>888-88888888</p>
+                                <p><span>Email：</span> watch-league@gmail.com</p>
                             </div>
                         </div>
                     </div>

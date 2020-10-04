@@ -132,8 +132,10 @@
 
                     <div class="different-address">
                         <div class="checkout-form-list"><label for="checkout-mess">支付方式</label>
-                            <label style="margin: 0 0 10px;"><input id="cbox" type="radio" v-model="payment" value="online-pay" checked/>线上支付</label>
-                            <label style="margin: 0 0 10px;"><input id="cbox" type="radio" v-model="payment" value="cash-pay"/>货到付款</label>
+                            <label style="margin: 0 0 10px;"><input id="cbox" type="radio" v-model="payment"
+                                    value="online-pay" checked />线上支付</label>
+                            <label style="margin: 0 0 10px;"><input id="cbox" type="radio" v-model="payment"
+                                    value="cash-pay" />货到付款</label>
                         </div>
 
                         <div class="order-notes">
@@ -156,7 +158,7 @@
 <script>
     var data = {
         l_mes: "",
-        payment:"online-pay",
+        payment: "online-pay",
         is_add_harvest: false
     }
     var vm = new Vue({
@@ -182,20 +184,39 @@
                 if (vm.l_mes != "") {
                     params += "&l_msg=" + vm.l_mes;
                 }
-                $.ajax({
-                    type: "POST",//方法类型
-                    url: "{:url('/check_out')}",//url
-                    data: params,
-                    success: function (result) {
-                        if (result.msg == 1) {
-                            alert("购买成功！请耐心等待商品到达您的手中！")
-                            window.location = "{:url('/show_plist')}";
+                if (vm.payment == 'online-pay') {
+                    $.ajax({
+                        type: "POST",//方法类型
+                        url: "{:url('/check_out_online')}",//url   线上支付
+                        data: params,
+                        success: function (result) {
+                            if (result.msg == 1) {
+                                alert("创建订单成功，前去支付")
+                                window.location = "{:url('/show_order_pay/')}"+result.oid;    //跳转到订单支付页
+                            }
+                        },
+                        error: function (result) {
+                            alert("服务器繁忙,请稍后重试!")
                         }
-                    },
-                    error: function (result) {
-                        alert("服务器繁忙,请稍后重试!")
-                    }
-                });
+                    });
+                } else {
+                    $.ajax({
+                        type: "POST",//方法类型
+                        url: "{:url('/check_out_cash')}",//url   货到付款
+                        data: params,
+                        success: function (result) {
+                            if (result.msg == 1) {
+                                alert("购买成功！请耐心等待商品到达您的手中！")
+                                window.location = "{:url('/show_user_center')}?2";    //跳转到个人中心订单页
+                            }
+                        },
+                        error: function (result) {
+                            alert("服务器繁忙,请稍后重试!")
+                        }
+                    });
+
+                }
+
             }
         },
     });

@@ -1,4 +1,4 @@
-<?php /*a:4:{s:70:"D:\phpstudy_pro\WWW\watchstore\application\index\view\index\index.html";i:1601194105;s:40:"public/static/product/header/header.html";i:1601734125;s:40:"public/static/product/footer/footer.html";i:1601605638;s:40:"public/static/product/dialog/dialog.html";i:1601193019;}*/ ?>
+<?php /*a:4:{s:70:"D:\phpstudy_pro\WWW\watchstore\application\index\view\index\index.html";i:1601786304;s:40:"public/static/product/header/header.html";i:1601734125;s:40:"public/static/product/footer/footer.html";i:1601781026;s:40:"public/static/product/dialog/dialog.html";i:1601193019;}*/ ?>
 <!DOCTYPE html>
 <html
     class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
@@ -440,8 +440,7 @@
                 </div>
                 <div class="owl-nav">
                     <button type="button" role="presentation" class="owl-prev"><i class="fa fa-angle-left"></i></button>
-                    <button type="button" role="presentation" class="owl-next"><i
-                            class="fa fa-angle-right"></i></button>
+                    <button type="button" role="presentation" class="owl-next"><i class="fa fa-angle-right"></i></button>
                 </div>
                 <div class="owl-dots">
                     <button role="button" class="owl-dot active"><span></span></button>
@@ -828,8 +827,8 @@
                                 <h3>其它</h3>
                             </div>
                             <div class="footer-contact">
-                                <p><span>联系我们：</span>xxx-xxxxxxxx</p>
-                                <p><span>Email：</span> xxxxx@mail.com</p>
+                                <p><span>联系我们：</span>888-88888888</p>
+                                <p><span>Email：</span> watch-league@gmail.com</p>
                             </div>
                         </div>
                     </div>

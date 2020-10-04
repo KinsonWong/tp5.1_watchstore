@@ -1,4 +1,4 @@
-<?php /*a:4:{s:74:"D:\phpstudy_pro\WWW\watchstore\application\product\view\product\plist.html";i:1601256014;s:40:"public/static/product/header/header.html";i:1601560651;s:40:"public/static/product/dialog/dialog.html";i:1601193019;s:40:"public/static/product/footer/footer.html";i:1601605638;}*/ ?>
+<?php /*a:4:{s:74:"D:\phpstudy_pro\WWW\watchstore\application\product\view\product\plist.html";i:1601256014;s:40:"public/static/product/header/header.html";i:1601734125;s:40:"public/static/product/dialog/dialog.html";i:1601193019;s:40:"public/static/product/footer/footer.html";i:1601605638;}*/ ?>
 <!DOCTYPE html>
 <html
     class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
@@ -87,7 +87,7 @@
                                 <ul>
                                     <?php if(app('session')->get('username') != null): ?>
                                     <li><a href="<?php echo url('/show_user_center'); ?>"><?php echo htmlentities(app('session')->get('username')); ?></a></li>
-                                    <li><a href="javascript:void(0);" onclick="show_order()">订单列表</a></li>
+                                    <li><a href="javascript:void(0);" onclick="show_order()">我的订单</a></li>
                                     <li><a href="<?php echo url('/user_logout'); ?>">退出</a></li>
                                     <?php else: ?>
                                     <li><a href="<?php echo url('/show_register'); ?>">注册</a></li>

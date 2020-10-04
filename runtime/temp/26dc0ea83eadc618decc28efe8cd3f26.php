@@ -1,4 +1,4 @@
-<?php /*a:3:{s:74:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\user_center.html";i:1601734588;s:40:"public/static/product/header/header.html";i:1601734125;s:40:"public/static/product/footer/footer.html";i:1601605638;}*/ ?>
+<?php /*a:3:{s:74:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\user_center.html";i:1601814230;s:40:"public/static/product/header/header.html";i:1601734125;s:40:"public/static/product/footer/footer.html";i:1601781026;}*/ ?>
 <!DOCTYPE html>
 <html
     class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
@@ -530,12 +530,17 @@
                             <td>待发货</td>
                             <?php elseif(($values['status']==2)): ?>
                             <td>已发货</td>
+                            <?php elseif(($values['status']==0)): ?>
+                            <td>待付款</td>
                             <?php else: ?><td>已收货</td>
                             <?php endif; ?>
                             <td><?php echo htmlentities($values['expressNum']); ?></td>
                             <td><?php echo htmlentities($values['date']); ?></td>
                             <?php if(($values['status']==1)): ?>
                             <td>-</td>
+                            <?php elseif(($values['status']==0)): ?>
+                            <td><a class="layui-btn layui-btn-normal layui-btn-xs"
+                                    onclick="payNow(this, '<?php echo htmlentities($values['o_id']); ?>')" href="javascript:;">立即付款</a></td>
                             <?php elseif(($values['status']==2)): ?>
                             <td><a class="layui-btn layui-btn-normal layui-btn-xs"
                                     onclick="receive_confirm(this, '<?php echo htmlentities($values['o_id']); ?>')" href="javascript:;">确认收货</a></td>
@@ -712,8 +717,8 @@
                                 <h3>其它</h3>
                             </div>
                             <div class="footer-contact">
-                                <p><span>联系我们：</span>xxx-xxxxxxxx</p>
-                                <p><span>Email：</span> xxxxx@mail.com</p>
+                                <p><span>联系我们：</span>888-88888888</p>
+                                <p><span>Email：</span> watch-league@gmail.com</p>
                             </div>
                         </div>
                     </div>
@@ -749,8 +754,10 @@
 <script type="text/javascript">
 
     $(function () {
-
         var type = window.location.search;
+        if (type == "?2") {
+            $('#myTab li:eq(1) a').tab('show')
+        }
         if (type == "?3") {
             $('#myTab li:eq(2) a').tab('show')
         }
@@ -870,6 +877,11 @@
             });
         });
 
+    }
+
+     //线上订单付款
+     function payNow(obj, id) {
+      window.location.href = "<?php echo url('/show_order_pay/'); ?>"+id;
     }
 
     //订单确认收货
