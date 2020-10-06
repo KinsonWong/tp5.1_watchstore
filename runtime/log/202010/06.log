@@ -1,0 +1,1113 @@
+---------------------------------------------------------------
+[2020-10-06T13:27:12+08:00] 127.0.0.1 GET www.watchleague.com/delLog
+[运行时间：0.045818s] [吞吐率：21.83req/s] [内存消耗：2,026.88kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'delLog',
+  'route' => 'admin/admin_system/delLog',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_system_view',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Mobile Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2020-10-06T13:27:16+08:00] 127.0.0.1 GET www.watchleague.com/show_system_view
+[运行时间：0.020870s] [吞吐率：47.92req/s] [内存消耗：2,235.82kb] [文件加载：67]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_system_view',
+  'route' => 'admin/admin_system/show_system_view',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_system_view',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Mobile Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_system\system_view.html [ array (
+  0 => 'temp_count',
+  1 => 'log_count',
+  2 => 'temp_size',
+  3 => 'log_size',
+) ]
+---------------------------------------------------------------
+[2020-10-06T13:27:18+08:00] 127.0.0.1 GET www.watchleague.com/show_system_view
+[运行时间：0.018276s] [吞吐率：54.72req/s] [内存消耗：2,235.79kb] [文件加载：67]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_system_view',
+  'route' => 'admin/admin_system/show_system_view',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_system_view',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_system\system_view.html [ array (
+  0 => 'temp_count',
+  1 => 'log_count',
+  2 => 'temp_size',
+  3 => 'log_size',
+) ]
+---------------------------------------------------------------
+[2020-10-06T13:31:12+08:00] 127.0.0.1 GET www.watchleague.com/show_order_list
+[运行时间：0.100529s] [吞吐率：9.95req/s] [内存消耗：3,619.11kb] [文件加载：81]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_order_list',
+  'route' => 'admin/admin_order/show_order_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_admin_index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_order\order_list.html [ array (
+  0 => 'order_count',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.017558s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch_order` [ RunTime:0.001575s ]
+[ sql ] [ SQL ] SELECT * FROM `watch_order` [ RunTime:0.000246s ]
+---------------------------------------------------------------
+[2020-10-06T13:31:12+08:00] 127.0.0.1 GET www.watchleague.com/get_order_list?page=1&limit=10
+[运行时间：0.090386s] [吞吐率：11.06req/s] [内存消耗：3,479.31kb] [文件加载：80]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'get_order_list',
+  'route' => 'admin/admin_order/get_order_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_order_list',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.018746s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch_order` [ RunTime:0.001181s ]
+[ sql ] [ SQL ] SELECT * FROM `watch_order` [ RunTime:0.000274s ]
+[ sql ] [ SQL ] SELECT * FROM `watch_order` ORDER BY `o_id` DESC LIMIT 0,10 [ RunTime:0.000228s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_state` [ RunTime:0.001338s ]
+[ sql ] [ SQL ] SELECT `state` FROM `order_state` WHERE  `os_id` = 1 LIMIT 1 [ RunTime:0.003560s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.002284s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `h_a_id` = 9 LIMIT 1 [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_detail` [ RunTime:0.001225s ]
+[ sql ] [ SQL ] SELECT * FROM `order_detail` WHERE  `b_o_id` = 32 [ RunTime:0.000313s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch` [ RunTime:0.000995s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 9 LIMIT 1 [ RunTime:0.000310s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 9  AND `b_o_id` = 32 LIMIT 1 [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SELECT `state` FROM `order_state` WHERE  `os_id` = 0 LIMIT 1 [ RunTime:0.000300s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `h_a_id` = 9 LIMIT 1 [ RunTime:0.000306s ]
+[ sql ] [ SQL ] SELECT * FROM `order_detail` WHERE  `b_o_id` = 31 [ RunTime:0.000301s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 22 LIMIT 1 [ RunTime:0.000274s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 22  AND `b_o_id` = 31 LIMIT 1 [ RunTime:0.000300s ]
+[ sql ] [ SQL ] SELECT `state` FROM `order_state` WHERE  `os_id` = 1 LIMIT 1 [ RunTime:0.000279s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `h_a_id` = 9 LIMIT 1 [ RunTime:0.000244s ]
+[ sql ] [ SQL ] SELECT * FROM `order_detail` WHERE  `b_o_id` = 30 [ RunTime:0.000254s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 24 LIMIT 1 [ RunTime:0.000247s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 24  AND `b_o_id` = 30 LIMIT 1 [ RunTime:0.000252s ]
+[ sql ] [ SQL ] SELECT `state` FROM `order_state` WHERE  `os_id` = 1 LIMIT 1 [ RunTime:0.000230s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `h_a_id` = 4 LIMIT 1 [ RunTime:0.000235s ]
+[ sql ] [ SQL ] SELECT * FROM `order_detail` WHERE  `b_o_id` = 27 [ RunTime:0.000232s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 23 LIMIT 1 [ RunTime:0.000241s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 23  AND `b_o_id` = 27 LIMIT 1 [ RunTime:0.000207s ]
+[ sql ] [ SQL ] SELECT `state` FROM `order_state` WHERE  `os_id` = 1 LIMIT 1 [ RunTime:0.000142s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `h_a_id` = 1 LIMIT 1 [ RunTime:0.000149s ]
+[ sql ] [ SQL ] SELECT * FROM `order_detail` WHERE  `b_o_id` = 26 [ RunTime:0.000150s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 24 LIMIT 1 [ RunTime:0.000153s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 24  AND `b_o_id` = 26 LIMIT 1 [ RunTime:0.000149s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 25 LIMIT 1 [ RunTime:0.000152s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 25  AND `b_o_id` = 26 LIMIT 1 [ RunTime:0.000155s ]
+[ sql ] [ SQL ] SELECT `state` FROM `order_state` WHERE  `os_id` = 1 LIMIT 1 [ RunTime:0.000140s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `h_a_id` = 9 LIMIT 1 [ RunTime:0.000147s ]
+[ sql ] [ SQL ] SELECT * FROM `order_detail` WHERE  `b_o_id` = 25 [ RunTime:0.000146s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 22 LIMIT 1 [ RunTime:0.000152s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 22  AND `b_o_id` = 25 LIMIT 1 [ RunTime:0.000149s ]
+[ sql ] [ SQL ] SELECT `state` FROM `order_state` WHERE  `os_id` = 1 LIMIT 1 [ RunTime:0.000139s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `h_a_id` = 7 LIMIT 1 [ RunTime:0.000146s ]
+[ sql ] [ SQL ] SELECT * FROM `order_detail` WHERE  `b_o_id` = 24 [ RunTime:0.000146s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 26 LIMIT 1 [ RunTime:0.000154s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 26  AND `b_o_id` = 24 LIMIT 1 [ RunTime:0.000147s ]
+[ sql ] [ SQL ] SELECT `state` FROM `order_state` WHERE  `os_id` = 1 LIMIT 1 [ RunTime:0.000139s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `h_a_id` = 4 LIMIT 1 [ RunTime:0.000147s ]
+[ sql ] [ SQL ] SELECT * FROM `order_detail` WHERE  `b_o_id` = 23 [ RunTime:0.000174s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 24 LIMIT 1 [ RunTime:0.000178s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 24  AND `b_o_id` = 23 LIMIT 1 [ RunTime:0.000207s ]
+[ sql ] [ SQL ] SELECT `state` FROM `order_state` WHERE  `os_id` = 1 LIMIT 1 [ RunTime:0.000201s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `h_a_id` = 4 LIMIT 1 [ RunTime:0.000160s ]
+[ sql ] [ SQL ] SELECT * FROM `order_detail` WHERE  `b_o_id` = 22 [ RunTime:0.000148s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 23 LIMIT 1 [ RunTime:0.000151s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 23  AND `b_o_id` = 22 LIMIT 1 [ RunTime:0.000195s ]
+[ sql ] [ SQL ] SELECT `state` FROM `order_state` WHERE  `os_id` = 1 LIMIT 1 [ RunTime:0.000141s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `h_a_id` = 3 LIMIT 1 [ RunTime:0.000148s ]
+[ sql ] [ SQL ] SELECT * FROM `order_detail` WHERE  `b_o_id` = 21 [ RunTime:0.000146s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` WHERE  `bid` = 29 LIMIT 1 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT `num` FROM `order_detail` WHERE  `b_id` = 29  AND `b_o_id` = 21 LIMIT 1 [ RunTime:0.000161s ]
+---------------------------------------------------------------
+[2020-10-06T13:31:14+08:00] 127.0.0.1 GET www.watchleague.com/show_member_list
+[运行时间：0.087428s] [吞吐率：11.44req/s] [内存消耗：3,658.41kb] [文件加载：81]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_member_list',
+  'route' => 'admin/admin_member/show_member_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_admin_index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_member\member_list.html [ array (
+  0 => 'user_count',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.017977s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001128s ]
+[ sql ] [ SQL ] SELECT * FROM `user` [ RunTime:0.000303s ]
+---------------------------------------------------------------
+[2020-10-06T13:31:14+08:00] 127.0.0.1 GET www.watchleague.com/get_member_list?page=1&limit=10
+[运行时间：0.042327s] [吞吐率：23.63req/s] [内存消耗：3,386.98kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'get_member_list',
+  'route' => 'admin/admin_member/get_member_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_member_list',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016889s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001141s ]
+[ sql ] [ SQL ] SELECT * FROM `user` [ RunTime:0.000232s ]
+[ sql ] [ SQL ] SELECT * FROM `user` ORDER BY `uid` ASC LIMIT 0,10 [ RunTime:0.000236s ]
+---------------------------------------------------------------
+[2020-10-06T13:33:02+08:00] 127.0.0.1 GET www.watchleague.com/show_userlog_list
+[运行时间：0.101612s] [吞吐率：9.84req/s] [内存消耗：3,588.56kb] [文件加载：81]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_userlog_list',
+  'route' => 'admin/admin_log/show_userlog_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_admin_index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_log\userlog_list.html [ array (
+  0 => 'log_count',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.023678s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.002452s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` [ RunTime:0.000335s ]
+---------------------------------------------------------------
+[2020-10-06T13:33:02+08:00] 127.0.0.1 GET www.watchleague.com/get_userlog_list?page=1&limit=10
+[运行时间：0.045513s] [吞吐率：21.97req/s] [内存消耗：3,378.81kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'get_userlog_list',
+  'route' => 'admin/admin_log/get_userlog_list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_userlog_list',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.020194s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_log` [ RunTime:0.001095s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` [ RunTime:0.000322s ]
+[ sql ] [ SQL ] SELECT * FROM `user_log` ORDER BY `log_id` DESC LIMIT 0,10 [ RunTime:0.000343s ]
+---------------------------------------------------------------
+[2020-10-06T13:34:12+08:00] 127.0.0.1 GET www.watchleague.com/show_admin_index
+[运行时间：0.020358s] [吞吐率：49.12req/s] [内存消耗：2,263.70kb] [文件加载：67]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_admin_index',
+  'route' => 'admin/admin/show_admin_index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_admin_index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\index.html [ array (
+) ]
+---------------------------------------------------------------
+[2020-10-06T13:34:12+08:00] 127.0.0.1 GET www.watchleague.com/show_admin_welcome
+[运行时间：0.089964s] [吞吐率：11.12req/s] [内存消耗：3,723.30kb] [文件加载：84]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_admin_welcome',
+  'route' => 'admin/admin/show_admin_welcome',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_admin_index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\welcome.html [ array (
+  0 => 'info',
+  1 => 'time',
+  2 => 'count',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013588s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch_order` [ RunTime:0.000581s ]
+[ sql ] [ SQL ] SELECT * FROM `watch_order` [ RunTime:0.000278s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001449s ]
+[ sql ] [ SQL ] SELECT * FROM `user` [ RunTime:0.000467s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch` [ RunTime:0.001216s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` [ RunTime:0.000299s ]
+[ sql ] [ SQL ] SELECT VERSION() AS ver [ RunTime:0.000202s ]
+---------------------------------------------------------------
+[2020-10-06T13:34:13+08:00] 127.0.0.1 GET www.watchleague.com/get_week_order_data
+[运行时间：0.020553s] [吞吐率：48.65req/s] [内存消耗：3,001.69kb] [文件加载：67]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'get_week_order_data',
+  'route' => 'admin/admin/get_week_order_data',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_admin_welcome',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000645s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SELECT str_to_date( date, '%Y-%m-%d' ) AS orderdate,count(*) as count FROM watch_order 
+            WHERE str_to_date( date, '%Y-%m-%d' )>'2020-09-30' AND str_to_date( date, '%Y-%m-%d' )<='2020-10-06' GROUP BY str_to_date( date, '%Y-%m-%d' ) [ RunTime:0.000360s ]
+---------------------------------------------------------------
+[2020-10-06T13:34:13+08:00] 127.0.0.1 GET www.watchleague.com/get_week_order_sell
+[运行时间：0.020683s] [吞吐率：48.35req/s] [内存消耗：3,002.05kb] [文件加载：67]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'get_week_order_sell',
+  'route' => 'admin/admin/get_week_order_sell',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_admin_welcome',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000640s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SELECT str_to_date( date, '%Y-%m-%d' ) AS orderdate,sum(pay) as sell FROM watch_order 
+            WHERE str_to_date( date, '%Y-%m-%d' )>'2020-09-30' AND str_to_date( date, '%Y-%m-%d' )<='2020-10-06' GROUP BY str_to_date( date, '%Y-%m-%d' ) [ RunTime:0.000340s ]
+---------------------------------------------------------------
+[2020-10-06T13:34:15+08:00] 127.0.0.1 GET www.watchleague.com/show_system_view
+[运行时间：0.037743s] [吞吐率：26.50req/s] [内存消耗：2,235.79kb] [文件加载：67]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_system_view',
+  'route' => 'admin/admin_system/show_system_view',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_admin_index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_system\system_view.html [ array (
+  0 => 'temp_count',
+  1 => 'log_count',
+  2 => 'temp_size',
+  3 => 'log_size',
+) ]
+---------------------------------------------------------------
+[2020-10-06T13:34:57+08:00] 127.0.0.1 GET www.watchleague.com/show_admin_index
+[运行时间：0.017949s] [吞吐率：55.71req/s] [内存消耗：2,263.70kb] [文件加载：67]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_admin_index',
+  'route' => 'admin/admin/show_admin_index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_admin_index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\index.html [ array (
+) ]
+---------------------------------------------------------------
+[2020-10-06T13:34:57+08:00] 127.0.0.1 GET www.watchleague.com/show_admin_welcome
+[运行时间：0.088416s] [吞吐率：11.31req/s] [内存消耗：3,723.30kb] [文件加载：84]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_admin_welcome',
+  'route' => 'admin/admin/show_admin_welcome',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_admin_index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\welcome.html [ array (
+  0 => 'info',
+  1 => 'time',
+  2 => 'count',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011101s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch_order` [ RunTime:0.000707s ]
+[ sql ] [ SQL ] SELECT * FROM `watch_order` [ RunTime:0.000476s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001300s ]
+[ sql ] [ SQL ] SELECT * FROM `user` [ RunTime:0.000370s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch` [ RunTime:0.001475s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SELECT VERSION() AS ver [ RunTime:0.000279s ]
+---------------------------------------------------------------
+[2020-10-06T13:34:57+08:00] 127.0.0.1 GET www.watchleague.com/get_week_order_data
+[运行时间：0.031298s] [吞吐率：31.95req/s] [内存消耗：3,001.69kb] [文件加载：67]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'get_week_order_data',
+  'route' => 'admin/admin/get_week_order_data',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_admin_welcome',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011191s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SELECT str_to_date( date, '%Y-%m-%d' ) AS orderdate,count(*) as count FROM watch_order 
+            WHERE str_to_date( date, '%Y-%m-%d' )>'2020-09-30' AND str_to_date( date, '%Y-%m-%d' )<='2020-10-06' GROUP BY str_to_date( date, '%Y-%m-%d' ) [ RunTime:0.000413s ]
+---------------------------------------------------------------
+[2020-10-06T13:34:57+08:00] 127.0.0.1 GET www.watchleague.com/get_week_order_sell
+[运行时间：0.045516s] [吞吐率：21.97req/s] [内存消耗：3,002.05kb] [文件加载：67]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'get_week_order_sell',
+  'route' => 'admin/admin/get_week_order_sell',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_admin_welcome',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.025354s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SELECT str_to_date( date, '%Y-%m-%d' ) AS orderdate,sum(pay) as sell FROM watch_order 
+            WHERE str_to_date( date, '%Y-%m-%d' )>'2020-09-30' AND str_to_date( date, '%Y-%m-%d' )<='2020-10-06' GROUP BY str_to_date( date, '%Y-%m-%d' ) [ RunTime:0.000493s ]
+---------------------------------------------------------------
+[2020-10-06T13:34:59+08:00] 127.0.0.1 GET www.watchleague.com/show_system_view
+[运行时间：0.037574s] [吞吐率：26.61req/s] [内存消耗：2,235.80kb] [文件加载：67]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_system_view',
+  'route' => 'admin/admin_system/show_system_view',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_admin_index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_system\system_view.html [ array (
+  0 => 'temp_count',
+  1 => 'log_count',
+  2 => 'temp_size',
+  3 => 'log_size',
+) ]
+---------------------------------------------------------------
+[2020-10-06T13:35:51+08:00] 127.0.0.1 GET www.watchleague.com/show_admin_index
+[运行时间：0.017856s] [吞吐率：56.00req/s] [内存消耗：2,263.70kb] [文件加载：67]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_admin_index',
+  'route' => 'admin/admin/show_admin_index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_admin_index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\index.html [ array (
+) ]
+---------------------------------------------------------------
+[2020-10-06T13:35:51+08:00] 127.0.0.1 GET www.watchleague.com/show_admin_welcome
+[运行时间：0.089096s] [吞吐率：11.22req/s] [内存消耗：3,723.30kb] [文件加载：84]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_admin_welcome',
+  'route' => 'admin/admin/show_admin_welcome',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_admin_index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\welcome.html [ array (
+  0 => 'info',
+  1 => 'time',
+  2 => 'count',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.017921s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch_order` [ RunTime:0.000565s ]
+[ sql ] [ SQL ] SELECT * FROM `watch_order` [ RunTime:0.000277s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001218s ]
+[ sql ] [ SQL ] SELECT * FROM `user` [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `watch` [ RunTime:0.001084s ]
+[ sql ] [ SQL ] SELECT * FROM `watch` [ RunTime:0.000325s ]
+[ sql ] [ SQL ] SELECT VERSION() AS ver [ RunTime:0.000222s ]
+---------------------------------------------------------------
+[2020-10-06T13:35:51+08:00] 127.0.0.1 GET www.watchleague.com/get_week_order_data
+[运行时间：0.037375s] [吞吐率：26.76req/s] [内存消耗：3,001.69kb] [文件加载：67]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'get_week_order_data',
+  'route' => 'admin/admin/get_week_order_data',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_admin_welcome',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.017133s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SELECT str_to_date( date, '%Y-%m-%d' ) AS orderdate,count(*) as count FROM watch_order 
+            WHERE str_to_date( date, '%Y-%m-%d' )>'2020-09-30' AND str_to_date( date, '%Y-%m-%d' )<='2020-10-06' GROUP BY str_to_date( date, '%Y-%m-%d' ) [ RunTime:0.000523s ]
+---------------------------------------------------------------
+[2020-10-06T13:35:51+08:00] 127.0.0.1 GET www.watchleague.com/get_week_order_sell
+[运行时间：0.020766s] [吞吐率：48.16req/s] [内存消耗：3,002.05kb] [文件加载：67]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'get_week_order_sell',
+  'route' => 'admin/admin/get_week_order_sell',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_admin_welcome',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000606s ] mysql:host=127.0.0.1;port=3306;dbname=watchstore;charset=utf8
+[ sql ] [ SQL ] SELECT str_to_date( date, '%Y-%m-%d' ) AS orderdate,sum(pay) as sell FROM watch_order 
+            WHERE str_to_date( date, '%Y-%m-%d' )>'2020-09-30' AND str_to_date( date, '%Y-%m-%d' )<='2020-10-06' GROUP BY str_to_date( date, '%Y-%m-%d' ) [ RunTime:0.000431s ]
+---------------------------------------------------------------
+[2020-10-06T13:35:54+08:00] 127.0.0.1 GET www.watchleague.com/show_system_view
+[运行时间：0.037646s] [吞吐率：26.56req/s] [内存消耗：2,235.80kb] [文件加载：67]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_system_view',
+  'route' => 'admin/admin_system/show_system_view',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_admin_index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_system\system_view.html [ array (
+  0 => 'temp_count',
+  1 => 'log_count',
+  2 => 'temp_size',
+  3 => 'log_size',
+) ]
+---------------------------------------------------------------
+[2020-10-06T13:39:50+08:00] 127.0.0.1 GET www.watchleague.com/show_system_view
+[运行时间：0.039293s] [吞吐率：25.45req/s] [内存消耗：2,236.05kb] [文件加载：67]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_system_view',
+  'route' => 'admin/admin_system/show_system_view',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_system_view',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_system\system_view.html [ array (
+  0 => 'temp_count',
+  1 => 'log_count',
+  2 => 'temp_size',
+  3 => 'log_size',
+) ]
+---------------------------------------------------------------
+[2020-10-06T13:40:19+08:00] 127.0.0.1 GET www.watchleague.com/show_system_view
+[运行时间：0.036784s] [吞吐率：27.19req/s] [内存消耗：2,236.05kb] [文件加载：67]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_system_view',
+  'route' => 'admin/admin_system/show_system_view',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_system_view',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_system\system_view.html [ array (
+  0 => 'temp_count',
+  1 => 'log_count',
+  2 => 'temp_size',
+  3 => 'log_size',
+) ]
+---------------------------------------------------------------
+[2020-10-06T13:40:44+08:00] 127.0.0.1 GET www.watchleague.com/show_system_view
+[运行时间：0.036866s] [吞吐率：27.13req/s] [内存消耗：2,236.05kb] [文件加载：67]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_system_view',
+  'route' => 'admin/admin_system/show_system_view',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_system_view',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_system\system_view.html [ array (
+  0 => 'temp_count',
+  1 => 'log_count',
+  2 => 'temp_size',
+  3 => 'log_size',
+) ]
+---------------------------------------------------------------
+[2020-10-06T13:41:57+08:00] 127.0.0.1 GET www.watchleague.com/show_system_view
+[运行时间：0.039412s] [吞吐率：25.37req/s] [内存消耗：2,236.05kb] [文件加载：67]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_system_view',
+  'route' => 'admin/admin_system/show_system_view',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_system_view',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_system\system_view.html [ array (
+  0 => 'temp_count',
+  1 => 'log_count',
+  2 => 'temp_size',
+  3 => 'log_size',
+) ]
+---------------------------------------------------------------
+[2020-10-06T13:48:25+08:00] 127.0.0.1 GET www.watchleague.com/show_system_view
+[运行时间：0.040316s] [吞吐率：24.80req/s] [内存消耗：2,236.05kb] [文件加载：67]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_system_view',
+  'route' => 'admin/admin_system/show_system_view',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_system_view',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_system\system_view.html [ array (
+  0 => 'temp_count',
+  1 => 'log_count',
+  2 => 'temp_size',
+  3 => 'log_size',
+) ]
+---------------------------------------------------------------
+[2020-10-06T13:48:40+08:00] 127.0.0.1 GET www.watchleague.com/show_system_view
+[运行时间：0.037337s] [吞吐率：26.78req/s] [内存消耗：2,240.05kb] [文件加载：67]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_system_view',
+  'route' => 'admin/admin_system/show_system_view',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_system_view',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_system\system_view.html [ array (
+  0 => 'temp_count',
+  1 => 'log_count',
+  2 => 'temp_size',
+  3 => 'log_size',
+) ]
+---------------------------------------------------------------
+[2020-10-06T13:48:51+08:00] 127.0.0.1 GET www.watchleague.com/show_system_view
+[运行时间：0.040262s] [吞吐率：24.84req/s] [内存消耗：2,240.04kb] [文件加载：67]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\watchstore\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'show_system_view',
+  'route' => 'admin/admin_system/show_system_view',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4o8ls3c5b80343b78tgdegcve2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.watchleague.com/show_system_view',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.watchleague.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_system\system_view.html [ array (
+  0 => 'temp_count',
+  1 => 'log_count',
+  2 => 'temp_size',
+  3 => 'log_size',
+) ]

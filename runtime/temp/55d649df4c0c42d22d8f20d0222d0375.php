@@ -1,4 +1,4 @@
-<?php /*a:1:{s:70:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\index.html";i:1601471982;}*/ ?>
+<?php /*a:1:{s:70:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\index.html";i:1601912852;}*/ ?>
 <!doctype html>
 <html lang="en">
 
@@ -108,6 +108,21 @@
                         </li>
                     </ul>
                 </li>
+                <li>
+                    <a href="javascript:;">
+                        <i class="iconfont">&#59054;</i>
+                        <cite>系统工具</cite>
+                        <i class="iconfont nav_right">&#xe697;</i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a _href="<?php echo url('/show_system_view'); ?>">
+                                <i class="iconfont">&#xe6a7;</i>
+                                <cite>系统管理</cite>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
@@ -132,7 +147,7 @@
     <!-- 中部结束 -->
     <!-- 底部开始 -->
     <div class="footer">
-        <div class="copyright">Copyright @ X-admin All Rights Reserved</div>
+        <div class="copyright" style="text-align: center;">Copyright @ X-admin All Rights Reserved</div>
     </div>
     <!-- 底部结束 -->
 </body>

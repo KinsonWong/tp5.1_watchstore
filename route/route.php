@@ -66,6 +66,12 @@ Route::post('userlog_delete','admin/admin_log/userlog_delete');//删除会员登
 Route::post('userlog_delete_s','admin/admin_log/userlog_delete_s');//会员登录日志批量删除
 Route::post("search_log",'admin/admin_log/search_log');//搜索登录日志
 
+
+//Admin_System
+Route::get('show_system_view','admin/admin_system/show_system_view');//系统工具页面
+Route::get('delTemp','admin/admin_system/delTemp'); //删除临时文件
+Route::get('delLog','admin/admin_system/delLog'); //删除日志文件
+
 //Product
 Route::get('show_details','product/product/show_details');//商品详情页面
 Route::post("watch_detail",'product/product/watch_detail');//获取商品详情信息

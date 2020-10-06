@@ -1,4 +1,4 @@
-<?php /*a:1:{s:81:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_log\userlog_list.html";i:1601473024;}*/ ?>
+<?php /*a:1:{s:81:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_log\userlog_list.html";i:1601910926;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -146,7 +146,7 @@
     });
 
     function delAll(argument) {
-      var checkStatus = layui.table.checkStatus('demo');
+      var checkStatus = layui.table.checkStatus('textreload');
       var data = checkStatus.data;
       var log_ids = [];
       //console.log(data);

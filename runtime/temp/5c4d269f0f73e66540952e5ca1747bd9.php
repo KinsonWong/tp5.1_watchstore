@@ -1,4 +1,4 @@
-<?php /*a:1:{s:83:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_member\member_list.html";i:1601428487;}*/ ?>
+<?php /*a:1:{s:83:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_member\member_list.html";i:1601908999;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -59,8 +59,8 @@
         limit: 10,
         cellMinWidth: 50, //全局定义常规单元格的最小宽度
         cols: [[ //表头
-          { type: 'checkbox', fixed: 'left' },
-          { field: 'uid', title: 'UID', width: 90, sort: true, fixed: 'left' },
+          { type: 'checkbox' },
+          { field: 'uid', title: 'UID', width: 90, sort: true },
           { field: 'username', title: '用户名' },
           { field: 'email', title: '邮箱' },
           { field: 'phone', title: '手机' },

@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version: 5.7.26)
-# Date: 2020-10-04 21:07:52
+# Date: 2020-10-06 13:52:13
 # Generator: MySQL-Front 5.3  (Build 4.234)
 
 /*!40101 SET NAMES utf8 */;
@@ -53,7 +53,7 @@ CREATE TABLE `order_state` (
 # Data for table "order_state"
 #
 
-INSERT INTO `order_state` VALUES (1,'待发货'),(2,'已发货'),(3,'已收货');
+INSERT INTO `order_state` VALUES (1,'待发货'),(2,'已发货'),(3,'已收货'),(0,'待付款');
 
 #
 # Structure for table "user"
