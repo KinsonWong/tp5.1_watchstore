@@ -1,3 +1,4 @@
+<?php /*a:1:{s:70:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\login.html";i:1602136868;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -5,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>WatchLeague管理员后台登录</title>
-    <link rel="stylesheet" href="__ADMIN__/css/login.css" media="all" />
-    <link rel="stylesheet" href="__ADMIN__/lib/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="/public/static/admin/css/login.css" media="all" />
+    <link rel="stylesheet" href="/public/static/admin/lib/layui/css/layui.css" media="all" />
     <style>
         /* 覆盖原框架样式 */
         .layui-elem-quote {
@@ -43,7 +44,7 @@
                         <div class="zyl_login_cont"></div>
                     </div>
                     <div>
-                        <img src="__ADMIN__/images/01.jpg" />
+                        <img src="/public/static/admin/images/01.jpg" />
                     </div>
                     <div>
                         <div class="background">
@@ -54,7 +55,7 @@
                         </div>
                     </div>
                     <div>
-                        <img src="__ADMIN__/images/03.jpg" />
+                        <img src="/public/static/admin/images/03.jpg" />
                     </div>
                 </div>
             </div>
@@ -101,7 +102,7 @@
                             </div>
                         </div>
                         <div class="layui-col-xs4 layui-col-sm4 layui-col-md4">
-                            <div><img id="verify_img" src="{:captcha_src()}" alt="验证码" onclick="refreshVerify()"></div>
+                            <div><img id="verify_img" src="<?php echo captcha_src(); ?>" alt="验证码" onclick="refreshVerify()"></div>
                         </div>
                     </div>
                 </div>
@@ -114,10 +115,10 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="__ADMIN__/lib/layui/layui.all.js"></script>
-    <script type="text/javascript" src="__ADMIN__/js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="__ADMIN__/js/jparticle.min.js"></script>
-    <script type="text/javascript" src="__STATIC__/js/hex_sha.js"></script>
+    <script type="text/javascript" src="/public/static/admin/lib/layui/layui.all.js"></script>
+    <script type="text/javascript" src="/public/static/admin/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/public/static/admin/js/jparticle.min.js"></script>
+    <script type="text/javascript" src="/public/static/product/js/hex_sha.js"></script>
 
     <script>
         //点击刷新验证码
@@ -144,7 +145,7 @@
                         password:password,
                         code,code
                     },
-                    url: "{:url('/admin_login')}",
+                    url: "<?php echo url('/admin_login'); ?>",
 
                     success: function (result) {
                         if (result.msg == 2) {
@@ -169,7 +170,7 @@
                                 icon: 1,
                                 time: 2000
                             }, function () {
-                                window.location.href = "{:url('/show_admin_index')}";
+                                window.location.href = "<?php echo url('/show_admin_index'); ?>";
                             });
                         }
                     },

@@ -1,10 +1,10 @@
-<?php /*a:1:{s:70:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\index.html";i:1601912852;}*/ ?>
+<?php /*a:1:{s:70:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\index.html";i:1602137347;}*/ ?>
 <!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>后台管理</title>
+    <title>Watch League-后台管理</title>
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
@@ -24,7 +24,7 @@
 <body>
     <!-- 顶部开始 -->
     <div class="container">
-        <div class="logo"><a href="<?php echo url('/show_admin_index'); ?>">网上手表商城后台管理</a></div>
+        <div class="logo"><a href="<?php echo url('/show_admin_index'); ?>">WatchLeague后台管理</a></div>
         <div class="left_open">
             <i title="展开左侧栏" class="iconfont">&#xe699;</i>
         </div>
@@ -132,7 +132,7 @@
     <div class="page-content">
         <div class="layui-tab tab" lay-filter="xbs_tab" lay-allowclose="false">
             <ul class="layui-tab-title">
-                <li class="home"><i class="layui-icon">&#xe68e;</i>我的桌面</li>
+                <li class="home"><i class="layui-icon">&#xe68e;</i>后台首页</li>
             </ul>
             <div class="layui-tab-content">
                 <div class="layui-tab-item layui-show">

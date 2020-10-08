@@ -57,7 +57,7 @@ class AdminProductController extends Controller
 
             //分页查询
             $watch = new WatchModel();
-            $watchpage = $watch->order('bid','asc')->limit($start,$limit)->select();
+            $watchpage = $watch->order('bid','desc')->limit($start,$limit)->select();
 
             $res = [
                 'code'=>0,

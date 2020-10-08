@@ -1,4 +1,4 @@
-<?php /*a:1:{s:72:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\welcome.html";i:1601348748;}*/ ?>
+<?php /*a:1:{s:72:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin\welcome.html";i:1602136945;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -140,7 +140,7 @@
                 <table class="layui-table" lay-skin="line">
                     <tbody>
                         <td>
-                            <a class="x-a" href="/" target="_blank">网上手表商城 Watch League 正式营业</a>
+                            <a class="x-a" href="/" target="_blank">WatchLeague 手表商城 正式营业</a>
                         </td>
                         </tr>
                     </tbody>

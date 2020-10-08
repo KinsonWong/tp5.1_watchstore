@@ -1,4 +1,4 @@
-<?php /*a:1:{s:83:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_system\system_view.html";i:1601963329;}*/ ?>
+<?php /*a:1:{s:83:"D:\phpstudy_pro\WWW\watchstore\application\admin\view\admin_system\system_view.html";i:1601963342;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -19,7 +19,7 @@
   <script type="text/javascript" src="/public/static/admin/lib/layui/layui.js" charset="utf-8"></script>
   <script type="text/javascript" src="/public/static/admin/js/xadmin.js"></script>
   <style>
-    .div1{
+    .div1 {
       float: left;
       margin-right: 35px;
     }
@@ -40,19 +40,19 @@
   <div class="x-body">
     <div style="margin-left: 30px;margin-top: 30px;">
 
-    <div class="div1" >
-    <p>临时文件数量：<?php echo htmlentities($temp_count); ?></p>
-    <p>临时文件大小：<?php echo htmlentities($temp_size); ?></p>
-    <button class="layui-btn layui-btn-danger" onclick="delTemp()"><i class="layui-icon"></i>删除临时文件</button>
+      <div class="div1">
+        <p>临时文件数量：<?php echo htmlentities($temp_count); ?></p>
+        <p>临时文件大小：<?php echo htmlentities($temp_size); ?></p>
+        <button class="layui-btn layui-btn-danger" onclick="delTemp()"><i class="layui-icon"></i>删除临时文件</button>
+      </div>
+
+
+      <div class="div1">
+        <p>日志文件数量：<?php echo htmlentities($log_count); ?></p>
+        <p>日志文件大小：<?php echo htmlentities($log_size); ?></p>
+        <button class="layui-btn layui-btn-danger" onclick="delLog()"><i class="layui-icon"></i>删除日志文件</button>
+      </div>
     </div>
-
-
- <div class="div1">
-<p>日志文件数量：<?php echo htmlentities($log_count); ?></p>
-<p>日志文件大小：<?php echo htmlentities($log_size); ?></p>
-<button class="layui-btn layui-btn-danger" onclick="delLog()"><i class="layui-icon"></i>删除日志文件</button>
- </div>   
- </div>
 
   </div>
 

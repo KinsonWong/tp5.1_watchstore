@@ -182,7 +182,7 @@ class UserController extends Controller
         $user = $usermodel->get($uid);
 
         //用户订单信息
-        $user_order = WatchOrderModel::where('u_id', $uid)->select();
+        $user_order = WatchOrderModel::where('u_id', $uid)->order('o_id','desc')->select();
         //$user_order 与 $order_item 指向同一内容
         foreach ($user_order as &$order_item) {
             $user2 = UserAddressModel::where('h_a_id', $order_item['h_a_id'])->find();
@@ -294,7 +294,7 @@ class UserController extends Controller
         try {
             // 判断是否登录
             $this->have_session();
-            $user_order = WatchOrderModel::where('u_id', $uid)->select();
+            $user_order = WatchOrderModel::where('u_id', $uid)->order('o_id','desc')->select();
 
             //$user_order 与 $order_item 指向同一内容
             foreach ($user_order as &$order_item) {
