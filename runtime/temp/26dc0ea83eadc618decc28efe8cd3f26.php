@@ -1,4 +1,4 @@
-<?php /*a:3:{s:74:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\user_center.html";i:1601814230;s:40:"public/static/product/header/header.html";i:1601974929;s:40:"public/static/product/footer/footer.html";i:1601781026;}*/ ?>
+<?php /*a:3:{s:74:"D:\phpstudy_pro\WWW\watchstore\application\user\view\user\user_center.html";i:1602314585;s:40:"public/static/product/header/header.html";i:1601974929;s:40:"public/static/product/footer/footer.html";i:1601781026;}*/ ?>
 <!DOCTYPE html>
 <html
     class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
@@ -755,13 +755,10 @@
 
     $(function () {
         var type = window.location.search;
-        if (type == "?2") {
-            $('#myTab li:eq(1) a').tab('show')
-        }
-        if (type == "?3") {
+        if (type == "?3") {    //激活收货地址导航栏并显示
             $('#myTab li:eq(2) a').tab('show')
         }
-        if (type == "?4") {
+        if (type == "?4") {    //激活登录日志导航栏并显示
             $('#myTab li:eq(3) a').tab('show')
         }
     });
@@ -782,6 +779,7 @@
 
     }
 
+    //修改密码
     function change_password() {
         var uid = $("#uid").val();
         layui.use("layer", function () {

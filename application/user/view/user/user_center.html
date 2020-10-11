@@ -302,13 +302,10 @@
 
     $(function () {
         var type = window.location.search;
-        if (type == "?2") {
-            $('#myTab li:eq(1) a').tab('show')
-        }
-        if (type == "?3") {
+        if (type == "?3") {    //激活收货地址导航栏并显示
             $('#myTab li:eq(2) a').tab('show')
         }
-        if (type == "?4") {
+        if (type == "?4") {    //激活登录日志导航栏并显示
             $('#myTab li:eq(3) a').tab('show')
         }
     });
@@ -329,6 +326,7 @@
 
     }
 
+    //修改密码
     function change_password() {
         var uid = $("#uid").val();
         layui.use("layer", function () {

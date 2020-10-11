@@ -32,7 +32,7 @@ class AdminController extends Controller
      */
     public function admin_login(Request $request)
     {
-        $captcha = new Captcha();    //实例化验证码包
+        $captcha = new Captcha();    //实例化验证码拓展包
         $code=$request->post('code');   //接收验证码
         try {
             if(!$captcha->check($code)){

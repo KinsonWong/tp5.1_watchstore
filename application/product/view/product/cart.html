@@ -201,6 +201,7 @@
         $("#coupon").blur(function () {
             var coupon = $("#coupon").val();   //获取优惠码
             var uid = '<%=session.getAttribute("uid")%>';  //获取session中的uid
+
             $.ajax({
                 type: "POST",//方法类型
                 dataType: "json",//预期服务器返回的数据类型
@@ -210,8 +211,6 @@
                     uid: uid
                 },
                 success: function (result) {
-
-
                     if (result.msg === 0) {
                         $('#couponTips').removeClass('tipsGreen');
                         $('#couponTips').html("优惠码不可用");
@@ -227,7 +226,7 @@
                         $('#couponTips2').html("优惠金额：￥" + discount);
                         //console.log(discount,price);
 
-                        document.getElementById("amount").innerText = price;
+                        document.getElementById("amount").innerText = "￥"+price;
 
                     } else {
                         $('#couponTips').html(result.msg);
@@ -321,6 +320,7 @@
                 }
             })
         })
+
     </script>
 </body>
 

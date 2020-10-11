@@ -1,4 +1,4 @@
-<?php /*a:3:{s:73:"D:\phpstudy_pro\WWW\watchstore\application\product\view\product\cart.html";i:1601975318;s:40:"public/static/product/header/header.html";i:1601974929;s:40:"public/static/product/footer/footer.html";i:1601781026;}*/ ?>
+<?php /*a:3:{s:73:"D:\phpstudy_pro\WWW\watchstore\application\product\view\product\cart.html";i:1602327360;s:40:"public/static/product/header/header.html";i:1601974929;s:40:"public/static/product/footer/footer.html";i:1601781026;}*/ ?>
 <!DOCTYPE html>
 <html
     class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
@@ -654,6 +654,7 @@
         $("#coupon").blur(function () {
             var coupon = $("#coupon").val();   //获取优惠码
             var uid = '<%=session.getAttribute("uid")%>';  //获取session中的uid
+
             $.ajax({
                 type: "POST",//方法类型
                 dataType: "json",//预期服务器返回的数据类型
@@ -663,8 +664,6 @@
                     uid: uid
                 },
                 success: function (result) {
-
-
                     if (result.msg === 0) {
                         $('#couponTips').removeClass('tipsGreen');
                         $('#couponTips').html("优惠码不可用");
@@ -680,7 +679,7 @@
                         $('#couponTips2').html("优惠金额：￥" + discount);
                         //console.log(discount,price);
 
-                        document.getElementById("amount").innerText = price;
+                        document.getElementById("amount").innerText = "￥"+price;
 
                     } else {
                         $('#couponTips').html(result.msg);
@@ -774,6 +773,7 @@
                 }
             })
         })
+
     </script>
 </body>
 
